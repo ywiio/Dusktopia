@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* :root{
+    --index: calc(1vw+1vh); 
+} */
+
+@font-face {
+    font-family: "Mazzard-R";
+    src: url('/font/MazzardH-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Mazzard-B";
+    src: url('/font/MazzardH-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OctosM";
+    src: url('/font/TTOctosquares-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OctosR";
+    src: url('/font/TTOctosquares-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NeueMachina-Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("NeueMachina-Medium"),
+         url("/font/NeueMachina-Medium.woff2") format("woff2"),
+}
+@font-face {
+    font-family: "NeueMachina-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("NeueMachina-Bold"),
+         url("/font/NeueMachina-Bold.woff2") format("woff2"),
+}
+@font-face {
+    font-family: "NeueMachina-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("NeueMachina-Regular"),
+         url("/font/NeueMachina-Regular.woff2") format("woff2"),
+}
+
+
+
+
+body{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    margin: 0 auto;
+    font-family: "Mazzard-R",serif;
+    height: 3000px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.header--margin{
+    position: absolute;
+    z-index: 999;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.header{
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 57px 46px;
+}
+
+.header__social{
+    display: flex;
+    align-items: center;
+    column-gap: 31px;
+}
+
+.header__btn a{
+    padding: 22px 49px 14px;
+    background:    
+        url("/img/btn.svg")
+         top no-repeat;  
+}
+
+[class*="__title"]{
+    font-size: 64px;
+    font-family: "OctosR",serif;
+    font-weight: 400;
+    line-height: 76px;
+    letter-spacing: 0.365em;
+    text-transform: uppercase;
+}
+
+div[class*="btn"]{
+    font-family: "Neue Machina";
+    font-weight: 700;
+    /* letter-spacing: 0.9px; ???????????????????? */
+    line-height: 140%;
+}
+
+[class$="__nav"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    font-family: "NeueMachina-Medium", sans-serif;
+    letter-spacing: 0.9px;
+    justify-content: space-between;
+}
+
+[class*="__nav-link"]{
+    transform: rotate(90deg);
+    font-weight: 500;
+    line-height: 140%;
+}
+
+aside{
+    width: 22px;
+}
+
+.main__layers{
+    /* height: 100vh; */
+    min-height: 835px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.main__layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    /* will-change: transform; ?????????????????????????????? */
+}
+
+.main__layers-base{
+    background:    
+        url("/img/layer-intro-base.png")
+         top no-repeat;
+    background-size: cover;
+    transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
+    z-index: -2;
+}
+
+.main__layers-middle{
+    background:    
+        url("/img/layer-intro-middle.png")
+        top no-repeat;
+    background-size: cover;
+    transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
+}
+
+.main__layers-front{
+    background:    
+        url("/img/layer-intro-front.png")
+        top no-repeat;
+    background-size: cover;
+    transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
+}
+
+.main__layers-gradient{
+    background:    
+        url("/img/gradient-1\(chamge\).png")
+        top no-repeat;
+    background-size: cover;
+    transform: translate3d(0, calc(var(--scrollTop)/7),0);
+}
+
+.main__intro{
+    z-index: 9;
+    transform: translate3d(0, calc(var(--scrollTop)/2),0);
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    width: 12622px;
+    margin-left: 46px;
+    gap: 93px;
+}
+
+.main__text{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin-top: 28px;
+}
+
+.main__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    margin-left: -44px;
+}
+
+.main__btn-mint a{
+    padding: 20px 47px 15px 48px;
+    background:    
+        url("/img/btn-mint.svg")
+         top no-repeat;  
+}
+
+.main__btn-connect a{
+    padding: 20px 33px 15px;
+    color: #000;
+    background:    
+        url("/img/btn-connect.svg")
+         top no-repeat;  
+    background-size: cover;
+}
+
+.faction__container{
+    height: 749px;
+    background:    
+    url("/img/back_faction.png")
+    top no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.faction__inner{
+    width: 1326.54px;
+    /* height: 522.7px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faction__title{
+    margin-top: -31px;
+    margin-left: -107px;
+}
+
+
+
+.faction__info{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    font-family: "OctosM",serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+}
+
+.faction__points{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 77px;
+}
+
+.faction__point-1{
+    text-transform: uppercase;
+    margin-bottom: 152px;
+}
+
+.faction__lights-on{
+    position: absolute;
+    margin: 9px -32px;
+}
+
+.roadmap__container{
+    min-height: 1666px;
+    background:    
+    url("/img/roadmap-first.png")
+    right top no-repeat;
+}
+
+.roadmap__inner{
+    padding-top: 85px;
+}
+
+.roadmap__text{
+    background:    
+    url("/img/roadmap-rows.png")
+    left 286px top 64px no-repeat;
+    width: fit-content;
+    margin-top: 53px;
+    margin-left: 158px;
+    margin-bottom: 107px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.roadmap__title{
+    margin-left: -8px;
+}
+
+.roadmap__info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 51px;
+    gap: 98px;
+}
+
+.roadmap__about{
+    display: flex;
+    align-items: flex-end;
+    gap: 42px;
+    font-family:"Mazzard-R", serif;
+    font-size: 13px;
+}
+
+.roadmap__lights-on{
+    position: absolute;
+    margin: 12px -48px;
+}
+
+.roadmap__points{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 503px;
+}
+
+/* мб сделать через невидимый элемент */
+.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5{
+    background:    
+    url("/img/frame-175.png")
+    left no-repeat;
+    padding: 23px 21px 23px 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.roadmap__point-1{
+    background:    
+    url("/img/frame-full-175.png")
+    left no-repeat;
+    color: #000;
+    font-size: 15px;
+    padding: 19px 21px 23px 27px;
+
+}
+
+.roadmap__point-1 .roadmap__point-number{
+    font-size: 45px;
+}
+
+.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4{
+    height: 175px;
+}
+
+.roadmap__point-5{
+    background:    
+    url("/img/frame-130.png")
+    left no-repeat;
+    height: 130px;
+}
+
+.roadmap__point-number{
+    font-family: "Neue Machina";
+    font-weight: 700;
+    font-size: 41px;
+}
+
+.roadmap__point-title{
+    font-family:"Mazzard-B", serif;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.roadmap__point-about{
+    width: 445px;
+}
+
+.collab__container{
+    margin-bottom: 52px;
+}
+
+.collab__inner{
+    margin-top: 63px;
+    margin-left: 51px;
+    display: flex;
+    gap: 100px;
+}
+
+.collab__info{
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+}
+
+.collab__logos{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1117px;
+    gap: 51px;
+}
+
+.collab__logo{
+    background:    
+    url("/img/logo_btn.png")
+    left no-repeat;
+    width: 241px;
+    height: 113px;
+}
+
+.collab__logo a{
+    /* padding: 45px 81px 43px 82px; */
+    width: 241px;
+    height: 113px;
+    margin: auto;
+}
+
+.collab__text{
+    /* width: fit-content;
+    margin-top: 53px;
+    margin-left: 158px;*/
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.questions__text{
+    width: fit-content;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.questions__title{
+    max-width: 586px;
+}
+
+.footer{
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 75px 50px;
+}
+
+.footer--margin{
+    margin: 0 auto;
+}
+
+.footer__social{
+    display: flex;
+    margin-left: 124px;
+    align-items: center;
+    column-gap: 31px;
+}
+
+
