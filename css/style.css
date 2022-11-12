@@ -69,15 +69,11 @@ a{
     color: white;
 }
 
-.header--margin{
+.header{
     position: absolute;
     z-index: 999;
-    left:50%;
-    transform:translate(-50%);
-}
 
-.header{
-    width: 1440px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,6 +117,7 @@ div[class*="btn"]{
     font-family: "NeueMachina-Medium", sans-serif;
     letter-spacing: 0.9px;
     justify-content: space-between;
+    width: 22px;
 }
 
 [class*="__nav-link"]{
@@ -129,13 +126,9 @@ div[class*="btn"]{
     line-height: 140%;
 }
 
-aside{
-    width: 22px;
-}
-
 .main__layers{
-    /* height: 100vh; */
-    min-height: 835px;
+    height: 100vh;
+    padding: 220px auto 221px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,8 +184,8 @@ aside{
     will-change: transform;
     display: flex;
     align-items: center;
-    width: 12622px;
-    margin-left: 46px;
+    /* width: 12622px; */
+    /* margin-left: 46px; */
     gap: 93px;
 }
 
@@ -237,12 +230,13 @@ aside{
 }
 
 .faction__inner{
-    width: 1326.54px;
-    /* height: 522.7px; */
-    margin: 0 auto;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* проверить по макету */
+    padding: 0 58px;  
 }
 
 .faction__title{
@@ -278,6 +272,7 @@ aside{
     position: absolute;
     margin: 9px -32px;
 }
+
 
 .roadmap__container{
     min-height: 1666px;
@@ -334,17 +329,27 @@ aside{
     flex-direction: column;
     gap: 50px;
     width: 503px;
+    z-index: 2;
 }
 
 /* мб сделать через невидимый элемент */
 .roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5{
-    background:    
-    url("/img/frame-175.png")
-    left no-repeat;
-    padding: 23px 21px 23px 29px;
+    /* background:    
+    url("/img/frame-175.svg")
+    left no-repeat; */
+    /* padding: 23px 21px 23px 29px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    cursor: pointer;
+}
+
+.roadmap__point-img img{
+    position: absolute;   
+    
+    backdrop-filter: blur(7px);
+    z-index: -1;
 }
 
 .roadmap__point-1{
@@ -389,7 +394,8 @@ aside{
 }
 
 .collab__container{
-    margin-bottom: 52px;
+    /* я думаю, надо заменять на не знаю что */
+    padding-bottom: 146px;
 }
 
 .collab__inner{
@@ -438,6 +444,10 @@ aside{
     gap: 22px;
 }
 
+.questions__container{
+    /* height: 100vh; */
+}
+
 .questions__text{
     width: fit-content;
     margin: 0 auto;
@@ -446,14 +456,61 @@ aside{
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .questions__title{
-    max-width: 586px;
+    max-width: 675px;
+    text-align: center;
 }
 
-.footer{
+.questions__info{
+    display: flex;
+    gap: 75px;
+    margin-top: 90px;
+}
+
+.questions__about{
+    background:    
+    url("/img/questions-panel.png")
+    top no-repeat;
+    height: 776.75px;
+    max-width: 1222px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.questions__title span{
+    padding: 0 47px 0 23px;
+}
+
+.questions__block{
+    padding: 40px;
+}
+
+.questions__block p{
+    width: 351px;
+    font-family: 'Mazzard-R';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.questions__block h3{
+    width: 309px;
+    font-family: 'TTOctosquares-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 117.8%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.footer__inner{
     width: 1440px;
     display: flex;
     align-items: center;

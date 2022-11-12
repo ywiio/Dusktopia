@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/app.js" defer></script>
-    <!-- <link rel="stylesheet" href="/font/Mazzard/stylesheet.css">
-    <link rel="stylesheet" href="/font/Neue Machina/stylesheet.css">
-    <link rel="stylesheet" href="/font/TTOctosquares/stylesheet.css"> -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accordion_css.css">
     <title>Dusktopia</title>
 </head>
 <body>
-    <header class="header header--margin">
+    <header class="header">
 
         <div class="header__logo">
             <a href="#" class="header__logo"><img src="./img/logo.png" alt="Dusktopia"></a>
@@ -21,17 +20,17 @@
         <div class="header__social">
             <div class="header__social-link">
                 <a href="#">
-                    <img src="/img/logo_discord.png" alt="Discord">
+                    <img src="img/logo_discord.png" alt="Discord">
                 </a>
             </div>
             <div class="header__social-link">
                 <a href="#">
-                    <img src="/img/logo_twitter.png" alt="Twitter">
+                    <img src="img/logo_twitter.png" alt="Twitter">
                 </a>
             </div>
             <div class="header__social-link">
                 <a href="#">
-                    <img src="/img/logo_medium-circle.png" alt="Medium">
+                    <img src="img/logo_medium-circle.png" alt="Medium">
                 </a>
             </div>
             <div class="header__btn">
@@ -43,58 +42,50 @@
 
     <main class="main">
 
-        <div class="main__container">
+        <div class="main__layers">
 
-            <div class="main__inner">
+            <div class="main__intro">
 
-                <div class="main__layers">
+                <aside class="main__nav">
+                    <div class="main__nav-link">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="main__nav-link">
+                        <img src="img/star.png" alt="">
+                    </div>
+                    <div class="main__nav-link">
+                        <a href="#">Factions</a>
+                    </div>
+                    <div class="main__nav-link">
+                        <img src="img/star.png" alt="">
+                    </div>
+                    <div class="main__nav-link">
+                        <a href="#">Roadmap</a>
+                    </div>
+                </aside>
+                
+                <div class="main__text">
 
-                    <div class="main__intro">
+                    <h1 class="main__title">From dusk to dawn</h1>
+                    <div class="main__btns">
 
-                        <aside class="main__nav">
-                            <div class="main__nav-link">
-                                <a href="#">Home</a>
-                            </div>
-                            <div class="main__nav-link">
-                                <img src="/img/star.png" alt="">
-                            </div>
-                            <div class="main__nav-link">
-                                <a href="#">Factions</a>
-                            </div>
-                            <div class="main__nav-link">
-                                <img src="/img/star.png" alt="">
-                            </div>
-                            <div class="main__nav-link">
-                                <a href="#">Roadmap</a>
-                            </div>
-                        </aside>
-                        
-                        <div class="main__text">
-
-                            <h1 class="main__title">From dusk to dawn</h1>
-                            <div class="main__btns">
-
-                                <div class="main__btn-mint">
-                                    <a href="#">Mint</a>
-                                </div>
-                                <div class="main__btn-connect">
-                                    <a href="#">Connect Wallet</a>
-                                </div>
-
-                            </div>
-
+                        <div class="main__btn-mint">
+                            <a href="#">Mint</a>
+                        </div>
+                        <div class="main__btn-connect">
+                            <a href="#">Connect Wallet</a>
                         </div>
 
                     </div>
-                    
-                    <div class="main__layer main__layers-base"></div>
-                    <div class="main__layer main__layers-middle"></div>
-                    <div class="main__layer main__layers-front"></div>
-                    <!-- <div class="main__layer main__layers-gradient"></div> -->
 
                 </div>
 
             </div>
+            
+            <div class="main__layer main__layers-base"></div>
+            <div class="main__layer main__layers-middle"></div>
+            <div class="main__layer main__layers-front"></div>
+            <!-- <div class="main__layer main__layers-gradient"></div> -->
 
         </div>
 
@@ -111,13 +102,13 @@
                         <a href="#">Home</a>
                     </div>
                     <div class="faction__nav-link">
-                        <img src="/img/star.png" alt="">
+                        <img src="img/star.png" alt="">
                     </div>
                     <div class="faction__nav-link">
                         <a href="#">Factions</a>
                     </div>
                     <div class="faction__nav-link">
-                        <img src="/img/star.png" alt="">
+                        <img src="img/star.png" alt="">
                     </div>
                     <div class="faction__nav-link">
                         <a href="#">Roadmap</a>
@@ -126,55 +117,59 @@
                 </aside> 
 
                 <div class="faction__title">Factions</div>
-               
-                <div class="faction__info">
-                    <div class="faction__points">
-                        <!-- заменять числа? -->
-                        <!-- при кликании заголовки становятся аперсейс -->
-                        <div class="faction__point-1">
-                            
-                            <div class="faction__point-title">
-                                Blighted Badlands
-                            </div>
-                            <div class="faction__point-about">
-    
-                            </div>
-    
-                        </div>
-    
-                        <div class="faction__point-2">
-    
-                            <div class="faction__point-title">
-                                Glacial Frontier
-                            </div>
-    
-                        </div>
-    
-                        <div class="faction__point-3">
-    
-                            <div class="faction__point-title">
-                                Sundered Grove
-                            </div>
-    
-                        </div>
-    
-                        <div class="faction__point-4">
-    
-                            <div class="faction__point-title">
-                                Sky Citadel 
-                            </div>
-    
-                        </div>
-    
+
+                <div class="faction__acor"> 
+                    
+                    <!-- <img src="img/faction-line.png" class="line" alt=""> -->
+
+                    <!-- <div class="faction__info">
+                        
+                    </div> -->
+                    <input type="radio" name="acor" id="acor1" checked />
+                    <label class="faction__acor-label" for="acor1">
+                        <h3 class="faction__acor-title">Blighted Badlands</h3>
+                        <img src="img/light-on.png" class="on" alt="">
+                        <img src="img/light-off.png" class="off" alt="">
+                    </label>
+                    <div class="faction__acor-body">
+                        <div class="faction__acor-btn">More</div>
+                        <img src="img/faction-vid.png" alt="">
                     </div>
-    
-                    <div class="faction__lights">
-    
-                        <img src="/img/factions-fancy.png" alt="">
-                        <!-- при ховер меняется расположение подсвечивающегося огонька -->
-                        <img src="/img/factions-light-on.png" class="faction__lights-on" alt="">
-    
+                    
+                    <input type="radio" name="acor" id="acor2" />
+                    <label class="faction__acor-label" for="acor2">
+                        <h3 class="faction__acor-title">Glacial Frontier</h3>
+                        <img src="img/light-on.png" class="on" alt="">
+                        <img src="img/light-off.png" class="off" alt="">
+                    </label>
+                    <div class="faction__acor-body">
+                        <div class="faction__acor-btn">More</div>
+                        <img src="img/faction-vid.png" alt="">
                     </div>
+                    
+                    <input type="radio" name="acor" id="acor3" />
+                    <label class="faction__acor-label" for="acor3">
+                        <h3 class="faction__acor-title">Sundered Grove</h3>
+                        <img src="img/light-on.png" class="on" alt="">
+                        <img src="img/light-off.png" class="off" alt="">
+                    </label>
+                    <div class="faction__acor-body">
+                        <div class="faction__acor-btn">More</div>
+                        <img src="img/faction-vid.png" alt="">
+                    </div> 
+
+                    <input type="radio" name="acor" id="acor4" />
+                    <label class="faction__acor-label" for="acor4">
+                        <h3 class="faction__acor-title">Sky Citadel</h3>
+                        <img src="img/light-on.png" class="on" alt="">
+                        <img src="img/light-off.png" class="off" alt="">
+                    </label>
+                    <div class="faction__acor-body">
+                        <div class="faction__acor-btn">More</div>
+                        <img src="img/faction-vid.png" alt="">
+                    </div> 
+                    
+                    
                 </div>
 
             </div>
@@ -190,7 +185,7 @@
             <div class="roadmap__inner">
 
                 <div class="roadmap__text">
-                    <img src="/img/our-way.png" alt="">
+                    <img src="img/our-way.png" alt="">
                    <div class="roadmap__title">Road Map</div>
                 </div>
                 
@@ -201,13 +196,13 @@
                             <a href="#">Factions</a>
                         </div>
                         <div class="roadmap__nav-link">
-                            <img src="/img/star.png" alt="">
+                            <img src="img/star.png" alt="">
                         </div>
                         <div class="roadmap__nav-link">
                             <a href="#">Roadmap</a>
                         </div>
                         <div class="roadmap__nav-link">
-                            <img src="/img/star.png" alt="">
+                            <img src="img/star.png" alt="">
                         </div>
                         <div class="roadmap__nav-link">
                             <a href="#">Collaborations</a>
@@ -217,9 +212,9 @@
                     <div class="roadmap__about">
 
                         <div class="roadmap__lights">
-                            <img src="/img/roadmap-fancy.png" alt="">
+                            <img src="img/roadmap-fancy.png" alt="">
                             <!-- при ховер меняется расположение подсвечивающегося огонька -->
-                            <img src="/img/light-on.png" class="roadmap__lights-on" alt="">
+                            <!-- <img src="/img/light-on.png" class="roadmap__lights-on" alt=""> -->
                         </div>
     
                         <div class="roadmap__points">
@@ -235,8 +230,8 @@
                                     </div>
         
                                     <div class="roadmap__point-about">
-                                        An original collection of 5,555 land plots will 
-                                        be made ready for the very first Dusktopian adventurers.
+                                        An original collection of 5,555 land plots will be made ready 
+                                        for the very first Dusktopian adventurers.
                                     </div>
 
                                 </div>
@@ -244,6 +239,13 @@
                             </div>
                             <div class="roadmap__point-2">
     
+                                <div class="roadmap__point-img">
+
+                                    <img src="img/frame-175.svg" alt="">
+
+
+                                </div>
+                                 
                                 <div class="roadmap__point-number">02</div>
     
                                 <div class="roadmap__point-text">
@@ -272,7 +274,7 @@
         
                                     <div class="roadmap__point-about">
                                         Claim a slice of our secret land collection with $DAWN.
-                                        <br> your existing land with new properties and accessories.
+                                        Outfit your existing land with new properties and accessories.
                                     </div>
 
                                 </div>
@@ -324,13 +326,13 @@
                         <a href="#">Roadmap</a>
                     </div>
                     <div class="collab__nav-link">
-                        <img src="/img/star.png" alt="">
+                        <img src="img/star.png" alt="">
                     </div>
                     <div class="collab__nav-link">
                         <a href="#">Collaborations</a>
                     </div>
                     <div class="collab__nav-link">
-                        <img src="/img/star.png" alt="">
+                        <img src="img/star.png" alt="">
                     </div>
                     <div class="collab__nav-link">
                         <a href="#">FAQ</a>
@@ -340,7 +342,7 @@
                 <div class="collab__info">
 
                     <div class="collab__text">
-                        <img src="/img/partners.png" alt="">
+                        <img src="img/partners.png" alt="">
                        <div class="collab__title">Collaborations</div>
                     </div>
 
@@ -376,10 +378,133 @@
             <div class="questions__inner">
 
                 <div class="questions__text">
-                    <img src="/img/FAQ.png" alt="">
-                   <div class="questions__title">
-                    Have   any questions?
+                    <img src="img/FAQ.png" alt="">
+                    <div class="questions__title">
+                        Have<span><img src="img/questions-vector.svg" alt=""></span>any questions?
+                    </div>
                 </div>
+
+                <div class="questions__info">
+
+                    <aside class="questions__nav">
+                        <div class="questions__nav-link">
+                            <a href="#">Factions</a>
+                        </div>
+                        <div class="questions__nav-link">
+                            <img src="img/star.png" alt="">
+                        </div>
+                        <div class="questions__nav-link">
+                            <a href="#">Roadmap</a>
+                        </div>
+                        <div class="questions__nav-link">
+                            <img src="img/star.png" alt="">
+                        </div>
+                        <div class="questions__nav-link">
+                            <a href="#">Collaborations</a>
+                        </div>
+                    </aside>
+    
+                    <div class="questions__about">
+    
+                        <!-- <img src="" alt=""> -->
+
+                        <div class="questions__block">
+                            <h3>How many?</h3>
+                            <p>
+                                Our genesis land NFT collection will comprise 5555 NFTs.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            
+                        </div>
+                        <div class="questions__block">
+                            <h3>How DO I Get Dusklist?</h3>
+                            <p>
+                                Get engaged and active with the community. The 
+                                earlier you are and more sGet engaged and active 
+                                with the community. The earlier you are and more 
+                                support you bring, the higher your chances. Upport 
+                                you bring, the higher your chances.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>How much?</h3>
+                            <p>
+                                Each genesis land NFT will be priced at 0.12eth + gas fees.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>WHEN mint?</h3>
+                            <p>
+                                We are targeting a release in mid May.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>Maximum mintable?</h3>
+                            <p>
+                                For Dusklist: 1 per wallet.
+                                For public sale: 2 per transaction.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>When is staking?</h3>
+                            <p>
+                                Staking with the EON Corporation will go live in the month after mint.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            
+                        </div>
+                        <div class="questions__block">
+                            <h3>Which blockchain?</h3>
+                            <p>
+                                Dusktopia will be built on the Ethereum blockchain.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>What is the utility?</h3>
+                            <p>
+                                Owning a genesis land NFT sets you up for the 
+                                rest of our ecosystem. The land collection is the 
+                                foundation of Dusktopia - holders will be 
+                                rewarded in the short term through the staking 
+                                mechanism. In the long term, they will be able to 
+                                build on that genesis land with various properties 
+                                and avatars we will be releasing.
+                            </p>
+                        </div>
+                        <div class="questions__block">
+                            <h3>Future mints?</h3>
+                            <p>
+                                Immediately after mint, we are planning for a 
+                                limited secondary land release for holders, 
+                                claimable with $DAWN. Subsequently, we will 
+                                release a Properties collection, as well as PFP 
+                                avatars which will serve as your in-game role.
+                            </p>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="team">
+
+        <div class="team__container">
+
+            <div class="team__inner">
+
+                <div class="team__text">
+                    <img src="img/members.png" alt="">
+                    <div class="team__title">
+                        Meet our team
+                    </div>
                 </div>
 
             </div>
@@ -394,22 +519,22 @@
 
             <div class="footer__inner">
 
-                <div class="footer__logo"><a href="#"><img src="/img/logo.png" alt=""></a></div>
+                <div class="footer__logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
 
                 <div class="footer__social">
                     <div class="footer__social-link">
                         <a href="#">
-                            <img src="/img/logo_discord.png" alt="Discord">
+                            <img src="img/logo_discord.png" alt="Discord">
                         </a>
                     </div>
                     <div class="footer__social-link">
                         <a href="#">
-                            <img src="/img/logo_twitter.png" alt="Twitter">
+                            <img src="img/logo_twitter.png" alt="Twitter">
                         </a>
                     </div>
                     <div class="footer__social-link">
                         <a href="#">
-                            <img src="/img/logo_medium-circle.png" alt="Medium">
+                            <img src="img/logo_medium-circle.png" alt="Medium">
                         </a>
                     </div>
                 </div>
@@ -421,5 +546,8 @@
         </div>
         
     </footer>
+
+    <script src="js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
