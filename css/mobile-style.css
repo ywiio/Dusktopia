@@ -1,0 +1,32 @@
+.container {
+    cursor: pointer;
+}
+
+.b1, .b2, .b3 {
+    height: 2.5px;
+    background-color: #fff;
+    margin-bottom: 9.16px;
+    margin-left: auto;
+    transition: 0.3s;
+}
+.b1{
+    width: 30.54px;
+}
+.b2{
+    width: 17.31px;
+}
+.b3{
+    width: 25.45px;
+}
+.change .b1 {
+    
+    transform: rotate(-45deg) translate(-6px, 10px);
+}
+.change .b2 {
+    
+    transform: rotate(45deg) translate(-9px, 1.69px);
+}
+.change .b3 {
+    
+    transform: rotate(45deg) translate(-5px, -9px);
+}

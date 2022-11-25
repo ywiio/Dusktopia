@@ -10,6 +10,7 @@
 
     width: 396px;
     height: 522px;
+    margin-right: 61px;
 
     background:    
     url("/img/faction-line.png")
@@ -17,11 +18,16 @@
 }
 
 .faction__acor-body {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     height: 0;
-    padding: 0 30px;
+    /* padding: 0 30px; */
     transition: color 0.5s, padding 0.5s;
     overflow: hidden;
+    position: relative;
+}
+
+.faction__acor-body img{
+    margin-left: 60px;
 }
 
 .faction__acor label {
@@ -42,6 +48,8 @@
 
 .faction__acor-title{
     padding-right: 70px;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 .on, .off{
@@ -78,24 +86,75 @@ input[type="radio"]:checked + label .off {
     background:    
     url("/img/btn-more.png")
     top no-repeat;
+
     position: absolute;
-    z-index: 2;
+    /* z-index: 2; */
     color: black;
     padding: 21px 41px 13px;
+    margin-top: 26.96px;
+
+    font-size: 16px;
+    /* font-weight: 700px; */
 }
 
-.line{
-    /* position: absolute;
-    align-self: center;
-    height: 495px;
-    padding: 13px 3px 3px 364px; */
 
-    /* при включении последнего высота уменьшаеься */
-
-    
-
+/* .timeline {
+    border-right: 4.81px solid #ffffff;
+    margin: 2em auto;
+    line-height: 1.4em;
+    padding: 1em;
+    padding-left: 3em;
+    list-style: none;
+    text-align: left;
+    margin-left: 10em;
+    margin-right: 3em;
+    min-width: 20em;
 }
 
+.event {
+    min-width: 20em;
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+    margin-top: 66px;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: -1em;
+}
+
+.timeline .event:before {
+    left: -15em;
+    color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 9em;
+  }
+  
+  .timeline .event:after {
+    box-shadow: 0 0 0 0.2em #4298c3;
+    right: -34px;
+    background:    
+    url("/img/light-off.png")
+    top no-repeat;
+    width: 33px;
+    height: 54px;
+    content: "";
+  } */
+  
+  /* .member-infos div,
+  .member-infos img {
+    display: none;
+  }
+  
+  .timeline .event:first-of-type,
+  .timeline .event:first-of-type {
+    display: block;
+  } */
 
 
 
