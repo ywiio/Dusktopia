@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-
-    <!-- <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/accordion_css.css">
+
+    <!-- <link rel="stylesheet" href="css/mobile-style.css">
+    <link rel="stylesheet" href="css/cards.scss"> -->
+
     <title>Dusktopia</title>
 </head>
 <body>
@@ -224,7 +223,7 @@
     
                         <div class="roadmap__points">
                             <!-- заменять числа? -->
-                            <div class="roadmap__point-1">
+                            <div class="roadmap__point">
     
                                 <div class="roadmap__point-number">01</div>
     
@@ -242,30 +241,7 @@
                                 </div>
                                     
                             </div>
-                            <div class="roadmap__point-2">
-    
-                                <div class="roadmap__point-img">
-                                    <div class="wrapper"></div>
-                                    <img src="img/frame-175.png" alt="">
-                                    <!-- <svg viewBox="0 0 462 175"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <defs>
-                                        <filter id="blur" x="0" y="0">
-                                        <feGaussianBlur stdDeviation="8" />
-                                        </filter>
-                                        <clipPath id="c">
-                                        <polygon points="0,0 61.9,0 82.16,13.18 462,13.18 462,164.2 410.8,164.3 391.748,175 0,175" />
-                                        </clipPath>
-                                    </defs>
-                                    <image xlink:href="img/white.png"
-                                            width="462" height="175" x="0" y="0"
-                                            filter="url(#blur)" clip-path="url(#c)"/>
-                                    </svg> -->
-
-                                    
-
-                                </div>
+                            <div class="roadmap__point">
                                  
                                 <div class="roadmap__point-number">02</div>
     
@@ -283,7 +259,7 @@
                                 </div>
     
                             </div>
-                            <div class="roadmap__point-3">
+                            <div class="roadmap__point">
     
                                 <div class="roadmap__point-number">03</div>
     
@@ -301,7 +277,7 @@
                                 </div>
 
                             </div>
-                            <div class="roadmap__point-4">
+                            <div class="roadmap__point">
 
                                 <div class="roadmap__point-number">04</div>
 
@@ -318,7 +294,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="roadmap__point-5">
+                            <div class="roadmap__point">
                                 <div class="roadmap__point-number">05</div>
 
                                 <div class="roadmap__point-text">LET THE GAMES BEGIN</div>
@@ -431,9 +407,8 @@
 
                         <div class="questions__block">
                             <h3>How many?</h3>
-                            <p>
-                                Our genesis land NFT collection will comprise 5555 NFTs.
-                            </p>
+                            <p>Our genesis land NFT collection will comprise</p>
+                            <p>5555 NFTs.</p>
                         </div>
                         <div class="questions__block">
                             <div class="questions__vec">
@@ -462,9 +437,8 @@
                         </div>
                         <div class="questions__block">
                             <h3>How much?</h3>
-                            <p>
-                                Each genesis land NFT will be priced at 0.12eth + gas fees.
-                            </p>
+                            <p>Each genesis land NFT will be priced at</p>
+                            <p>0.12eth + gas fees.</p>
                         </div>
                         <div class="questions__block">
                             <h3>WHEN mint?</h3>
@@ -503,7 +477,8 @@
                             </p>
                         </div>
                         <div class="questions__block">
-                            <h3>What is the utility?</h3>
+                            <h3>What is</h3>
+                            <h3>the utility?</h3>
                             <p>
                                 Owning a genesis land NFT sets you up for the 
                                 rest of our ecosystem. The land collection is the 
@@ -605,7 +580,103 @@
         </div>
 
     </div>
+
+    <!-- <div class="app">
+
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+            </button>
     
+            <div class="cards__wrapper">
+                <div class="card current--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+                    </div>
+                </div>
+    
+                <div class="card next--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+                    </div>
+                </div>
+    
+                <div class="card previous--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+                    </div>
+                </div>
+            </div>
+    
+            <button class="cardList__btn btn btn--right">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <h1 class="text name">Highlands</h1>
+                    <h4 class="text location">Scotland</h4>
+                    <p class="text description">The mountains are calling</p>
+                </div>
+    
+                <div class="info next--info">
+                    <h1 class="text name">Machu Pichu</h1>
+                    <h4 class="text location">Peru</h4>
+                    <p class="text description">Adventure is never far away</p>
+                </div>
+    
+                <div class="info previous--info">
+                    <h1 class="text name">Chamonix</h1>
+                    <h4 class="text location">France</h4>
+                    <p class="text description">Let your dreams come true</p>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+                <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+            </div>
+            <div class="app__bg__image next--image">
+                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+            </div>
+            <div class="app__bg__image previous--image">
+                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+    
+    
+    <svg class="icons" style="display: none;">
+        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='328 112 184 256 328 400'
+                         style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='184 112 328 256 184 400'
+                         style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+    </svg>
+  -->
+
     <footer class="footer footer--margin">
 
         <div class="footer__container">
@@ -640,12 +711,13 @@
         
     </footer>
 
+    <!-- <script src="js/cards.js"></script> -->
     <script src="js/app.js" defer></script>
-    <script src="js/app.js" defer></script>
+    
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 </body>
 </html>

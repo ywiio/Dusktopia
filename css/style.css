@@ -1,721 +1,589 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* :root{
-    --index: calc(1vw+1vh); 
-} */
 
 @font-face {
-    font-family: "Mazzard-R";
-    src: url('/font/MazzardH-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Mazzard-R";
+  src: url("/font/MazzardH-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-    font-family: "Mazzard-B";
-    src: url('/font/MazzardH-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Mazzard-B";
+  src: url("/font/MazzardH-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-    font-family: "OctosM";
-    src: url('/font/TTOctosquares-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "OctosM";
+  src: url("/font/TTOctosquares-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-    font-family: "OctosR";
-    src: url('/font/TTOctosquares-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OctosR";
+  src: url("/font/TTOctosquares-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: "NeueMachina-Medium";
-    font-style: normal;
-    font-weight: normal;
-    src: local("NeueMachina-Medium"),
-         url("/font/NeueMachina-Medium.woff2") format("woff2"),
+  font-family: "NeueMachina-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("NeueMachina-Medium"), url("/font/NeueMachina-Medium.woff2") format("woff2");
 }
 @font-face {
-    font-family: "NeueMachina-Bold";
-    font-style: normal;
-    font-weight: normal;
-    src: local("NeueMachina-Bold"),
-         url("/font/NeueMachina-Bold.woff2") format("woff2"),
+  font-family: "NeueMachina-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("NeueMachina-Bold"), url("/font/NeueMachina-Bold.woff2") format("woff2");
 }
 @font-face {
-    font-family: "NeueMachina-Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: local("NeueMachina-Regular"),
-         url("/font/NeueMachina-Regular.woff2") format("woff2"),
+  font-family: "NeueMachina-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("NeueMachina-Regular"), url("/font/NeueMachina-Regular.woff2") format("woff2");
+}
+body {
+  background-color: rgb(49, 49, 49);
+  color: white;
+  margin: 0 auto;
+  font-family: "Mazzard-R", serif;
 }
 
-
-
-
-body{
-    background-color: rgb(49, 49, 49);
-    color: white;
-    margin: 0 auto;
-    font-family: "Mazzard-R",serif;
-    
+[class*=__container] {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
 }
 
-[class*="__container"]{
-    width: 100vw;
-    height: fit-content;
-    overflow: hidden;
+[class*=__title] {
+  /* font-size: 64px; */
+  font-size: 4.44vw;
+  font-family: "OctosR", serif;
+  font-weight: 400;
+  line-height: 76px;
+  letter-spacing: 0.365em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+[class*=__text] {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
 }
 
-.header{
-    position: absolute;
-    z-index: 999;
-
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 57px 46px;
+div[class*=btn] {
+  font-family: "Neue Machina";
+  font-weight: 700;
+  /* letter-spacing: 0.9px; ???????????????????? */
+  line-height: 140%;
 }
 
-.header__social{
-    display: flex;
-    align-items: center;
-    column-gap: 31px;
+[class$=__nav] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  font-family: "NeueMachina-Medium", sans-serif;
+  letter-spacing: 0.9px;
+  /* justify-content: space-between; */
+  width: 22px;
+  margin-left: 50px;
 }
 
-.header__btn a{
-    padding: 22px 49px 14px;
-    background:    
-        url("img/btn.svg")
-         top no-repeat;  
+[class*=__nav-link] {
+  transform: rotate(90deg);
+  font-weight: 500;
+  line-height: 140%;
 }
 
-[class*="__title"]{
-    /* font-size: 64px; */
-    font-size: 4.44vw;
-    font-family: "OctosR",serif;
-    font-weight: 400;
-    line-height: 76px;
-    letter-spacing: 0.365em;
-    text-transform: uppercase;
-    text-align: center;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-[class*="__text"]{
-    /* margin: 0 auto; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* gap: 20px; */
+.header {
+  position: absolute;
+  z-index: 999;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 57px 46px;
+}
+.header__social {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
+}
+.header__btn a {
+  padding: 22px 49px 14px;
+  background: url("/img/btn.svg") top no-repeat;
 }
 
-div[class*="btn"]{
-    font-family: "Neue Machina";
-    font-weight: 700;
-    /* letter-spacing: 0.9px; ???????????????????? */
-    line-height: 140%;
+.main__container {
+  height: 100vh;
+  /* padding: 220px auto 221px; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.main__layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  /* will-change: transform; ?????????????????????????????? */
+}
+.main__layers-base {
+  background: url("/img/layer-intro-base.png") top no-repeat;
+  background-size: cover;
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: -2;
+}
+.main__layers-middle {
+  background: url("/img/layer-intro-middle.png") top no-repeat;
+  background-size: cover;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+.main__layers-front {
+  background: url("/img/layer-intro-front.png") top no-repeat;
+  background-size: cover;
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+.main__layers-gradient {
+  background: url("/img/gradient-1(chamge).png") top no-repeat;
+  background-size: cover;
+  transform: translate3d(0, calc(var(--scrollTop) / 7), 0);
+}
+.main__intro {
+  z-index: 9;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.main__text {
+  gap: 55px;
+  margin: 0 auto;
+}
+.main__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  margin-left: -44px;
+}
+.main__btn-mint a {
+  padding: 20px 47px 15px 48px;
+  background: url("/img/btn-mint.svg") top no-repeat;
+}
+.main__btn-mint a:hover {
+  background: url("/img/btn-connect.svg") top no-repeat;
+}
+.main__btn-connect a {
+  padding: 20px 33px 15px;
+  color: #000;
+  background: url("/img/btn-connect.svg") top no-repeat;
+  background-size: cover;
 }
 
-[class$="__nav"]{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 56px;
-    font-family: "NeueMachina-Medium", sans-serif;
-    letter-spacing: 0.9px;
-    /* justify-content: space-between; */
-    width: 22px;
-    margin-left: 50px;
+.faction__container {
+  height: 749px;
+  background: url("/img/back_faction.png") top no-repeat;
+  background-size: cover;
+  /* display: flex; */
+}
+.faction__inner {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 114px 0;
+}
+.faction__title {
+  margin-top: -31px;
+  margin-left: -107px;
+}
+.faction__info {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-family: "OctosM", serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+}
+.faction__points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 77px;
+}
+.faction__point-1 {
+  text-transform: uppercase;
+  margin-bottom: 152px;
+}
+.faction__lights-on {
+  position: absolute;
+  margin: 9px -32px;
 }
 
-[class*="__nav-link"]{
-    transform: rotate(90deg);
-    font-weight: 500;
-    line-height: 140%;
+.roadmap__container {
+  /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
+  min-height: 1666px;
+  background: url("/img/roadmap-first.png") right top no-repeat;
 }
-
-.main__container{
-    height: 100vh;
-    /* padding: 220px auto 221px; */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+.roadmap__inner {
+  padding-top: 85px;
 }
-
-.main__layer{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-position: center;
-    /* will-change: transform; ?????????????????????????????? */
+.roadmap__text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 53px;
+  margin-left: 158px;
+  margin-bottom: 111px;
+  align-items: flex-start;
+  gap: 10px;
 }
-
-.main__layers-base{
-    background:    
-        url("img/layer-intro-base.png")
-         top no-repeat;
-    background-size: cover;
-    transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
-    z-index: -2;
+.roadmap__title {
+  margin-left: -8px;
 }
-
-.main__layers-middle{
-    background:    
-        url("img/layer-intro-middle.png")
-        top no-repeat;
-    background-size: cover;
-    transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
+.roadmap__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 98px;
 }
-
-.main__layers-front{
-    background:    
-        url("img/layer-intro-front.png")
-        top no-repeat;
-    background-size: cover;
-    transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
+.roadmap__about {
+  display: flex;
+  /* align-items: flex-end; */
+  gap: 42px;
+  font-family: "Mazzard-R", serif;
+  font-size: 13px;
 }
-
-.main__layers-gradient{
-    background:    
-        url("img/gradient-1\(chamge\).png")
-        top no-repeat;
-    background-size: cover;
-    transform: translate3d(0, calc(var(--scrollTop)/7),0);
+.roadmap__lights-on {
+  position: absolute;
+  margin: 12px -48px;
 }
-
-.main__intro{
-    z-index: 9;
-    transform: translate3d(0, calc(var(--scrollTop)/2),0);
-    will-change: transform;
-    display: flex;
-    align-items: center;
-    /* margin-left: 3.19%; */
-    width: 100%;
-
-    /* width: 87.85%; */
-    /* gap: 7.35%; */
+.roadmap__points {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 503px;
+  z-index: 2;
 }
-
-.main__text{
-    gap: 55px;
-    margin-left: 5.6%;
-
-    /* margin-top: 28px; */
+.roadmap__point {
+  height: 175px;
+  position: relative;
+  -webkit-backdrop-filter: blur(16.9248px);
+          backdrop-filter: blur(16.9248px);
+  -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 484px 13.18px, 484px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
+          clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 484px 13.18px, 484px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
+  overflow: visible;
+  background: url("/img/frame-175.png") top no-repeat;
 }
-
-.main__btns{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 21px;
-    margin-left: -44px;
+.roadmap__point-number {
+  font-family: "Neue Machina";
+  font-weight: 700;
+  font-size: 41px;
 }
-
-.main__btn-mint a{
-    padding: 20px 47px 15px 48px;
-    background:    
-        url("img/btn-mint.svg")
-         top no-repeat;  
+.roadmap__point-title {
+  font-family: "Mazzard-B", serif;
+  font-weight: 700;
+  line-height: 140%;
 }
-
-.main__btn-connect a{
-    padding: 20px 33px 15px;
-    color: #000;
-    background:    
-        url("img/btn-connect.svg")
-         top no-repeat;  
-    background-size: cover;
+.roadmap__point-about {
+  width: 445px;
 }
-
-.faction__container{
-    height: 749px;
-    
-    background:    
-    url("img/back_faction.png")
-    top no-repeat;
-    background-size: cover;
-    /* display: flex; */
+.roadmap__point:nth-child(1) {
+  background: url("/img/frame-full-175.svg") left no-repeat;
+  color: #000;
+  font-size: 15px;
+  /* padding: 19px 21px 23px 27px; */
 }
-
-.faction__inner{
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 114px 0;
+.roadmap__point:nth-child(1) .roadmap__point-number {
+  font-size: 45px;
 }
-
-.faction__title{
-    margin-top: -31px;
-    margin-left: -107px;
-}
-
-
-
-.faction__info{
-    display: flex;
-    align-items: center;
-    gap: 27px;
-    font-family: "OctosM",serif;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 140%;
-}
-
-.faction__points{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 77px;
-}
-
-.faction__point-1{
-    text-transform: uppercase;
-    margin-bottom: 152px;
-}
-
-.faction__lights-on{
-    position: absolute;
-    margin: 9px -32px;
-}
-
-
-.roadmap__container{
-    /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
-    min-height: 1666px;
-
-    background:    
-    url("img/roadmap-first.png")
-    right top no-repeat;
-}
-
-.roadmap__inner{
-    padding-top: 85px;
-}
-
-.roadmap__text{
-    width: fit-content;
-    margin-top: 53px;
-    margin-left: 158px;
-    margin-bottom: 111px;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.roadmap__title{
-    margin-left: -8px;
-}
-
-.roadmap__info{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 98px;
-}
-
-.roadmap__about{
-    display: flex;
-    /* align-items: flex-end; */
-    gap: 42px;
-    font-family:"Mazzard-R", serif;
-    font-size: 13px;
-}
-
-.roadmap__lights-on{
-    position: absolute;
-    margin: 12px -48px;
-}
-
-.roadmap__points{
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    width: 503px;
-    z-index: 2;
+.roadmap__point:nth-child(5) {
+  background: url("/img/frame-130.svg") left no-repeat;
+  height: 130px;
 }
 
 /* мб сделать через before элемент */
-.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5{
-    
-    /* padding: 23px 21px 23px 29px; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    padding: 19px 21px 23px 27px;
-    cursor: pointer;
+.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 34px 70.89px 30px 27px;
+  cursor: pointer;
 }
 
-.roadmap__point-img img{
-    position: absolute;   
-    
-    width: 462px;
-    height: 175px;
-    /* z-index: -1; */
+.collab__container {
+  /* я думаю, надо заменять, но не знаю что */
+  padding-bottom: 146px;
 }
-.roadmap__point-img{
-    /* background:
-    url("/img/frame-175.svg")
-    left no-repeat;
-    backdrop-filter: blur(8px); */
-    /* filter: blur(8px); */
-    /* -webkit-filter: blur(8px); */
-    height: 175px;
-    
+.collab__inner {
+  margin-top: 63px;
+  display: flex;
+  /* gap: 100px; */
 }
-
-.wrapper:before { 
-        position: absolute;
-        content: '';
-        background: inherit;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
-        filter: blur(10px);
-        border-radius: 15px;
-        border: #000 5px solid;
+.collab__info {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  margin: 0 auto;
 }
-
-.roadmap__point-1 .roadmap__point-number{
-    font-size: 45px;
+.collab__logos {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1117px;
+  gap: 51px;
+  flex-wrap: wrap;
 }
-
-/* .roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4{
-    height: 175px;
-    background:    
-    url("/img/frame-175.svg")
-    left no-repeat;
-} */
-
-.roadmap__point-1{
-    background:    
-    url("img/frame-full-175.svg")
-    left no-repeat;
-    color: #000;
-    font-size: 15px;
-    /* padding: 19px 21px 23px 27px; */
+.collab__logo {
+  background: url("/img/logo_btn.png") left no-repeat;
+  width: 241px;
+  height: 113px;
+}
+.collab__logo a {
+  /* padding: 45px 81px 43px 82px; */
+  width: 241px;
+  height: 113px;
+  margin: auto;
+}
+.collab__text {
+  /* width: fit-content;
+  margin-top: 53px;
+  margin-left: 158px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
 }
 
-.roadmap__point-5{
-    background:    
-    url("img/frame-130.svg")
-    left no-repeat;
-    height: 130px;
+.questions__text {
+  /* width: fit-content; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.questions__title {
+  max-width: 675px;
+  text-align: center;
+}
+.questions__info {
+  display: flex;
+  align-items: center;
+  /* gap: 75px; */
+  margin-top: 90px;
+}
+.questions__about {
+  /* background:    
+  url("/img/questions-panel.png")
+  top no-repeat; */
+  width: 83.79vw;
+  height: 777px;
+  /* height: fit-content; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(407px, 1fr));
+  grid-template-rows: auto; */
+  margin: 0 auto;
+}
+.questions__title span {
+  padding: 0 47px 0 23px;
+}
+.questions__block {
+  padding: 58px 28px 45px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid white;
+}
+.questions__block p {
+  width: 351px;
+  font-family: "Mazzard-R";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: 16px;
+}
+.questions__block p:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+.questions__block:nth-child(4) p:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+.questions__block h3 {
+  width: 333px;
+  font-family: "TTOctosquares-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 117.8%;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.questions__vec img:nth-child(1) {
+  transform: rotate(90deg);
+}
+.questions__block:nth-child(2), .questions .questions__block:nth-child(8) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 56.67px;
+}
+.questions__block:nth-child(4) {
+  padding-top: 46px;
+  padding-bottom: 62px;
+}
+.questions__block:nth-child(10) {
+  padding-top: 43px;
+}
+.questions__block:nth-child(8) {
+  padding: 0;
+  height: 116.75px;
+}
+.questions__block:last-child {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.questions__vec {
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+}
+.questions__vec img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.questions__block:nth-child(2) .questions__vec:first-child {
+  width: 29%;
+}
+.questions__block:nth-child(2) .questions__vec:nth-child(2) {
+  width: 39%;
+}
+.questions__block:nth-child(2) .questions__vec:nth-child(3) {
+  width: 34%;
+}
+.questions__block:nth-child(8) .questions__vec:first-child {
+  width: 51%;
 }
 
-.roadmap__point-number{
-    font-family: "Neue Machina";
-    font-weight: 700;
-    font-size: 41px;
+.team__container {
+  margin-top: 262px;
 }
-
-.roadmap__point-title{
-    font-family:"Mazzard-B", serif;
-    font-weight: 700;
-    line-height: 140%;
+.team__info {
+  display: flex;
+  margin-top: 103.58px;
+  align-items: center;
 }
-
-.roadmap__point-about{
-    width: 445px;
+.team__text {
+  align-items: center;
 }
-
-
-/* .swiper {
-    width: 1224px;
-    height: 1733px;
-    padding: 50px;
-    margin: 155px 0 157px 195px;
+.team__cards {
+  display: flex;
+  margin-left: 8%;
+  gap: 27px;
+}
+.team__card {
+  background: url("/img/team-card.png") top no-repeat;
+  width: 265.2px;
+  height: 420.85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+.team__card img {
+  width: 247.08px;
+  height: 328.97px;
+  margin-top: 19.39px;
+}
+.team__job {
+  font-size: 8px;
+  line-height: 140%;
+  align-self: flex-start;
+  margin-left: 16px;
+}
+.team__name {
+  font-size: 21px;
+  line-height: 117.8%;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-left: 16px;
+}
+.team__card:first-child {
+  background: url("/img/team-card-full.png") top no-repeat;
+  width: 442px;
+  height: 701.42px;
+  /* &-img{
+      width: 411.8px;
+      height: 548.28px;
+      margin-top: 32.31px;
   }
 
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 2139.97px;
-    height: 1666px;
+  &-job{
+      font-size: 13px;
+      margin-left: 27px;
   }
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
+  &-name{
+      font-size: 35px;
+      align-self: flex-start;
+      margin-left: 27px;
   } */
-
-.collab__container{
-    /* я думаю, надо заменять, но не знаю что */
-    padding-bottom: 146px;
 }
 
-.collab__inner{
-    margin-top: 63px;
-    display: flex;
-    gap: 100px;
+.footer__inner {
+  display: flex;
+  align-items: center;
+  padding: 75px 50px;
 }
-
-.collab__info{
-    display: flex;
-    flex-direction: column;
-    gap: 51px;
+.footer__container {
+  /* margin: 0 auto; */
+  background-color: black;
 }
-
-.collab__logos{
-    display: flex;
-    justify-content: space-between;
-    max-width: 1117px;
-    gap: 51px;
-    flex-wrap: wrap;
+.footer__social {
+  display: flex;
+  margin-left: 124px;
+  align-items: center;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
 }
-
-.collab__logo{
-    background:    
-    url("img/logo_btn.png")
-    left no-repeat;
-    width: 241px;
-    height: 113px;
-}
-
-.collab__logo a{
-    /* padding: 45px 81px 43px 82px; */
-    width: 241px;
-    height: 113px;
-    margin: auto;
-}
-
-.collab__text{
-    /* width: fit-content;
-    margin-top: 53px;
-    margin-left: 158px;*/
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-}
-
-.questions__text{
-    /* width: fit-content; */
-    margin: 0 auto;
-    
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.questions__title{
-    max-width: 675px;
-    text-align: center;
-}
-
-.questions__info{
-    display: flex;
-    align-items: center;
-    gap: 75px;
-    margin-top: 90px;
-}
-
-.questions__about{
-    /* background:    
-    url("/img/questions-panel.png")
-    top no-repeat; */
-    width: 88.79%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(407px, 1fr));
-}
-
-.questions__about+img{
-    object-fit: cover;
-    width: 84.79vw;
-    height:100vh;
-    position: absolute;
-}
-
-.questions__title span{
-    padding: 0 47px 0 23px;
-}
-
-.questions__block{
-    padding: 58px 28px 18px;
-    /* width: 407px; */
-    height: fit-content;
-}
-
-.questions__block p{
-    width: 351px;
-    font-family: 'Mazzard-R';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    margin-top: 16px;
-}
-
-.questions__block h3{
-    width: 309px;
-    font-family: 'TTOctosquares-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 31px;
-    line-height: 117.8%;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-}
-
-.questions__block:nth-child(2), .questions__block:nth-child(8){
-    display: flex;
-    justify-content: space-between;
-}
-
-.questions__vec{
-    display: flex;
-}
-
-.team__container{
-    margin-top: 262px;
-}
-
-.team__info{
-    display: flex;
-    margin-top: 103.58px;
-    align-items: center;
-}
-
-.team__text{
-    align-items: center;
-}
-
-.team__cards{
-    display: flex;
-    margin-left: auto;
-    gap: 27px;
-}
-
-.team__card{
-    background:    
-    url("img/team-card.png")
-    top no-repeat;
-    width: 265.2px;
-    height: 420.85px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 13px;
-}
-
-.team__card img{
-    width: 247.08px;
-    height: 328.97px;
-    margin-top: 19.39px;
-}
-
-.team__job{
-    font-size: 8px;
-    line-height: 140%;
-    align-self: flex-start;
-    margin-left: 16px;
-}
-
-.team__name{
-    font-size: 21px;
-    line-height: 117.8%;
-    text-transform: uppercase;
-    align-self: flex-start;
-    margin-left: 16px;
-}
-
-.team__card:first-child{
-    background:    
-    url("img/team-card-full.png")
-    top no-repeat;
-    width: 442px;
-    height: 701.42px;
-
-    /* &-img{
-        width: 411.8px;
-        height: 548.28px;
-        margin-top: 32.31px;
-    }
-
-    &-job{
-        font-size: 13px;
-        margin-left: 27px;
-    }
-
-    &-name{
-        font-size: 35px;
-        align-self: flex-start;
-        margin-left: 27px;
-    } */
-}
-
-/* .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-
-
-.footer__inner{
-    display: flex;
-    align-items: center;
-    
-    padding: 75px 50px;
-}
-
-.footer__container{
-    /* margin: 0 auto; */
-    background-color: black;
-}
-
-.footer__social{
-    display: flex;
-    margin-left: 124px;
-    align-items: center;
-    column-gap: 31px;
-}
-
-.footer__rights{
-    margin-left: auto;
-}
-
-
+.footer__rights {
+  margin-left: auto;
+}/*# sourceMappingURL=style.css.map */
