@@ -47,6 +47,87 @@
   font-weight: normal;
   src: local("NeueMachina-Regular"), url("../font/NeueMachina-Regular.woff2") format("woff2");
 }
+.faction__acor {
+  font-family: "OctosM", serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 396px;
+  height: 522px;
+  margin-right: 61px;
+  background: url("../img/faction-line.png") top right 15px no-repeat;
+}
+.faction__acor-body {
+  /* margin: 0 auto; */
+  height: 0;
+  /* padding: 0 30px; */
+  transition: color 0.5s, padding 0.5s;
+  overflow: hidden;
+  position: relative;
+}
+.faction__acor-body img {
+  margin-left: 60px;
+}
+.faction__acor label {
+  cursor: pointer;
+  display: block;
+  /* padding: 15px 20px; */
+  width: 100%;
+  transition: color 0.35s;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.faction__acor input {
+  display: none;
+}
+.faction__acor-title {
+  padding-right: 70px;
+  font-weight: 500;
+  font-size: 22px;
+}
+.faction__acor label::after {
+  display: none;
+}
+.faction__acor input:checked + label:before {
+  transition: transform 0.35s;
+}
+.faction__acor-btn {
+  background: url("../img/btn-more.png") top no-repeat;
+  position: absolute;
+  /* z-index: 2; */
+  color: black;
+  padding: 21px 41px 13px;
+  margin-top: 26.96px;
+  font-size: 16px;
+  /* font-weight: 700px; */
+}
+
+.on, .off {
+  position: absolute;
+}
+
+label:nth-child(odd) .on, label:nth-child(odd) .off {
+  transform: scale(-1, 1);
+}
+
+input[type=radio]:checked + label {
+  text-transform: uppercase;
+}
+
+input[type=radio]:checked + label .off {
+  display: none;
+}
+
+.faction__acor input:checked + label + .faction__acor-body {
+  height: auto;
+  /* margin-top: -5px; */
+  /* padding: 20px 30px 10px; */
+}
+
 body {
   background-color: rgb(49, 49, 49);
   color: white;
