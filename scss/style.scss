@@ -88,7 +88,7 @@ a{
     &__btn a{
         padding: 22px 49px 14px;
         background:    
-            url("/img/btn.svg")
+            url('../img/btn.svg')
              top no-repeat;  
     }
 }
@@ -112,7 +112,7 @@ a{
     }
     &__layers-base{
         background:    
-            url("/img/layer-intro-base.png")
+            url('../img/layer-intro-base.png')
              top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
@@ -120,21 +120,21 @@ a{
     }
     &__layers-middle{
         background:    
-            url("/img/layer-intro-middle.png")
+            url('../img/layer-intro-middle.png')
             top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
     }
     &__layers-front{
         background:    
-            url("/img/layer-intro-front.png")
+            url('../img/layer-intro-front.png')
             top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
     }
     &__layers-gradient{
         background:    
-            url("/img/gradient-1\(chamge\).png")
+            url('../img/gradient-1\(chamge\).png')
             top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/7),0);
@@ -161,13 +161,13 @@ a{
     &__btn-mint a{
         padding: 20px 47px 15px 48px;
         background:    
-            url("/img/btn-mint.svg")
+            url('../img/btn-mint.svg')
              top no-repeat;  
     }
     &__btn-mint a{
         &:hover{
             background:    
-                url("/img/btn-connect.svg")
+                url('../img/btn-connect.svg')
                  top no-repeat;  
         }
     }
@@ -176,7 +176,7 @@ a{
         padding: 20px 33px 15px;
         color: #000;
         background:    
-            url("/img/btn-connect.svg")
+            url('../img/btn-connect.svg')
              top no-repeat;  
         background-size: cover;
     }
@@ -187,7 +187,7 @@ a{
     height: 749px;
     
     background:    
-    url("/img/back_faction.png")
+    url('../img/back_faction.png')
     top no-repeat;
     background-size: cover;
     /* display: flex; */
@@ -234,7 +234,7 @@ a{
         min-height: 1666px;
     
         background:    
-        url("/img/roadmap-first.png")
+        url('../img/roadmap-first.png')
         right top no-repeat;
     }
     &__inner{
@@ -247,6 +247,7 @@ a{
         margin-bottom: 111px;
         align-items: flex-start;
         gap: 10px;
+        
     }
     &__title{
         margin-left: -8px;
@@ -271,53 +272,71 @@ a{
     &__points{
         display: flex;
         flex-direction: column;
-        gap: 60px;
+        gap: 50px;
         width: 503px;
         z-index: 2;
     }
     &__point{
-        height: 175px;
-        position: relative;
+        // height: 175px;
+        // position: relative;
+       
         backdrop-filter: blur(16.9248px);
-        clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 484px 13.18px, 484px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
+        clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
         overflow: visible;
-        background:    
-        url("/img/frame-175.png")
-        top no-repeat;
-        // background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-        // border: 2.12px solid;
-        // border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
-        &-number{
+        // background:    
+        // url('../img/frame-175.png')
+        // top no-repeat;
+        background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
+        border: 2.12px solid;
+        border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+        &-text{
+            padding: 19px 21px 23px 27px;
+        }
+        h3{
             font-family: "Neue Machina";
             font-weight: 700;
             font-size: 41px;
         }
-        &-title{
+        h4{
             font-family:"Mazzard-B", serif;
             font-weight: 700;
             line-height: 140%;
         }
-        &-about{
+        p{
             width: 445px;
         }
     }
     &__point:nth-child(1){
         background:    
-        url("/img/frame-full-175.svg")
+        url('../img/frame-full-175.svg')
         left no-repeat;
         color: #000;
         font-size: 15px;
-        /* padding: 19px 21px 23px 27px; */
         .roadmap__point-number{
             font-size: 45px;
         }
     }
     &__point:nth-child(5){
         background:    
-        url("/img/frame-130.svg")
+        url('../img/frame-130.svg')
         left no-repeat;
         height: 130px;
     } 
+}
+
+.triangle-bottomleft {
+	width: 0;
+	height: 0;
+	border-bottom: 17.38px solid white; 
+	border-right: 16.47px solid transparent;	
+}
+.triangle-topright {
+	width: 0;
+	height: 0;
+    margin-left: auto;
+	border-top: 17.38px solid white; 
+	border-left: 16.47px solid transparent;	
+	
 }
 
 // короче тут надо глянуть с картинкой что делать, либо градиент пихать на фон, либо картинку, но с ней надо глянуть точки размытия
@@ -361,7 +380,7 @@ a{
     }
     &__logo{
         background:    
-        url("/img/logo_btn.png")
+        url('../img/logo_btn.png')
         left no-repeat;
         width: 241px;
         height: 113px;
@@ -407,7 +426,7 @@ a{
     }
     &__about{
         /* background:    
-        url("/img/questions-panel.png")
+        url('../img/questions-panel.png')
         top no-repeat; */
         width: 83.79vw;
         height: 777px;
@@ -526,7 +545,7 @@ a{
     }
     &__card{
         background:    
-        url("/img/team-card.png")
+        url('../img/team-card.png')
         top no-repeat;
         width: 265.2px;
         height: 420.85px;
@@ -556,7 +575,7 @@ a{
     }
     &__card:first-child{
         background:    
-        url("/img/team-card-full.png")
+        url('../img/team-card-full.png')
         top no-repeat;
         width: 442px;
         height: 701.42px;

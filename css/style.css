@@ -129,7 +129,7 @@ a {
 }
 .header__btn a {
   padding: 22px 49px 14px;
-  background: url("/img/btn.svg") top no-repeat;
+  background: url("../img/btn.svg") top no-repeat;
 }
 
 .main__container {
@@ -149,23 +149,23 @@ a {
   /* will-change: transform; ?????????????????????????????? */
 }
 .main__layers-base {
-  background: url("/img/layer-intro-base.png") top no-repeat;
+  background: url("../img/layer-intro-base.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: -2;
 }
 .main__layers-middle {
-  background: url("/img/layer-intro-middle.png") top no-repeat;
+  background: url("../img/layer-intro-middle.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
 }
 .main__layers-front {
-  background: url("/img/layer-intro-front.png") top no-repeat;
+  background: url("../img/layer-intro-front.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
 }
 .main__layers-gradient {
-  background: url("/img/gradient-1(chamge).png") top no-repeat;
+  background: url("../img/gradient-1(chamge).png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 7), 0);
 }
@@ -190,21 +190,21 @@ a {
 }
 .main__btn-mint a {
   padding: 20px 47px 15px 48px;
-  background: url("/img/btn-mint.svg") top no-repeat;
+  background: url("../img/btn-mint.svg") top no-repeat;
 }
 .main__btn-mint a:hover {
-  background: url("/img/btn-connect.svg") top no-repeat;
+  background: url("../img/btn-connect.svg") top no-repeat;
 }
 .main__btn-connect a {
   padding: 20px 33px 15px;
   color: #000;
-  background: url("/img/btn-connect.svg") top no-repeat;
+  background: url("../img/btn-connect.svg") top no-repeat;
   background-size: cover;
 }
 
 .faction__container {
   height: 749px;
-  background: url("/img/back_faction.png") top no-repeat;
+  background: url("../img/back_faction.png") top no-repeat;
   background-size: cover;
   /* display: flex; */
 }
@@ -246,7 +246,7 @@ a {
 .roadmap__container {
   /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
   min-height: 1666px;
-  background: url("/img/roadmap-first.png") right top no-repeat;
+  background: url("../img/roadmap-first.png") right top no-repeat;
 }
 .roadmap__inner {
   padding-top: 85px;
@@ -284,45 +284,62 @@ a {
 .roadmap__points {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   width: 503px;
   z-index: 2;
 }
 .roadmap__point {
-  height: 175px;
-  position: relative;
   -webkit-backdrop-filter: blur(16.9248px);
           backdrop-filter: blur(16.9248px);
-  -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 484px 13.18px, 484px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
-          clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 484px 13.18px, 484px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
+  -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
+          clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
   overflow: visible;
-  background: url("/img/frame-175.png") top no-repeat;
+  background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
+  border: 2.12px solid;
+  border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
 }
-.roadmap__point-number {
+.roadmap__point-text {
+  padding: 19px 21px 23px 27px;
+}
+.roadmap__point h3 {
   font-family: "Neue Machina";
   font-weight: 700;
   font-size: 41px;
 }
-.roadmap__point-title {
+.roadmap__point h4 {
   font-family: "Mazzard-B", serif;
   font-weight: 700;
   line-height: 140%;
 }
-.roadmap__point-about {
+.roadmap__point p {
   width: 445px;
 }
 .roadmap__point:nth-child(1) {
-  background: url("/img/frame-full-175.svg") left no-repeat;
+  background: url("../img/frame-full-175.svg") left no-repeat;
   color: #000;
   font-size: 15px;
-  /* padding: 19px 21px 23px 27px; */
 }
 .roadmap__point:nth-child(1) .roadmap__point-number {
   font-size: 45px;
 }
 .roadmap__point:nth-child(5) {
-  background: url("/img/frame-130.svg") left no-repeat;
+  background: url("../img/frame-130.svg") left no-repeat;
   height: 130px;
+}
+
+.triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-bottom: 17.38px solid white;
+  border-right: 16.47px solid transparent;
+}
+
+.triangle-topright {
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  border-top: 17.38px solid white;
+  border-left: 16.47px solid transparent;
 }
 
 /* мб сделать через before элемент */
@@ -358,7 +375,7 @@ a {
   flex-wrap: wrap;
 }
 .collab__logo {
-  background: url("/img/logo_btn.png") left no-repeat;
+  background: url("../img/logo_btn.png") left no-repeat;
   width: 241px;
   height: 113px;
 }
@@ -399,7 +416,7 @@ a {
 }
 .questions__about {
   /* background:    
-  url("/img/questions-panel.png")
+  url('../img/questions-panel.png')
   top no-repeat; */
   width: 83.79vw;
   height: 777px;
@@ -520,7 +537,7 @@ a {
   gap: 27px;
 }
 .team__card {
-  background: url("/img/team-card.png") top no-repeat;
+  background: url("../img/team-card.png") top no-repeat;
   width: 265.2px;
   height: 420.85px;
   display: flex;
@@ -547,7 +564,7 @@ a {
   margin-left: 16px;
 }
 .team__card:first-child {
-  background: url("/img/team-card-full.png") top no-repeat;
+  background: url("../img/team-card-full.png") top no-repeat;
   width: 442px;
   height: 701.42px;
   /* &-img{
