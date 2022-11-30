@@ -213,9 +213,10 @@ a {
   -moz-column-gap: 31px;
        column-gap: 31px;
 }
-.header__btn a {
-  padding: 22px 49px 14px;
-  background: url("../img/btn.svg") top no-repeat;
+.header__btn {
+  -webkit-clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
+          clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
+  border: 1px solid white;
 }
 
 .main__container {
@@ -332,7 +333,7 @@ a {
 .roadmap__container {
   /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
   min-height: 1666px;
-  background: url("../img/roadmap-first.png") right top no-repeat;
+  display: flex;
 }
 .roadmap__inner {
   padding-top: 85px;
@@ -375,14 +376,19 @@ a {
   z-index: 2;
 }
 .roadmap__point {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
   -webkit-backdrop-filter: blur(16.9248px);
           backdrop-filter: blur(16.9248px);
   -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
           clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
   overflow: visible;
   background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-  border: 2.12px solid;
+  border: 2.12px solid white;
   border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+  transition: background-color 0.6s ease;
 }
 .roadmap__point-text {
   padding: 19px 21px 23px 27px;
@@ -428,15 +434,40 @@ a {
   border-left: 16.47px solid transparent;
 }
 
-/* мб сделать через before элемент */
-.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 34px 70.89px 30px 27px;
-  cursor: pointer;
+.slideshow {
+  max-width: 1000px;
+  margin: auto;
+  z-index: -1;
+  left: 25%;
 }
 
+.slide {
+  display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .collab__container {
   /* я думаю, надо заменять, но не знаю что */
   padding-bottom: 146px;

@@ -65,6 +65,7 @@ div[class*="btn"]{
     /* justify-content: space-between; */
     width: 22px;
     margin-left: 50px;
+    //вставить здесь паддинг вместо гап
 }
 
 [class*="__nav-link"]{
@@ -93,10 +94,15 @@ a{
         column-gap: 31px;
     }
     &__btn a{
-        padding: 22px 49px 14px;
-        background:    
-            url('../img/btn.svg')
-             top no-repeat;  
+        // padding: 22px 49px 14px;
+        // background:    
+        //     url('../img/btn.svg')
+        //      top no-repeat;  
+    }
+    &__btn{
+        // clip-path: polygon(0 5.451px, 101.626px 5.451px, 110.095px 0, 136px 0, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0 51.54px);
+        clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
+        border: 1px solid white;
     }
 }
 
@@ -239,10 +245,10 @@ a{
     &__container{
         /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
         min-height: 1666px;
-    
-        background:    
-        url('../img/roadmap-first.png')
-        right top no-repeat;
+        display: flex;
+        // background:    
+        // url('../img/roadmap-first.png')
+        // right top no-repeat;
     }
     &__inner{
         padding-top: 85px;
@@ -286,6 +292,12 @@ a{
     &__point{
         // height: 175px;
         // position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        //padding: 34px 70.89px 30px 27px;
+        cursor: pointer;
        
         backdrop-filter: blur(16.9248px);
         clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
@@ -294,8 +306,11 @@ a{
         // url('../img/frame-175.png')
         // top no-repeat;
         background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-        border: 2.12px solid;
+        border: 2.12px solid white;
         border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+
+        transition: background-color 0.6s ease;
+
         &-text{
             padding: 19px 21px 23px 27px;
         }
@@ -331,6 +346,8 @@ a{
     } 
 }
 
+// впихнуть в код нормально
+
 .triangle-bottomleft {
 	width: 0;
 	height: 0;
@@ -343,21 +360,35 @@ a{
     margin-left: auto;
 	border-top: 17.38px solid white; 
 	border-left: 16.47px solid transparent;	
-	
 }
 
-// короче тут надо глянуть с картинкой что делать, либо градиент пихать на фон, либо картинку, но с ней надо глянуть точки размытия
-
-// ??????
-/* мб сделать через before элемент */
-.roadmap__point-1, .roadmap__point-2, .roadmap__point-3, .roadmap__point-4, .roadmap__point-5{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    padding: 34px 70.89px 30px 27px;
-    cursor: pointer;
+.slideshow{
+    max-width: 1000px;
+    //position: absolute;
+    margin: auto;
+    z-index: -1;
+    
+    left: 25%;
 }
+.slide {
+    display: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 
 .collab{
