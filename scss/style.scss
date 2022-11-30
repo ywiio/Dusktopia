@@ -5,8 +5,14 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 @import "fonts";
 @import "accordion";
+// @import "swiper";
 
 body{
     background-color: rgb(49, 49, 49);
@@ -426,9 +432,16 @@ a{
         margin-top: 90px;
     }
     &__about{
-        /* background:    
-        url('../img/questions-panel.png')
-        top no-repeat; */
+        backdrop-filter: blur(16.9248px);
+        clip-path: polygon(0px 0px, 61.9px 0px, 82.143px 13.134px, 1221px 13.134px, 1221px 766px, 1169.81px 766px, 1150.762px 776.746px, 0px 776.746px);
+        overflow: visible;
+        // background:    
+        // url('../img/frame-175.png')
+        // top no-repeat;
+        background: linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
+        border: 2.12px solid;
+        border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+
         width: 83.79vw;
         height: 777px;
         /* height: fit-content; */

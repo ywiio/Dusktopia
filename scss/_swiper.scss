@@ -1,0 +1,31 @@
+.home .content {
+  text-align: center;
+  padding-top: 6rem;
+  margin: 2rem auto;
+  max-width: 70rem;
+}
+  
+.home .content h3 {
+  color: #fff;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+  
+.home .content h3 span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+  
+.home .home-slider .swiper-slide {
+  overflow: hidden;
+  width: 35rem;
+  border-radius: .5rem;
+  height: 50rem;
+    
+}
+  
+.swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
