@@ -1,3 +1,23 @@
+@import "fonts";
+@import "accordion";
+@import "header";
+@import "main";
+@import "factions";
+@import "roadmap";
+@import "collab";
+@import "questions";
+@import "footer";
+// @import "swiper";
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
 
 *{
     margin: 0;
@@ -10,22 +30,16 @@ html{
     scroll-behavior: smooth;
 }
 
-@import "fonts";
-@import "accordion";
-// @import "swiper";
-
 body{
     background-color: rgb(49, 49, 49);
     color: white;
     margin: 0 auto;
     font-family: "Mazzard-R",serif;
-    
 }
 
 [class*="__container"]{
     width: 100vw;
     height: fit-content;
-    overflow: hidden;
 }
 
 [class*="__title"]{
@@ -59,12 +73,13 @@ div[class*="btn"]{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 56px;
+    //gap: 56px;
     font-family: "NeueMachina-Medium", sans-serif;
     letter-spacing: 0.9px;
     /* justify-content: space-between; */
     width: 22px;
     margin-left: 50px;
+
     //вставить здесь паддинг вместо гап
 }
 
@@ -72,278 +87,12 @@ div[class*="btn"]{
     transform: rotate(90deg);
     font-weight: 500;
     line-height: 140%;
+    margin-top: 56px;
 }
 
 a{
     text-decoration: none;
     color: white;
-}
-
-.header{
-    position: absolute;
-    z-index: 999;
-
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 57px 46px;
-    &__social{
-        display: flex;
-        align-items: center;
-        column-gap: 31px;
-    }
-    &__btn a{
-        // padding: 22px 49px 14px;
-        // background:    
-        //     url('../img/btn.svg')
-        //      top no-repeat;  
-    }
-    &__btn{
-        // clip-path: polygon(0 5.451px, 101.626px 5.451px, 110.095px 0, 136px 0, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0 51.54px);
-        clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
-        border: 1px solid white;
-    }
-}
-
-.main{
-    &__container{
-        height: 100vh;
-        /* padding: 220px auto 221px; */
-        display: flex;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-        position: relative;
-    }
-    &__layer{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-position: center;
-        /* will-change: transform; ?????????????????????????????? */
-    }
-    &__layers-base{
-        background:    
-            url('../img/layer-intro-base.png')
-             top no-repeat;
-        background-size: cover;
-        transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
-        z-index: -2;
-    }
-    &__layers-middle{
-        background:    
-            url('../img/layer-intro-middle.png')
-            top no-repeat;
-        background-size: cover;
-        transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
-    }
-    &__layers-front{
-        background:    
-            url('../img/layer-intro-front.png')
-            top no-repeat;
-        background-size: cover;
-        transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
-    }
-    &__layers-gradient{
-        background:    
-            url('../img/gradient-1\(chamge\).png')
-            top no-repeat;
-        background-size: cover;
-        transform: translate3d(0, calc(var(--scrollTop)/7),0);
-    }
-    &__intro{
-        z-index: 9;
-        transform: translate3d(0, calc(var(--scrollTop)/2),0);
-        will-change: transform;
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    &__text{
-        gap: 55px;
-        margin:0 auto;
-    }
-    &__btns{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 21px;
-        margin-left: -44px;
-    }
-    &__btn-mint a{
-        padding: 20px 47px 15px 48px;
-        background:    
-            url('../img/btn-mint.svg')
-             top no-repeat;  
-    }
-    &__btn-mint a{
-        &:hover{
-            background:    
-                url('../img/btn-connect.svg')
-                 top no-repeat;  
-        }
-    }
-    
-    &__btn-connect a{
-        padding: 20px 33px 15px;
-        color: #000;
-        background:    
-            url('../img/btn-connect.svg')
-             top no-repeat;  
-        background-size: cover;
-    }
-}
-
-.faction{
-    &__container{
-    height: 749px;
-    
-    background:    
-    url('../img/back_faction.png')
-    top no-repeat;
-    background-size: cover;
-    /* display: flex; */
-    }
-    &__inner{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 114px 0;
-    }
-    &__title{
-        margin-top: -31px;
-        margin-left: -107px;
-    }
-    &__info{
-        display: flex;
-        align-items: center;
-        gap: 27px;
-        font-family: "OctosM",serif;
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 140%;
-    }
-    &__points{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 77px;
-    }
-    &__point-1{
-        text-transform: uppercase;
-        margin-bottom: 152px;
-    }
-    &__lights-on{
-        position: absolute;
-        margin: 9px -32px;
-    }
-}
-
-.roadmap{
-    &__container{
-        /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
-        min-height: 1666px;
-        display: flex;
-        // background:    
-        // url('../img/roadmap-first.png')
-        // right top no-repeat;
-    }
-    &__inner{
-        padding-top: 85px;
-    }
-    &__text{
-        width: fit-content;
-        margin-top: 53px;
-        margin-left: 158px;
-        margin-bottom: 111px;
-        align-items: flex-start;
-        gap: 10px;
-        
-    }
-    &__title{
-        margin-left: -8px;
-    }
-    &__info{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 98px;
-    }
-    &__about{
-        display: flex;
-        /* align-items: flex-end; */
-        gap: 42px;
-        font-family:"Mazzard-R", serif;
-        font-size: 13px;
-    }
-    &__lights-on{
-        position: absolute;
-        margin: 12px -48px;
-    }
-    &__points{
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        width: 503px;
-        z-index: 2;
-    }
-    &__point{
-        // height: 175px;
-        // position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        //padding: 34px 70.89px 30px 27px;
-        cursor: pointer;
-       
-        backdrop-filter: blur(16.9248px);
-        clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
-        overflow: visible;
-        // background:    
-        // url('../img/frame-175.png')
-        // top no-repeat;
-        background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-        border: 2.12px solid white;
-        border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
-
-        transition: background-color 0.6s ease;
-
-        &-text{
-            padding: 19px 21px 23px 27px;
-        }
-        h3{
-            font-family: "Neue Machina";
-            font-weight: 700;
-            font-size: 41px;
-        }
-        h4{
-            font-family:"Mazzard-B", serif;
-            font-weight: 700;
-            line-height: 140%;
-        }
-        p{
-            width: 445px;
-        }
-    }
-    &__point:nth-child(1){
-        background:    
-        url('../img/frame-full-175.svg')
-        left no-repeat;
-        color: #000;
-        font-size: 15px;
-        .roadmap__point-number{
-            font-size: 45px;
-        }
-    }
-    &__point:nth-child(5){
-        background:    
-        url('../img/frame-130.svg')
-        left no-repeat;
-        height: 130px;
-    } 
 }
 
 // впихнуть в код нормально
@@ -361,308 +110,3 @@ a{
 	border-top: 17.38px solid white; 
 	border-left: 16.47px solid transparent;	
 }
-
-.slideshow{
-    max-width: 1000px;
-    //position: absolute;
-    margin: auto;
-    z-index: -1;
-    
-    left: 25%;
-}
-.slide {
-    display: none;
-}
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-
-.collab{
-    &__container{
-        /* я думаю, надо заменять, но не знаю что */
-        padding-bottom: 146px;
-    }
-    &__inner{
-        margin-top: 63px;
-        display: flex;
-        /* gap: 100px; */
-    }
-    &__info{
-        display: flex;
-        flex-direction: column;
-        gap: 51px;
-        margin: 0 auto;
-    }
-    &__logos{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        // ?????????????????????????
-        max-width: 1117px; 
-        gap: 51px;
-        flex-wrap: wrap;
-    }
-    &__logo{
-        background:    
-        url('../img/logo_btn.png')
-        left no-repeat;
-        width: 241px;
-        height: 113px;
-    }
-    &__logo a{
-        /* padding: 45px 81px 43px 82px; */
-        width: 241px;
-        height: 113px;
-        margin: auto;
-    }
-    &__text{
-        /* width: fit-content;
-        margin-top: 53px;
-        margin-left: 158px;*/
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-    }
-}
-
-.questions{
-    &__text{
-        /* width: fit-content; */
-        margin: 0 auto;
-        
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        justify-content: center;
-        gap: 20px;
-    }
-    &__title{
-        max-width: 675px;
-        text-align: center;
-    }
-    &__info{
-        display: flex;
-        align-items: center;
-        /* gap: 75px; */
-        margin-top: 90px;
-    }
-    &__about{
-        backdrop-filter: blur(16.9248px);
-        clip-path: polygon(0px 0px, 61.9px 0px, 82.143px 13.134px, 1221px 13.134px, 1221px 766px, 1169.81px 766px, 1150.762px 776.746px, 0px 776.746px);
-        overflow: visible;
-        // background:    
-        // url('../img/frame-175.png')
-        // top no-repeat;
-        background: linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
-        border: 2.12px solid;
-        border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
-
-        width: 83.79vw;
-        height: 777px;
-        /* height: fit-content; */
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        /* display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(407px, 1fr));
-        grid-template-rows: auto; */
-        margin: 0 auto;
-    }
-    &__title span{
-        padding: 0 47px 0 23px;
-    }
-    &__block{
-        padding: 58px 28px 45px;
-        height: fit-content;
-        border: 1px solid white;
-    }
-    &__block p{
-        width: 351px;
-        font-family: 'Mazzard-R';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 140%;
-        margin-top: 16px;
-    }
-    &__block p:nth-of-type(2){
-        font-weight: 700;
-        font-size: 24px;
-        margin: 0;
-    }
-    &__block:nth-child(4) p:nth-of-type(2){
-        font-weight: 700;
-        font-size: 14px;
-        margin: 0;
-    }
-    &__block h3{
-        width: 333px;
-        font-family: 'TTOctosquares-Regular';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 31px;
-        line-height: 117.8%;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-    }
-    &__vec img:nth-child(1){
-        transform: rotate(90deg);
-    }
-    &__block:nth-child(2), .questions__block:nth-child(8){
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0;
-        height: 56.67px;
-    }
-    &__block:nth-child(4){
-        padding-top: 46px;
-        padding-bottom: 62px;
-    }
-    &__block:nth-child(10){
-        padding-top: 43px;
-    }
-    &__block:nth-child(8){
-        padding: 0;
-        height: 116.75px;
-    }
-    &__block:last-child{
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    &__vec{
-        display: flex;
-        justify-content: center;
-        border: 1px solid white;
-        height: 100%;
-        width: 100%;
-    }
-    &__vec img{
-        object-fit: contain;
-        width: fit-content;
-    }
-    &__block:nth-child(2) .questions__vec:first-child{
-        width: 29%;
-    } 
-    &__block:nth-child(2) .questions__vec:nth-child(2){
-        width: 39%;
-    } 
-    &__block:nth-child(2) .questions__vec:nth-child(3){
-        width: 34%;
-    } 
-    &__block:nth-child(8) .questions__vec:first-child{
-        width: 51%;
-    }     
-}
-
-.team{
-    &__container{
-        margin-top: 262px;
-    }
-    &__info{
-        display: flex;
-        margin-top: 103.58px;
-        align-items: center;
-    }
-    &__text{
-        align-items: center;
-    }
-    &__cards{
-        display: flex;
-        margin-left: 8%;
-        gap: 27px;
-    }
-    &__card{
-        background:    
-        url('../img/team-card.png')
-        top no-repeat;
-        width: 265.2px;
-        height: 420.85px;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 13px;
-    }
-    &__card img{
-        width: 247.08px;
-        height: 328.97px;
-        margin-top: 19.39px;
-    }
-    &__job{
-        font-size: 8px;
-        line-height: 140%;
-        align-self: flex-start;
-        margin-left: 16px;
-    }
-    &__name{
-        font-size: 21px;
-        line-height: 117.8%;
-        text-transform: uppercase;
-        align-self: flex-start;
-        margin-left: 16px;
-    }
-    &__card:first-child{
-        background:    
-        url('../img/team-card-full.png')
-        top no-repeat;
-        width: 442px;
-        height: 701.42px;
-    
-        /* &-img{
-            width: 411.8px;
-            height: 548.28px;
-            margin-top: 32.31px;
-        }
-    
-        &-job{
-            font-size: 13px;
-            margin-left: 27px;
-        }
-    
-        &-name{
-            font-size: 35px;
-            align-self: flex-start;
-            margin-left: 27px;
-        } */
-    }
-}
-
-.footer{
-    &__inner{
-        display: flex;
-        align-items: center;
-        
-        padding: 75px 50px;
-    }
-    &__container{
-        /* margin: 0 auto; */
-        background-color: black;
-    }
-    &__social{
-        display: flex;
-        margin-left: 124px;
-        align-items: center;
-        column-gap: 31px;
-    }
-    &__rights{
-        margin-left: auto;
-    }
-}
-

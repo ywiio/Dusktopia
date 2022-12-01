@@ -1,0 +1,88 @@
+.main{
+    &__container{
+        height: 100vh;
+        /* padding: 220px auto 221px; */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    &__layer{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-position: center;
+        /* will-change: transform; ?????????????????????????????? */
+    }
+    &__layers-base{
+        background:    
+            url('../img/layer-intro-base.png')
+             top no-repeat;
+        background-size: cover;
+        transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
+        z-index: -2;
+    }
+    &__layers-middle{
+        background:    
+            url('../img/layer-intro-middle.png')
+            top no-repeat;
+        background-size: cover;
+        transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
+    }
+    &__layers-front{
+        background:    
+            url('../img/layer-intro-front.png')
+            top no-repeat;
+        background-size: cover;
+        transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
+    }
+    &__layers-gradient{
+        background:    
+            url('../img/gradient-1\(chamge\).png')
+            top no-repeat;
+        background-size: cover;
+        transform: translate3d(0, calc(var(--scrollTop)/7),0);
+    }
+    &__intro{
+        z-index: 9;
+        transform: translate3d(0, calc(var(--scrollTop)/2),0);
+        will-change: transform;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__text{
+        gap: 55px;
+        margin:0 auto;
+    }
+    &__btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 21px;
+        margin-left: -44px;
+    }
+    &__btn-mint a{
+        padding: 20px 47px 15px 48px;
+        background:    
+            url('../img/btn-mint.svg')
+             top no-repeat;  
+    }
+    &__btn-mint a{
+        &:hover{
+            background:    
+                url('../img/btn-connect.svg')
+                 top no-repeat;  
+        }
+    }
+    
+    &__btn-connect a{
+        padding: 20px 33px 15px;
+        color: #000;
+        background:    
+            url('../img/btn-connect.svg')
+             top no-repeat;  
+        background-size: cover;
+    }
+}

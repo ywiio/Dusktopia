@@ -1,0 +1,21 @@
+.footer{
+    &__inner{
+        display: flex;
+        align-items: center;
+        
+        padding: 75px 50px;
+    }
+    &__container{
+        /* margin: 0 auto; */
+        background-color: black;
+    }
+    &__social{
+        display: flex;
+        margin-left: 124px;
+        align-items: center;
+        column-gap: 31px;
+    }
+    &__rights{
+        margin-left: auto;
+    }
+}

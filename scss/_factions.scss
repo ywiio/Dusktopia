@@ -1,0 +1,45 @@
+.faction{
+    &__container{
+    height: 749px;
+    
+    background:    
+    url('../img/back_faction.png')
+    top no-repeat;
+    background-size: cover;
+    /* display: flex; */
+    }
+    &__inner{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 114px 0;
+    }
+    &__title{
+        margin-top: -31px;
+        margin-left: -107px;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        gap: 27px;
+        font-family: "OctosM",serif;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 140%;
+    }
+    &__points{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 77px;
+    }
+    &__point-1{
+        text-transform: uppercase;
+        margin-bottom: 152px;
+    }
+    &__lights-on{
+        position: absolute;
+        margin: 9px -32px;
+    }
+}
