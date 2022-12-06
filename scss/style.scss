@@ -8,6 +8,8 @@
 @import "collab";
 @import "questions";
 @import "footer";
+
+@import "media";
 // @import "swiper";
 
 *{
@@ -34,8 +36,8 @@ body{
 }
 
 [class*="__title"]{
-    /* font-size: 64px; */
-    font-size: 4.44vw;
+    font-size: 64px; 
+    // font-size: 4.44vw;
     font-family: "OctosR",serif;
     font-weight: 400;
     line-height: 76px;

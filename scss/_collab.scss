@@ -24,17 +24,21 @@
         flex-wrap: wrap;
     }
     &__logo{
+        @include btn(241);
+        height: 113px;
+        
+        backdrop-filter: blur(16.9248px);
+        clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
         background:    
-        url('../img/logo_btn.png')
-        left no-repeat;
-        width: 241px;
-        height: 113px;
-    }
-    &__logo a{
-        /* padding: 45px 81px 43px 82px; */
-        width: 241px;
-        height: 113px;
-        margin: auto;
+        url('../img/btn-241.png')
+        top no-repeat;
+
+        font-family: "OctosR", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 100%;
+        text-transform: uppercase;
     }
     &__text{
         /* width: fit-content;

@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px)
+{
+    [class*="__title"] {
+        font-size: 50px;
+    }
+    [class$="__nav"]{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px)
+{
+    .header{
+        &__btn, &__social{
+            display: none;
+        }
+        &__burger{
+            display: block;
+        }
+    }
+    .main{
+        &__btns{
+            flex-direction: column;
+        }
+    }
+
+}

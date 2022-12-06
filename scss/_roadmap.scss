@@ -43,26 +43,23 @@
         // z-index: 2;
     }
     &__point{
-        display: flex;
-        flex-direction: column;
         @include btn(464);
         height: 175px;
-        cursor: pointer;
         backdrop-filter: blur(16.9248px);
         clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
-        overflow: visible;
         background:    
         url('../img/frame-175.png')
         top no-repeat;
+
         // background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
         // border: 2.12px solid white;
         // border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
 
-        transition: background-color 0.6s ease;
 
         &:hover{
+            // width: 503px;
             background:    
-            url("../img/frame-full-175.svg")
+            url("../img/frame-full-175.png")
              top no-repeat;
         }
 
@@ -70,30 +67,22 @@
             content: "";
             position: absolute;
             width: 50%;
-            height: 50%;            
-            // background: radial-gradient( #F1A347 50%,  #FF72E0);
+            height: 50%;
             background:
             linear-gradient(60deg,#F1A347, #FF72E0);
-            // linear-gradient(127deg, #FF72E0, rgba(0,255,0,0) 70.71%);
             filter: blur(51.7478px);
         }
 
         &-text{
-            // padding: 19px 21px 23px 27px;
             width: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: flex-start;
             z-index: 1;
             h3{
                 font-family: "Neue Machina";
-                font-weight: 700;
                 font-size: 41px;
             }
             h4{
                 font-family:"Mazzard-B", serif;
-                font-weight: 700;
                 line-height: 140%;
             }
             p{
@@ -124,7 +113,7 @@
         margin-right: 40%;
     } 
 }
-
+//?????????????????????????
 .actve{
     background:    
             url("../img/frame-full-175.svg")

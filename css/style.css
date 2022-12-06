@@ -97,10 +97,13 @@
   height: 56px;
   width: 136px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  overflow: hidden;
   font-weight: 700;
+  cursor: pointer;
   font-size: 16px;
   color: black;
 }
@@ -155,16 +158,48 @@ input[type=radio]:checked + label .off {
   height: 56px;
   width: 194px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  overflow: hidden;
   font-weight: 700;
+  cursor: pointer;
 }
 .header__btn:hover {
   color: #000;
 }
 .header__btn:hover {
   background: url("../img/btn-194-hov.png") top no-repeat;
+}
+.header__burger {
+  display: none;
+  cursor: pointer;
+}
+.header__burger .line1, .header__burger .line2, .header__burger .line3 {
+  height: 2.5px;
+  background-color: #fff;
+  margin-bottom: 9.16px;
+  margin-left: auto;
+  transition: 0.3s;
+}
+.header__burger .line1 {
+  width: 30.54px;
+}
+.header__burger .line2 {
+  width: 17.31px;
+}
+.header__burger .line3 {
+  width: 25.45px;
+}
+.header__burger .change .line1 {
+  transform: rotate(-45deg) translate(-6px, 10px);
+}
+.header__burger .change .line2 {
+  transform: rotate(45deg) translate(-9px, 1.69px);
+}
+.header__burger .change .line3 {
+  transform: rotate(45deg) translate(-5px, -9px);
 }
 
 .main__container {
@@ -230,10 +265,13 @@ input[type=radio]:checked + label .off {
   height: 56px;
   width: 136px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  overflow: hidden;
   font-weight: 700;
+  cursor: pointer;
 }
 .main__btn-mint:hover {
   color: #000;
@@ -248,10 +286,13 @@ input[type=radio]:checked + label .off {
   height: 56px;
   width: 194px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  overflow: hidden;
   font-weight: 700;
+  cursor: pointer;
 }
 .main__btn-connect:hover {
   color: #000;
@@ -344,30 +385,28 @@ input[type=radio]:checked + label .off {
   margin-top: -17px;
 }
 .roadmap__point {
-  display: flex;
-  flex-direction: column;
   height: 56px;
   width: 464px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  overflow: hidden;
   font-weight: 700;
-  height: 175px;
   cursor: pointer;
+  height: 175px;
   -webkit-backdrop-filter: blur(16.9248px);
           backdrop-filter: blur(16.9248px);
   -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
           clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
-  overflow: visible;
   background: url("../img/frame-175.png") top no-repeat;
-  transition: background-color 0.6s ease;
 }
 .roadmap__point:hover {
   color: #000;
 }
 .roadmap__point:hover {
-  background: url("../img/frame-full-175.svg") top no-repeat;
+  background: url("../img/frame-full-175.png") top no-repeat;
 }
 .roadmap__point::before {
   content: "";
@@ -379,20 +418,15 @@ input[type=radio]:checked + label .off {
 }
 .roadmap__point-text {
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   z-index: 1;
 }
 .roadmap__point-text h3 {
   font-family: "Neue Machina";
-  font-weight: 700;
   font-size: 41px;
 }
 .roadmap__point-text h4 {
   font-family: "Mazzard-B", serif;
-  font-weight: 700;
   line-height: 140%;
 }
 .roadmap__point-text p {
@@ -469,15 +503,31 @@ input[type=radio]:checked + label .off {
   flex-wrap: wrap;
 }
 .collab__logo {
-  background: url("../img/logo_btn.png") left no-repeat;
+  height: 56px;
   width: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  overflow: hidden;
+  font-weight: 700;
+  cursor: pointer;
   height: 113px;
+  -webkit-backdrop-filter: blur(16.9248px);
+          backdrop-filter: blur(16.9248px);
+  -webkit-clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
+          clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
+  background: url("../img/btn-241.png") top no-repeat;
+  font-family: "OctosR", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 100%;
+  text-transform: uppercase;
 }
-.collab__logo a {
-  /* padding: 45px 81px 43px 82px; */
-  width: 241px;
-  height: 113px;
-  margin: auto;
+.collab__logo:hover {
+  color: #000;
 }
 .collab__text {
   /* width: fit-content;
@@ -639,6 +689,25 @@ input[type=radio]:checked + label .off {
   margin-left: auto;
 }
 
+@media screen and (max-width: 768px) {
+  [class*=__title] {
+    font-size: 50px;
+  }
+  [class$=__nav] {
+    display: none;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header__btn, .header__social {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+  .main__btns {
+    flex-direction: column;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -662,8 +731,7 @@ body {
 }
 
 [class*=__title] {
-  /* font-size: 64px; */
-  font-size: 4.44vw;
+  font-size: 64px;
   font-family: "OctosR", serif;
   font-weight: 400;
   line-height: 76px;
