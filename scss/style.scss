@@ -1,3 +1,4 @@
+@import "variables";
 @import "fonts";
 @import "accordion";
 @import "header";
@@ -8,16 +9,6 @@
 @import "questions";
 @import "footer";
 // @import "swiper";
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-  
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
 
 *{
     margin: 0;
@@ -39,7 +30,7 @@ body{
 
 [class*="__container"]{
     width: 100vw;
-    height: fit-content;
+    // height: fit-content;
 }
 
 [class*="__title"]{
@@ -71,23 +62,19 @@ div[class*="btn"]{
 
 [class$="__nav"]{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    //gap: 56px;
+    gap: 40px;
     font-family: "NeueMachina-Medium", sans-serif;
     letter-spacing: 0.9px;
-    /* justify-content: space-between; */
     width: 22px;
-    margin-left: 50px;
-
-    //вставить здесь паддинг вместо гап
+    transform: rotate(90deg);
+    align-self: baseline;
+    margin-left: 53px;
 }
 
 [class*="__nav-link"]{
-    transform: rotate(90deg);
     font-weight: 500;
     line-height: 140%;
-    margin-top: 56px;
 }
 
 a{

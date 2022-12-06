@@ -51,19 +51,19 @@
     input:checked + label:before {
         transition: transform .35s;
     }
-    &-btn{
-        background:    
-        url('../img/btn-more.png')
-        top no-repeat;
-    
+    &-btn{    
         position: absolute;
-        /* z-index: 2; */
-        color: black;
-        padding: 21px 41px 13px;
-        margin-top: 26.96px;
-    
+
+        background:    
+            url("../img/btn-more.png")
+             top no-repeat;  
+        clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+        @include btn(136);
         font-size: 16px;
-        /* font-weight: 700px; */
+        color: black;
+        &:hover{
+            filter: brightness(1.2);
+        }
     }
 }
 

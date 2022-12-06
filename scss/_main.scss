@@ -63,26 +63,29 @@
         gap: 21px;
         margin-left: -44px;
     }
-    &__btn-mint a{
-        padding: 20px 47px 15px 48px;
+    &__btn-mint{
         background:    
-            url('../img/btn-mint.svg')
+            url("../img/btn-136.png")
              top no-repeat;  
-    }
-    &__btn-mint a{
+        clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
+        @include btn(136);
         &:hover{
             background:    
-                url('../img/btn-connect.svg')
-                 top no-repeat;  
+            url("../img/btn-136-hov.png")
+             top no-repeat;
         }
     }
     
-    &__btn-connect a{
-        padding: 20px 33px 15px;
-        color: #000;
+    &__btn-connect{
         background:    
-            url('../img/btn-connect.svg')
+            url('../img/btn-194.png')
              top no-repeat;  
-        background-size: cover;
+        clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+        @include btn(194);
+        &:hover{
+            background:    
+            url('../img/btn-194-hov.png')
+             top no-repeat;
+        }
     }
 }

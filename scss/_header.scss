@@ -1,26 +1,26 @@
 .header{
     position: absolute;
     z-index: 999;
-
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 57px 46px;
+    padding: 40px 46px;
     &__social{
         display: flex;
         align-items: center;
         column-gap: 31px;
     }
-    &__btn a{
-        // padding: 22px 49px 14px;
-        // background:    
-        //     url('../img/btn.svg')
-        //      top no-repeat;  
-    }
     &__btn{
-        // clip-path: polygon(0 5.451px, 101.626px 5.451px, 110.095px 0, 136px 0, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0 51.54px);
-        clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
-        border: 1px solid white;
+        background:    
+            url('../img/btn-194.png')
+             top no-repeat;  
+        clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+        @include btn(194);
+        &:hover{
+            background:    
+            url('../img/btn-194-hov.png')
+             top no-repeat;
+        }
     }
 }

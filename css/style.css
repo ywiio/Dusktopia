@@ -90,14 +90,25 @@
   transition: transform 0.35s;
 }
 .faction__acor-btn {
-  background: url("../img/btn-more.png") top no-repeat;
   position: absolute;
-  /* z-index: 2; */
-  color: black;
-  padding: 21px 41px 13px;
-  margin-top: 26.96px;
+  background: url("../img/btn-more.png") top no-repeat;
+  -webkit-clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+          clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+  height: 56px;
+  width: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  font-weight: 700;
   font-size: 16px;
-  /* font-weight: 700px; */
+  color: black;
+}
+.faction__acor-btn:hover {
+  color: #000;
+}
+.faction__acor-btn:hover {
+  filter: brightness(1.2);
 }
 
 .on, .off {
@@ -129,7 +140,7 @@ input[type=radio]:checked + label .off {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 57px 46px;
+  padding: 40px 46px;
 }
 .header__social {
   display: flex;
@@ -138,9 +149,22 @@ input[type=radio]:checked + label .off {
        column-gap: 31px;
 }
 .header__btn {
-  -webkit-clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
-          clip-path: polygon(0 5.5px, 159.5px 5.5px, 168px 0, 194px 0, 194px 56.5px, 29.5px 56.5px, 21.5px 52px, 0 52px);
-  border: 1px solid white;
+  background: url("../img/btn-194.png") top no-repeat;
+  -webkit-clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+          clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+  height: 56px;
+  width: 194px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  font-weight: 700;
+}
+.header__btn:hover {
+  color: #000;
+}
+.header__btn:hover {
+  background: url("../img/btn-194-hov.png") top no-repeat;
 }
 
 .main__container {
@@ -199,18 +223,41 @@ input[type=radio]:checked + label .off {
   gap: 21px;
   margin-left: -44px;
 }
-.main__btn-mint a {
-  padding: 20px 47px 15px 48px;
-  background: url("../img/btn-mint.svg") top no-repeat;
+.main__btn-mint {
+  background: url("../img/btn-136.png") top no-repeat;
+  -webkit-clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
+          clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
+  height: 56px;
+  width: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  font-weight: 700;
 }
-.main__btn-mint a:hover {
-  background: url("../img/btn-connect.svg") top no-repeat;
-}
-.main__btn-connect a {
-  padding: 20px 33px 15px;
+.main__btn-mint:hover {
   color: #000;
-  background: url("../img/btn-connect.svg") top no-repeat;
-  background-size: cover;
+}
+.main__btn-mint:hover {
+  background: url("../img/btn-136-hov.png") top no-repeat;
+}
+.main__btn-connect {
+  background: url("../img/btn-194.png") top no-repeat;
+  -webkit-clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+          clip-path: polygon(0px 5.451px, 159.5px 5.451px, 168px 0px, 194px 0px, 194px 56px, 29.5px 56px, 21.5px 51.54px, 0px 51.54px);
+  height: 56px;
+  width: 194px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  font-weight: 700;
+}
+.main__btn-connect:hover {
+  color: #000;
+}
+.main__btn-connect:hover {
+  background: url("../img/btn-194-hov.png") top no-repeat;
 }
 
 .faction__container {
@@ -255,8 +302,6 @@ input[type=radio]:checked + label .off {
 }
 
 .roadmap__container {
-  /* изменить картинку на фоне, и тогда по идее убрать эту высоту */
-  min-height: 1666px;
   display: flex;
 }
 .roadmap__inner {
@@ -296,51 +341,87 @@ input[type=radio]:checked + label .off {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  width: 503px;
+  margin-top: -17px;
 }
 .roadmap__point {
   display: flex;
   flex-direction: column;
+  height: 56px;
+  width: 464px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  font-weight: 700;
+  height: 175px;
   cursor: pointer;
   -webkit-backdrop-filter: blur(16.9248px);
           backdrop-filter: blur(16.9248px);
   -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
           clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
   overflow: visible;
-  background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-  border: 2.12px solid white;
-  border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+  background: url("../img/frame-175.png") top no-repeat;
   transition: background-color 0.6s ease;
 }
 .roadmap__point:hover {
-  background: rgba(255, 255, 255, 0.1607843137);
+  color: #000;
+}
+.roadmap__point:hover {
+  background: url("../img/frame-full-175.svg") top no-repeat;
+}
+.roadmap__point::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(60deg, #F1A347, #FF72E0);
+  filter: blur(51.7478px);
 }
 .roadmap__point-text {
-  padding: 19px 21px 23px 27px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
 }
-.roadmap__point h3 {
+.roadmap__point-text h3 {
   font-family: "Neue Machina";
   font-weight: 700;
   font-size: 41px;
 }
-.roadmap__point h4 {
+.roadmap__point-text h4 {
   font-family: "Mazzard-B", serif;
   font-weight: 700;
   line-height: 140%;
 }
-.roadmap__point p {
+.roadmap__point-text p {
   width: 392px;
+  font-weight: 400;
 }
-.roadmap__point:nth-child(1) {
-  background: url("../img/frame-full-175.svg") left no-repeat;
-  color: #000;
-  font-size: 15px;
+.roadmap__point:nth-child(1)::before {
+  margin-left: 50%;
+  margin-bottom: 26%;
 }
-.roadmap__point:nth-child(1) .roadmap__point-number {
-  font-size: 45px;
+.roadmap__point:nth-child(2)::before {
+  margin-top: 26%;
+  margin-right: 40%;
 }
-.roadmap__point:nth-child(5) {
-  height: 130px;
+.roadmap__point:nth-child(3)::before {
+  margin-left: 25%;
+  margin-bottom: 26%;
+}
+.roadmap__point:nth-child(4)::before {
+  margin-left: 25%;
+  margin-bottom: 26%;
+}
+.roadmap__point:nth-child(5)::before {
+  margin-top: 26%;
+  margin-right: 40%;
+}
+
+.actve {
+  background: url("../img/frame-full-175.svg") top no-repeat;
 }
 
 .slideshow {
@@ -558,22 +639,6 @@ input[type=radio]:checked + label .off {
   margin-left: auto;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -594,9 +659,6 @@ body {
 
 [class*=__container] {
   width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 [class*=__title] {
@@ -628,20 +690,19 @@ div[class*=btn] {
 
 [class$=__nav] {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 40px;
   font-family: "NeueMachina-Medium", sans-serif;
   letter-spacing: 0.9px;
-  /* justify-content: space-between; */
   width: 22px;
-  margin-left: 50px;
+  transform: rotate(90deg);
+  align-self: baseline;
+  margin-left: 53px;
 }
 
 [class*=__nav-link] {
-  transform: rotate(90deg);
   font-weight: 500;
   line-height: 140%;
-  margin-top: 56px;
 }
 
 a {
