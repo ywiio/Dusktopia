@@ -1,6 +1,7 @@
 .roadmap{
     &__container{
         display: flex;
+        margin-bottom: 168px;
     }
     &__inner{
         padding-top: 85px;
@@ -86,7 +87,7 @@
                 line-height: 140%;
             }
             p{
-                width: 392px;
+                width: 100%;
                 font-weight: 400;
             }
         }
