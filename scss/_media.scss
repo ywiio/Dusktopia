@@ -1,9 +1,30 @@
+@media screen and (max-width: 1024px) {
+    .faction{
+        &__inner{
+            flex-direction: column;
+        }
+    }
+    .roadmap{
+        &__title{
+            font-size: 40px !important;
+        }
+    }
+    .collab{
+        &__title{
+            font-size: 40px !important;
+        }
+    }
+}
+
 @media screen and (max-width: 768px)
 {
     [class*="__title"] {
-        font-size: 50px;
+        font-size: 50px !important;
     }
     [class$="__nav"]{
+        display: none !important;
+    }
+    .collab{
         display: none;
     }
 }
@@ -23,5 +44,24 @@
             flex-direction: column;
         }
     }
-
+    .faction{        
+        &__title{
+            font-size: 40px;
+        }
+    }
+    .footer{
+        
+        &__inner{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__social{
+            margin: 0;
+        }
+        &__rights{
+            text-align: start;
+            margin: 0;
+        }
+    }
 }
