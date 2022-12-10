@@ -9,7 +9,7 @@
     &__text{
         width: fit-content;
         margin-top: 53px;
-        margin-left: 158px;
+        margin-left: 11%;
         margin-bottom: 111px;
         align-items: flex-start;
         gap: 10px;
@@ -117,14 +117,11 @@
 //?????????????????????????
 .actve{
     background:    
-            url("../img/frame-full-175.svg")
-             top no-repeat;
+        url("../img/frame-full-175.svg")
+        top no-repeat;
 }
 
 .slideshow{
-    // max-width: 1000px;
-    //position: absolute;
-    // margin: auto;
     z-index: -1;
     margin-left: -42%;
     margin-top: 55px;
@@ -135,6 +132,7 @@
     &:nth-child(5){
         margin-left: 220px;
     }
+    @include fade;
 }
 .fade {
     -webkit-animation-name: fade;

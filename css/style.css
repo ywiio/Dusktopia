@@ -55,9 +55,7 @@
   background: url("../img/faction-line.png") top right 15px no-repeat;
 }
 .faction__acor-body {
-  /* margin: 0 auto; */
   height: 0;
-  /* padding: 0 30px; */
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
   position: relative;
@@ -91,9 +89,9 @@
 }
 .faction__acor-btn {
   position: absolute;
-  background: url("../img/btn-more.png") top no-repeat;
-  -webkit-clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
-          clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+  -webkit-clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+          clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+  background: url("../img/btn-more.png");
   height: 56px;
   width: 136px;
   display: flex;
@@ -132,8 +130,6 @@ input[type=radio]:checked + label .off {
 
 .faction__acor input:checked + label + .faction__acor-body {
   height: auto;
-  /* margin-top: -5px; */
-  /* padding: 20px 30px 10px; */
 }
 
 .header {
@@ -353,7 +349,7 @@ input[type=radio]:checked + label .off {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 53px;
-  margin-left: 158px;
+  margin-left: 11%;
   margin-bottom: 111px;
   align-items: flex-start;
   gap: 10px;
@@ -470,6 +466,22 @@ input[type=radio]:checked + label .off {
 }
 .slide:nth-child(5) {
   margin-left: 220px;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .fade {
@@ -691,17 +703,33 @@ input[type=radio]:checked + label .off {
   text-align: end;
 }
 
+@media screen and (max-width: 1090px) {
+  .collab__title {
+    font-size: 50px !important;
+  }
+}
 @media screen and (max-width: 1024px) {
   .faction__inner {
     flex-direction: column;
   }
+  .faction__title {
+    margin-bottom: 40px;
+  }
+  .faction__acor {
+    margin: 0;
+  }
   .roadmap__title {
-    font-size: 40px !important;
+    font-size: 40px;
   }
   .slideshow {
     margin-left: -80%;
     filter: brightness(0.6);
   }
+  .collab__title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 890px) {
   .collab__title {
     font-size: 40px !important;
   }
@@ -718,6 +746,9 @@ input[type=radio]:checked + label .off {
   }
   .collab {
     display: none;
+  }
+  .roadmap__info {
+    margin-left: 11%;
   }
 }
 @media screen and (max-width: 660px) {
@@ -757,6 +788,9 @@ input[type=radio]:checked + label .off {
   }
   .roadmap__info {
     justify-content: center;
+  }
+  .questions__title {
+    font-size: 35px;
   }
   .footer__inner {
     flex-direction: column;

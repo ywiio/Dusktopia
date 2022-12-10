@@ -1,12 +1,25 @@
+@media screen and (max-width: 1090px){
+    .collab{
+        &__title{
+            font-size: 50px !important;
+        }
+    }
+}
 @media screen and (max-width: 1024px) {
     .faction{
         &__inner{
             flex-direction: column;
         }
+        &__title{
+            margin-bottom: 40px;
+        }
+        &__acor{
+            margin: 0;
+        }
     }
     .roadmap{
         &__title{
-            font-size: 40px !important;
+            font-size: 40px;
         }
     }
     .slideshow{
@@ -15,9 +28,18 @@
     }
     .collab{
         &__title{
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 890px){
+    .collab{
+        &__title{
             font-size: 40px !important;
         }
     }
+    
 }
 
 @media screen and (max-width: 768px)
@@ -28,11 +50,17 @@
     [class$="__nav"]{
         display: none !important;
     }
+    
     .slideshow{
         margin-left: -130%;
     }
     .collab{
         display: none;
+    }
+    .roadmap{
+        &__info{
+            margin-left: 11%;
+        }
     }
 }
 
@@ -72,6 +100,11 @@
         }
         &__info{
             justify-content: center;
+        }
+    }
+    .questions{        
+        &__title{
+            font-size: 35px;
         }
     }
     .footer{

@@ -16,9 +16,7 @@
     url('../img/faction-line.png')
     top right 15px no-repeat;
     &-body {
-        /* margin: 0 auto; */
         height: 0;
-        /* padding: 0 30px; */
         transition: color 0.5s, padding 0.5s;
         overflow: hidden;
         position: relative;
@@ -53,17 +51,23 @@
     }
     &-btn{    
         position: absolute;
-
-        background:    
-            url("../img/btn-more.png")
-             top no-repeat;  
-        clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 124.33px 0px, 124.33px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+        clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
+        background: url("../img/btn-more.png");
         @include btn(136);
         font-size: 16px;
         color: black;
         &:hover{
             filter: brightness(1.2);
         }
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: linear-gradient(90deg, #FFB800 0%, #FFBAC3 70.62%);
+        //     backdrop-filter: blur(17px);
+        //     z-index: -5;
+        // }
     }
 }
 
@@ -86,6 +90,4 @@ input[type="radio"]:checked + label .off {
 
 .faction__acor input:checked + label + .faction__acor-body {
     height: auto;
-    /* margin-top: -5px; */
-    /* padding: 20px 30px 10px; */
 }

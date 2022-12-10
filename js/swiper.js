@@ -26,43 +26,49 @@ document.querySelectorAll('.theme-toggler .theme-btn').forEach(btn => {
   }
 }) 
 
-
+import Swiper from 'swiper-bundle.esm.js';
+// import 'swiper-bundle.css';
 //Sliders
 
-const swiper = new Swiper(".home-slider", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1, 
-          slideShadows: true, 
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
+const swiper = new Swiper(".team__cards", {
+      direction: 'horizontal',
+      loop: true,
+      effect: "coverflow",
+      slidesPerView: 4,
+      centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+        // coverflowEffect: {
+        //   rotate: 50,
+        //   stretch: 0,
+        //   depth: 100,
+        //   modifier: 1, 
+        //   slideShadows: true, 
+        // },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        // },
 });
 
-const slider = new Swiper(".review-slider", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1, 
-          slideShadows: true, 
-        },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-}); 
+// const slider = new Swiper(".review-slider", {
+//         effect: "coverflow",
+//         grabCursor: true,
+//         centeredSlides: true,
+//         slidesPerView: "auto",
+//         coverflowEffect: {
+//           rotate: 50,
+//           stretch: 0,
+//           depth: 100,
+//           modifier: 1, 
+//           slideShadows: true, 
+//         },
+//         autoplay: {
+//           delay: 3000,
+//           disableOnInteraction: false
+//         },
+//         pagination: {
+//           el: ".swiper-pagination",
+//         },
+// }); 
