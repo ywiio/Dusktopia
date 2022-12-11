@@ -1,7 +1,7 @@
 @media screen and (max-width: 1090px){
     .collab{
         &__title{
-            font-size: 50px !important;
+            font-size: 50px;
         }
     }
 }
@@ -15,11 +15,6 @@
         }
         &__acor{
             margin: 0;
-        }
-    }
-    .roadmap{
-        &__title{
-            font-size: 40px;
         }
     }
     .slideshow{
@@ -36,7 +31,7 @@
 @media screen and (max-width: 890px){
     .collab{
         &__title{
-            font-size: 40px !important;
+            font-size: 40px;
         }
     }
     
@@ -45,10 +40,10 @@
 @media screen and (max-width: 768px)
 {
     [class*="__title"] {
-        font-size: 50px !important;
+        font-size: 50px;
     }
     [class$="__nav"]{
-        display: none !important;
+        display: none;
     }
     .main{
         &__btns{
@@ -106,10 +101,18 @@
         &__info{
             justify-content: center;
         }
+        &__line{
+            &-mobile{
+                display: block;
+            }
+            &-desk{
+                display: none;
+            }
+        }
     }
     .questions{        
         &__title{
-            font-size: 35px !important;
+            font-size: 35px;
             span{
                 padding:0 12px;
                 img{

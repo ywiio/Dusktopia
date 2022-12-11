@@ -1,3 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    margin: 0 auto;
+    font-family: "Mazzard-R",serif;
+}
+
+[class*="__container"]{
+    width: 100vw;
+    // height: fit-content;
+}
+
+[class*="__title"]{
+    font-size: 64px; 
+    // font-size: 4.44vw;
+    font-family: "OctosR",serif;
+    font-weight: 400;
+    line-height: 76px;
+    letter-spacing: 0.365em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+[class*="__text"]{
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+}
+
+div[class*="btn"]{
+    font-family: "Neue Machina";
+    font-weight: 700;
+    /* letter-spacing: 0.9px; ???????????????????? */
+    line-height: 140%;
+}
+
+[class$="__nav"]{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: "NeueMachina-Medium", sans-serif;
+    letter-spacing: 0.9px;
+    width: 22px;
+    transform: rotate(90deg);
+    align-self: baseline;
+    margin-left: 53px;
+}
+
+[class*="__nav-link"]{
+    font-weight: 500;
+    line-height: 140%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 @mixin btn($width) {
     height: 56px;
     width: $width*1px;

@@ -1,4 +1,79 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+  color: white;
+  margin: 0 auto;
+  font-family: "Mazzard-R", serif;
+}
+
+[class*=__container] {
+  width: 100vw;
+}
+
+[class*=__title] {
+  font-size: 64px;
+  font-family: "OctosR", serif;
+  font-weight: 400;
+  line-height: 76px;
+  letter-spacing: 0.365em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+[class*=__text] {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
+}
+
+div[class*=btn] {
+  font-family: "Neue Machina";
+  font-weight: 700;
+  /* letter-spacing: 0.9px; ???????????????????? */
+  line-height: 140%;
+}
+
+[class$=__nav] {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-family: "NeueMachina-Medium", sans-serif;
+  letter-spacing: 0.9px;
+  width: 22px;
+  transform: rotate(90deg);
+  align-self: baseline;
+  margin-left: 53px;
+}
+
+[class*=__nav-link] {
+  font-weight: 500;
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 @font-face {
   font-family: "Mazzard-R";
   src: url("../font/MazzardH-Regular.woff2") format("woff2");
@@ -298,7 +373,6 @@ input[type=radio]:checked + label .off {
 }
 
 .faction__container {
-  height: 749px;
   background: url("../img/back_faction.png") top no-repeat;
   background-size: cover;
   /* display: flex; */
@@ -448,6 +522,9 @@ input[type=radio]:checked + label .off {
 .roadmap__point:nth-child(5)::before {
   margin-top: 26%;
   margin-right: 40%;
+}
+.roadmap__line-mobile {
+  display: none;
 }
 
 .actve {
@@ -705,7 +782,7 @@ input[type=radio]:checked + label .off {
 
 @media screen and (max-width: 1090px) {
   .collab__title {
-    font-size: 50px !important;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -718,9 +795,6 @@ input[type=radio]:checked + label .off {
   .faction__acor {
     margin: 0;
   }
-  .roadmap__title {
-    font-size: 40px;
-  }
   .slideshow {
     margin-left: -80%;
     filter: brightness(0.6);
@@ -731,15 +805,15 @@ input[type=radio]:checked + label .off {
 }
 @media screen and (max-width: 890px) {
   .collab__title {
-    font-size: 40px !important;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 768px) {
   [class*=__title] {
-    font-size: 50px !important;
+    font-size: 50px;
   }
   [class$=__nav] {
-    display: none !important;
+    display: none;
   }
   .main__btns {
     margin-left: 0;
@@ -792,8 +866,14 @@ input[type=radio]:checked + label .off {
   .roadmap__info {
     justify-content: center;
   }
+  .roadmap__line-mobile {
+    display: block;
+  }
+  .roadmap__line-desk {
+    display: none;
+  }
   .questions__title {
-    font-size: 35px !important;
+    font-size: 35px;
   }
   .questions__title span {
     padding: 0 12px;
@@ -814,78 +894,4 @@ input[type=radio]:checked + label .off {
     text-align: start;
     margin: 0;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: rgb(49, 49, 49);
-  color: white;
-  margin: 0 auto;
-  font-family: "Mazzard-R", serif;
-}
-
-[class*=__container] {
-  width: 100vw;
-}
-
-[class*=__title] {
-  font-size: 64px;
-  font-family: "OctosR", serif;
-  font-weight: 400;
-  line-height: 76px;
-  letter-spacing: 0.365em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-[class*=__text] {
-  /* margin: 0 auto; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* gap: 20px; */
-}
-
-div[class*=btn] {
-  font-family: "Neue Machina";
-  font-weight: 700;
-  /* letter-spacing: 0.9px; ???????????????????? */
-  line-height: 140%;
-}
-
-[class$=__nav] {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  font-family: "NeueMachina-Medium", sans-serif;
-  letter-spacing: 0.9px;
-  width: 22px;
-  transform: rotate(90deg);
-  align-self: baseline;
-  margin-left: 53px;
-}
-
-[class*=__nav-link] {
-  font-weight: 500;
-  line-height: 140%;
-}
-
-a {
-  text-decoration: none;
-  color: white;
 }/*# sourceMappingURL=style.css.map */
