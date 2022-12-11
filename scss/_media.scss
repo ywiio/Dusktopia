@@ -50,6 +50,11 @@
     [class$="__nav"]{
         display: none !important;
     }
+    .main{
+        &__btns{
+            margin-left: 0;
+        }
+    }
     
     .slideshow{
         margin-left: -130%;
@@ -104,7 +109,13 @@
     }
     .questions{        
         &__title{
-            font-size: 35px;
+            font-size: 35px !important;
+            span{
+                padding:0 12px;
+                img{
+                    width: 28px;
+                }
+            }
         }
     }
     .footer{
@@ -124,3 +135,4 @@
         }
     }
 }
+

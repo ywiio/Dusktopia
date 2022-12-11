@@ -1,7 +1,8 @@
 .team{
-    cursor: url('../img/cursor.png'),auto;
+    // cursor: url('../img/cursor.png'),auto;
     &__container{
         margin-top: 262px;
+        margin-bottom: 161px;
     }
     &__info{
         display: flex;
@@ -11,63 +12,73 @@
     &__text{
         align-items: center;
     }
-    &__cards{
-        display: flex;
-        margin: 0 auto;
-        gap: 27px;
-    }
-    &__card{
-        background:    
-        url('../img/team-card.png')
-        top no-repeat;
-        width: 265.2px;
-        height: 420.85px;
+    // &__cards{
+    //     display: flex;
+    //     margin: 0 auto;
+    //     gap: 27px;
+    // }
+    // &__card{
+    //     background:    
+    //     url('../img/team-card.png')
+    //     top no-repeat;
+    //     width: 265.2px;
+    //     height: 420.85px;
     
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 13px;
-    }
-    &__card img{
-        width: 247.08px;
-        height: 328.97px;
-        margin-top: 19.39px;
-    }
-    &__job{
-        font-size: 8px;
-        line-height: 140%;
-        align-self: flex-start;
-        margin-left: 16px;
-    }
-    &__name{
-        font-size: 21px;
-        line-height: 117.8%;
-        text-transform: uppercase;
-        align-self: flex-start;
-        margin-left: 16px;
-    }
-    &__card:first-child{
-        background:    
-        url('../img/team-card-full.png')
-        top no-repeat;
-        width: 442px;
-        height: 701.42px;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     gap: 13px;
+    // }
+    // &__card img{
+    //     width: 247.08px;
+    //     height: 328.97px;
+    //     margin-top: 19.39px;
+    // }
+    // &__job{
+    //     font-size: 8px;
+    //     line-height: 140%;
+    //     align-self: flex-start;
+    //     margin-left: 16px;
+    // }
+    // &__name{
+    //     font-size: 21px;
+    //     line-height: 117.8%;
+    //     text-transform: uppercase;
+    //     align-self: flex-start;
+    //     margin-left: 16px;
+    // }
+    // &__card:first-child{
+    //     background:    
+    //     url('../img/team-card-full.png')
+    //     top no-repeat;
+    //     width: 442px;
+    //     height: 701.42px;
     
-        /* &-img{
-            width: 411.8px;
-            height: 548.28px;
-            margin-top: 32.31px;
-        }
+    //     /* &-img{
+    //         width: 411.8px;
+    //         height: 548.28px;
+    //         margin-top: 32.31px;
+    //     }
     
-        &-job{
-            font-size: 13px;
-            margin-left: 27px;
-        }
+    //     &-job{
+    //         font-size: 13px;
+    //         margin-left: 27px;
+    //     }
     
-        &-name{
-            font-size: 35px;
-            align-self: flex-start;
-            margin-left: 27px;
-        } */
-    }
+    //     &-name{
+    //         font-size: 35px;
+    //         align-self: flex-start;
+    //         margin-left: 27px;
+    //     } */
+    // }
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+    margin-left: 11%;
+}
+.swiper-slide{
+    cursor: pointer;
+    // flex-shrink: 1;
 }
