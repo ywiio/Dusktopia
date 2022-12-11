@@ -58,10 +58,7 @@
 
 
         &:hover{
-            // width: 503px;
-            background:    
-            url("../img/frame-full-175.png")
-             top no-repeat;
+            background-color: gray;
         }
 
         &::before{
@@ -118,11 +115,14 @@
         display: none;
     }
 }
-//?????????????????????????
-.actve{
+
+.active{
+    width: 503px;
+    clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
     background:    
-        url("../img/frame-full-175.svg")
+        url("../img/frame-full-175.png")
         top no-repeat;
+    color: black;
 }
 
 .slideshow{

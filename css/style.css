@@ -476,7 +476,7 @@ input[type=radio]:checked + label .off {
   color: #000;
 }
 .roadmap__point:hover {
-  background: url("../img/frame-full-175.png") top no-repeat;
+  background-color: gray;
 }
 .roadmap__point::before {
   content: "";
@@ -527,8 +527,12 @@ input[type=radio]:checked + label .off {
   display: none;
 }
 
-.actve {
-  background: url("../img/frame-full-175.svg") top no-repeat;
+.active {
+  width: 503px;
+  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
+          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
+  background: url("../img/frame-full-175.png") top no-repeat;
+  color: black;
 }
 
 .slideshow {
@@ -852,16 +856,13 @@ input[type=radio]:checked + label .off {
     overflow: hidden;
     font-weight: 700;
     cursor: pointer;
-    height: 227.53px;
+    height: 250px;
     -webkit-clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 220.066px, 197.802px 220.066px, 178.379px 227.528px, 0px 227.528px);
             clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 220.066px, 197.802px 220.066px, 178.379px 227.528px, 0px 227.528px);
     background: url("../img/frame-250.png") top no-repeat;
   }
   .roadmap__point:hover {
     color: #000;
-  }
-  .roadmap:hover {
-    background: url("../img/frame-full-250.png") top no-repeat;
   }
   .roadmap__info {
     justify-content: center;
@@ -871,6 +872,13 @@ input[type=radio]:checked + label .off {
   }
   .roadmap__line-desk {
     display: none;
+  }
+  .active {
+    width: 267px;
+    -webkit-clip-path: polygon(0px 0px, 67.416px 0px, 89.456px 9.74px, 267px 9.74px, 267px 235.031px, 211.253px 235.031px, 190.509px 243px, 0px 243px);
+            clip-path: polygon(0px 0px, 67.416px 0px, 89.456px 9.74px, 267px 9.74px, 267px 235.031px, 211.253px 235.031px, 190.509px 243px, 0px 243px);
+    background: url("../img/frame-full-250.png") top no-repeat;
+    color: black;
   }
   .questions__title {
     font-size: 35px;
