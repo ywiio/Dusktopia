@@ -630,6 +630,17 @@ input[type=radio]:checked + label .off {
   flex-direction: column;
   align-items: center;
   gap: 22px;
+  width: 100%;
+}
+.collab__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collab__title span {
+  position: absolute;
+  margin-left: -1.5%;
+  margin-bottom: 2%;
 }
 
 .questions__text {
@@ -872,6 +883,12 @@ input[type=radio]:checked + label .off {
   }
   .roadmap__line-desk {
     display: none;
+  }
+  .roadmap__text {
+    width: 100%;
+  }
+  .roadmap__title {
+    text-align: left;
   }
   .active {
     width: 267px;
