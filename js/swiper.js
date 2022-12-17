@@ -25,9 +25,40 @@ const swiper = new Swiper('.swiper', {
   // },
 
   slidesPerView:3.5,
-  watchOverflow:true, //если у слайдера меньше слайдов чем нужно отобразить
+  // watchOverflow:true, 
  
-  spaceBetween:30,
+  // spaceBetween:30,
+  slidesPerGroup:1,
 
-  centeredSlides:true,
+  autoplay:{
+    delay:2000,
+  },
+
+  speed: 800,
+
 });
+
+// window.load = function(){
+//   // Теперь мы знаем актуальную ширину экрана
+//   var media_size = parseInt(window.getComputedStyle(document.body, null)
+//                                   .getPropertyValue('width'), 10);
+
+//   switchClass();
+
+//   window.resize = function () {
+//       // Обновляем ширину экрана
+//       media_size = parseInt(window.getComputedStyle(document.body, null)
+//                                   .getPropertyValue('width'), 10);
+//       switchClass();
+//   };
+// };
+
+// function switchClass() {
+//   if(media_size  < 780) {
+//     document.body.classList.remove('swiper');
+//     alert(document.body.className);
+//   }
+//   else{
+      
+//   }
+// }

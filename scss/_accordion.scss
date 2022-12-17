@@ -20,6 +20,7 @@
         transition: color 0.5s, padding 0.5s;
         overflow: hidden;
         position: relative;
+        margin-top: -35px;
         img{
             margin-left: 60px;
         }
@@ -51,6 +52,7 @@
     }
     &-btn{    
         position: absolute;
+        margin-top: 26px;
         clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
         background: url("../img/btn-more.png");
         @include btn(136);

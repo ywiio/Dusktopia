@@ -1,4 +1,19 @@
 .main{
+    position: relative;
+    &__elipses{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        
+    }
+    // .elipse{
+    //     width: 1089px;
+    //     height: 861px;
+    //     top: 412px;
+    //     background: rgba(255, 114, 190, 0.5);
+    //     opacity: 0.8;
+    //     filter: blur(190.875px);
+    // }
     &__container{
         height: 100vh;
         /* padding: 220px auto 221px; */
@@ -51,17 +66,21 @@
         display: flex;
         align-items: center;
         width: 100%;
+        margin-top: 42px;
+    }
+    &__nav{
+        margin-top: -135px;
     }
     &__text{
-        gap: 55px;
-        margin:0 auto;
+        gap: 35px;
+        margin-left: 70px;
     }
     &__btns{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 21px;
-        margin-left: -44px;
+        margin-left: -24px;
     }
     &__btn-mint{
         background:    
