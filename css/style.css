@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-color: rgb(49, 49, 49);
+  background-color: #080809;
   color: white;
   margin: 0 auto;
   font-family: "Mazzard-R", serif;
@@ -65,6 +65,13 @@ div[class*=btn] {
 [class*=__nav-link] {
   font-weight: 500;
   line-height: 140%;
+  opacity: 70%;
+}
+[class*=__nav-link]:nth-child(2), [class*=__nav-link]:nth-child(4) {
+  opacity: 1;
+}
+[class*=__nav-link]:hover {
+  opacity: 1;
 }
 
 a {
@@ -431,7 +438,7 @@ input[type=radio]:checked + label .off {
   display: flex;
 }
 .roadmap__inner {
-  padding-top: 141px;
+  padding-top: 137px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -497,6 +504,12 @@ input[type=radio]:checked + label .off {
 }
 .roadmap__point:hover {
   color: #000;
+}
+.roadmap__point:nth-child(5) {
+  height: 130px;
+  -webkit-clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+          clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+  background: url("../img/frame-130.png") top no-repeat;
 }
 .roadmap__point:hover {
   background-color: gray;
@@ -566,6 +579,12 @@ input[type=radio]:checked + label .off {
 .active .roadmap__point-text h3 {
   font-size: 45px;
 }
+.active .roadmap__point:nth-child(5) {
+  height: 148.71px;
+  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+  background: url("../img/frame-full-130.png") top no-repeat;
+}
 
 .slideshow {
   z-index: -1;
@@ -606,7 +625,7 @@ input[type=radio]:checked + label .off {
 
 .collab__container {
   /* я думаю, надо заменять, но не знаю что */
-  padding-bottom: 193px;
+  padding-bottom: 182px;
   padding-top: 53px;
 }
 .collab__inner {
@@ -630,6 +649,8 @@ input[type=radio]:checked + label .off {
   max-width: 1117px;
   gap: 51px;
   flex-wrap: wrap;
+  margin-left: -49px;
+  margin-top: 12px;
 }
 .collab__logo {
   height: 56px;
@@ -689,14 +710,19 @@ input[type=radio]:checked + label .off {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
 }
 .questions__title {
   max-width: 675px;
   text-align: center;
+  margin-left: -3px;
 }
 .questions__title span {
-  padding: 0 47px 0 23px;
+  padding: 0 47px 0 12px;
+}
+.questions__title p:nth-child(2) {
+  margin-top: -13px;
+  margin-left: 4px;
 }
 .questions__info {
   display: flex;
@@ -816,7 +842,7 @@ input[type=radio]:checked + label .off {
 }
 
 .team__container {
-  margin-top: 262px;
+  margin-top: -99px;
   margin-bottom: 161px;
 }
 .team__info {
@@ -826,6 +852,17 @@ input[type=radio]:checked + label .off {
 }
 .team__text {
   align-items: center;
+  gap: 20.5px;
+}
+.team__title p:nth-child(1) {
+  margin-left: -19px;
+  margin-bottom: -12px;
+}
+.team__title p:nth-child(2) {
+  margin-left: 21px;
+}
+.team__title p:nth-child(2) span {
+  padding: 0 34px 0 26px;
 }
 .team__cards {
   display: none;
@@ -867,23 +904,49 @@ input[type=radio]:checked + label .off {
   } */
 }
 
-.swiper-block {
-  width: 91.9%;
-  height: 100%;
+.swiper-wrapper {
+  margin-left: 132px;
+  margin-top: 232px;
+}
+
+.team-swiper {
+  margin-right: 0 !important;
+  width: 88%;
+  height: 701.42px;
 }
 
 .swiper-slide {
+  transform: scale(1);
+  transition: 0.3s all;
+  display: flex;
+}
+
+.swiper-slide-active {
+  transform: scale(1.66);
+}
+.swiper-slide-active .info {
+  display: block;
+}
+
+.avatar {
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  height: 100%;
-  transform: scale(0.8);
-  transition: 0.3s all;
+  width: 265.2px;
+  height: 420.85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(16.9248px);
+          backdrop-filter: blur(16.9248px);
+  -webkit-clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
+          clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
+  background: url("../img/card-sm.png") top no-repeat;
 }
 
-.swiper-slide-active,
-.swiper-slide-next {
-  transform: scale(1);
+.info {
+  display: none;
 }
 
 .footer__inner {

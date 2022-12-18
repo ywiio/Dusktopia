@@ -1,11 +1,6 @@
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  
   scrollbar: {
     el:'.swiper-slide',
     draggable:true,

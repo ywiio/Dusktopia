@@ -1,7 +1,7 @@
 .team{
     // cursor: url('../img/cursor.png'),auto;
     &__container{
-        margin-top: 262px;
+        margin-top: -99px;
         margin-bottom: 161px;
     }
     &__info{
@@ -11,6 +11,21 @@
     }
     &__text{
         align-items: center;
+        gap: 20.5px;
+    }
+    &__title{
+        p{
+            &:nth-child(1){
+                margin-left: -19px;
+                margin-bottom: -12px;
+            }
+            &:nth-child(2){
+                margin-left: 21px;
+                span{
+                    padding: 0 34px 0 26px;
+                }
+            }
+        }
     }
     &__cards{
         display: none;
@@ -73,26 +88,27 @@
     }
 }
 
-.swiper {
-    &-block{
-        width: 91.9%;
-        height: 100%;
-    }
+.swiper-wrapper{
+    margin-left: 132px;
+    margin-top: 232px;
+}
+
+.team-swiper {
+    margin-right: 0 !important; 
+    width: 88%;
+    height: 701.42px;
 }
 
 .swiper-slide{
-    cursor: pointer;
-    text-align: center;
-      font-size: 18px;
-    //   background: rgb(255, 41, 41);
-    height: 100%;
-    // opacity: 0.3;
-     transform: scale(0.8);
+    
+    transform: scale(1);
+    transition: .3s all;
+    
 
     //  display: -webkit-box;
     //  display: -ms-flexbox;
     //  display: -webkit-flex;
-    //  display: flex;
+     display: flex;
     //  -webkit-box-pack: center;
     //  -ms-flex-pack: center;
     //  -webkit-justify-content: center;
@@ -101,12 +117,34 @@
     //  -ms-flex-align: center;
     //  -webkit-align-items: center;
     //  align-items: center;
-    transition: .3s all;
+    
 }
 
-.swiper-slide-active,
-.swiper-slide-next {
-//   opacity: 1;
-//   background-color: orange;
-   transform: scale(1);
+.swiper-slide-active{
+   transform: scale(1.66);
+   .info{
+    display: block;
+   }
+}
+
+.avatar{
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    width: 265.2px;
+    height: 420.85px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(16.9248px);
+    clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
+    background:    
+        url('../img/card-sm.png')
+        top no-repeat;
+}
+.info{
+    display: none;
 }

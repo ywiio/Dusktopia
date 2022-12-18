@@ -1,7 +1,7 @@
 .collab{
     &__container{
         /* я думаю, надо заменять, но не знаю что */
-        padding-bottom: 193px;
+        padding-bottom: 182px;
         padding-top: 53px;
     }
     &__inner{
@@ -27,6 +27,8 @@
         max-width: 1117px; 
         gap: 51px;
         flex-wrap: wrap;
+        margin-left: -49px;
+        margin-top: 12px;
     }
     &__logo{
         @include btn(241);
