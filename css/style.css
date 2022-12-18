@@ -294,7 +294,7 @@ a {
 .faction__container {
   background: url("../img/back_faction.png") top no-repeat;
   background-size: cover;
-  height: 89.5vh;
+  height: 751px;
 }
 .faction__inner {
   width: 100vw;
@@ -429,7 +429,6 @@ input[type=radio]:checked + label .off {
 
 .roadmap__container {
   display: flex;
-  margin-bottom: 168px;
 }
 .roadmap__inner {
   padding-top: 141px;
@@ -607,12 +606,16 @@ input[type=radio]:checked + label .off {
 
 .collab__container {
   /* я думаю, надо заменять, но не знаю что */
-  padding-bottom: 146px;
+  padding-bottom: 193px;
+  padding-top: 53px;
 }
 .collab__inner {
-  margin-top: 63px;
   display: flex;
-  /* gap: 100px; */
+  /* ga
+  p: 100px; */
+}
+.collab__nav {
+  margin-top: -20px;
 }
 .collab__info {
   display: flex;
@@ -656,28 +659,28 @@ input[type=radio]:checked + label .off {
   color: #000;
 }
 .collab__text {
-  /* width: fit-content;
-  margin-top: 53px;
-  margin-left: 158px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 22px;
+  gap: 17px;
   width: 100%;
+  margin-left: -36px;
 }
 .collab__title {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 24px;
 }
 .collab__title span {
   position: absolute;
-  margin-left: -1.5%;
-  margin-bottom: 2%;
+  margin-left: -5.94%;
+  margin-bottom: 1.7%;
 }
 
-.questions {
-  background: url("../img/back_questions.png") top no-repeat;
+.questions__container {
+  height: 1423px;
+  background: url("../img/back_questions.png") top left 28% no-repeat;
 }
 .questions__text {
   /* width: fit-content; */
@@ -691,6 +694,9 @@ input[type=radio]:checked + label .off {
 .questions__title {
   max-width: 675px;
   text-align: center;
+}
+.questions__title span {
+  padding: 0 47px 0 23px;
 }
 .questions__info {
   display: flex;
@@ -707,29 +713,30 @@ input[type=radio]:checked + label .off {
   background: linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
   border: 2.12px solid;
   border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
-  width: 83.79vw;
-  height: 777px;
+  max-width: 83.79vw;
   /* height: fit-content; */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(407px, 1fr));
-  grid-template-rows: auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "many mint blockchain" "many mintable blockchain" "three-vec mintable utility" "dusklist mintable utility" "dusklist staking utility" "much staking mints" "much two-vec mints";
   margin: 0 auto;
-}
-.questions__title span {
-  padding: 0 47px 0 23px;
 }
 .questions__block {
   padding: 58px 28px 45px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   border: 1px solid white;
 }
+.questions__block h3 {
+  width: 100%;
+  font-family: "TTOctosquares-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 117.8%;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
 .questions__block p {
-  width: 351px;
+  width: 100%;
   font-family: "Mazzard-R";
   font-style: normal;
   font-weight: 400;
@@ -742,49 +749,10 @@ input[type=radio]:checked + label .off {
   font-size: 24px;
   margin: 0;
 }
-.questions__block:nth-child(4) p:nth-of-type(2) {
-  font-weight: 700;
-  font-size: 14px;
-  margin: 0;
-}
-.questions__block h3 {
-  width: 333px;
-  font-family: "TTOctosquares-Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 31px;
-  line-height: 117.8%;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-.questions__vec img:nth-child(1) {
-  transform: rotate(90deg);
-}
-.questions__block:nth-child(2), .questions .questions__block:nth-child(8) {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-  height: 56.67px;
-}
-.questions__block:nth-child(4) {
-  padding-top: 46px;
-  padding-bottom: 62px;
-}
-.questions__block:nth-child(10) {
-  padding-top: 43px;
-}
-.questions__block:nth-child(8) {
-  padding: 0;
-  height: 116.75px;
-}
-.questions__block:last-child {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 .questions__vec {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid white;
   height: 100%;
   width: 100%;
@@ -796,17 +764,55 @@ input[type=radio]:checked + label .off {
   width: -moz-fit-content;
   width: fit-content;
 }
-.questions__block:nth-child(2) .questions__vec:first-child {
-  width: 29%;
+.questions .many {
+  grid-area: many;
 }
-.questions__block:nth-child(2) .questions__vec:nth-child(2) {
-  width: 39%;
+.questions .mint {
+  grid-area: mint;
 }
-.questions__block:nth-child(2) .questions__vec:nth-child(3) {
-  width: 34%;
+.questions .blockchain {
+  grid-area: blockchain;
 }
-.questions__block:nth-child(8) .questions__vec:first-child {
-  width: 51%;
+.questions .three-vec {
+  grid-area: three-vec;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 56.67px;
+}
+.questions .mintable {
+  grid-area: mintable;
+}
+.questions .utility {
+  grid-area: utility;
+}
+.questions .dusklist {
+  grid-area: dusklist;
+}
+.questions .staking {
+  grid-area: staking;
+}
+.questions .much {
+  grid-area: much;
+  padding-top: 46px;
+  padding-bottom: 62px;
+}
+.questions .much p:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+.questions .mints {
+  grid-area: mints;
+}
+.questions .two-vec {
+  grid-area: two-vec;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 56.67px;
 }
 
 .team__container {
@@ -913,14 +919,8 @@ input[type=radio]:checked + label .off {
   }
 }
 @media screen and (max-width: 1024px) {
-  .faction__inner {
-    flex-direction: column;
-  }
   .faction__title {
-    margin-bottom: 40px;
-  }
-  .faction__acor {
-    margin: 0;
+    margin-right: -89px;
   }
   .slideshow {
     margin-left: -80%;
@@ -928,6 +928,18 @@ input[type=radio]:checked + label .off {
   }
   .collab__title {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .faction__inner {
+    flex-direction: column;
+    padding-top: 28px;
+  }
+  .faction__title {
+    margin-bottom: 40px;
+  }
+  .faction__acor {
+    margin: 0;
   }
 }
 @media screen and (max-width: 890px) {
