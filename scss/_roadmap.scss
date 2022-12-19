@@ -61,13 +61,20 @@
         background:    
         url('../img/roadmap/frame-175.png')
         top no-repeat;
-        // &:nth-child(5){
-        //     height: 130px;
-        //     clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
-        //     background:    
-        //     url('../img/roadmap/frame-130.png')
-        //     top no-repeat;
-        // }
+        &:nth-child(5){
+            height: 130px;
+            clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+            background:    
+            url('../img/roadmap/frame-130.png')
+            top no-repeat;
+            &.active{
+                height: 148.71px;
+                clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+                background:    
+                    url("../img/roadmap/frame-full-130.png")
+                    top no-repeat;
+            }
+        }
         &:hover{
             background-color: gray;
         }
@@ -138,27 +145,8 @@
         url("../img/roadmap/frame-full-175.png")
         top no-repeat;
     color: black;
-    .roadmap &{
-        // &__point{
-        //     &-text{
-        //         width: 445px;
-        //         font-size: 15px;
-        //         margin: 0 auto;
-        //         h2{
-        //             font-size: 45px;
-        //         }
-        //     }
-        //     &:nth-child(5){
-        //         height: 148.71px;
-        //         clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
-        //         background:    
-        //             url("../img/roadmap/frame-full-130.png")
-        //             top no-repeat;
-        //     }
-        // }
-    }
 }
-
+// .roadmap__point:nth-child(5)
 .slideshow{
     z-index: -1;
     margin-left: -36.5%;

@@ -555,6 +555,18 @@ input[type=radio]:checked + label .off {
 .roadmap__point:hover {
   color: #000;
 }
+.roadmap__point:nth-child(5) {
+  height: 130px;
+  -webkit-clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+          clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+  background: url("../img/roadmap/frame-130.png") top no-repeat;
+}
+.roadmap__point:nth-child(5).active {
+  height: 148.71px;
+  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+  background: url("../img/roadmap/frame-full-130.png") top no-repeat;
+}
 .roadmap__point:hover {
   background-color: gray;
 }
@@ -618,6 +630,7 @@ input[type=radio]:checked + label .off {
   background: url("../img/roadmap/frame-full-175.png") top no-repeat;
   color: black;
 }
+
 .slideshow {
   z-index: -1;
   margin-left: -36.5%;
@@ -1055,8 +1068,9 @@ input[type=radio]:checked + label .off {
   .questions__about {
     -webkit-clip-path: none;
             clip-path: none;
+    width: 100%;
     display: block;
-    width: 50vw;
+    width: 331px;
   }
   .questions__block {
     padding: 40px 20px;
@@ -1171,8 +1185,14 @@ input[type=radio]:checked + label .off {
   .roadmap__info {
     margin-left: 11%;
   }
+  .roadmap__inner {
+    margin-left: 24px;
+  }
 }
 @media screen and (max-width: 660px) {
+  .header {
+    padding: 31px 25px;
+  }
   .header__btn, .header__social {
     display: none;
   }
@@ -1205,6 +1225,9 @@ input[type=radio]:checked + label .off {
   .roadmap__inner {
     padding-top: 58px;
   }
+  .roadmap__points {
+    gap: 77px;
+  }
   .roadmap__point {
     height: 56px;
     width: 250px;
@@ -1228,8 +1251,20 @@ input[type=radio]:checked + label .off {
   .roadmap__point:hover {
     color: #000;
   }
-  .roadmap__info {
-    justify-content: center;
+  .roadmap__point:nth-child(5) {
+    height: 174px;
+    -webkit-clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 166.181px, 197.802px 166.181px, 178.379px 173.643px, 0px 173.643px);
+            clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 166.181px, 197.802px 166.181px, 178.379px 173.643px, 0px 173.643px);
+    background: url("../img/roadmap/frame-250-five.png") top no-repeat;
+  }
+  .roadmap__point:nth-child(5).active {
+    height: 173px;
+    -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.456px 9.74px, 267px 9.74px, 267px 165.357px, 211.253px 165.357px, 190.509px 173.326px, 0px 173.326px);
+            clip-path: polygon(0px 0px, 67.413px 0px, 89.456px 9.74px, 267px 9.74px, 267px 165.357px, 211.253px 165.357px, 190.509px 173.326px, 0px 173.326px);
+    background: url("../img/roadmap/frame-full-250-five.png") top no-repeat;
+  }
+  .roadmap__point-text {
+    margin: 0;
   }
   .roadmap__line-mobile {
     display: block;
@@ -1243,6 +1278,9 @@ input[type=radio]:checked + label .off {
   }
   .roadmap__title {
     font-size: 40px;
+  }
+  .roadmap__about {
+    gap: 20px;
   }
   .active {
     width: 267px;
@@ -1290,5 +1328,10 @@ input[type=radio]:checked + label .off {
   }
   .team__cards {
     display: block;
+  }
+}
+@media screen and (max-width: 393px) {
+  .roadmap__inner {
+    margin-left: 3%;
   }
 }/*# sourceMappingURL=style.css.map */
