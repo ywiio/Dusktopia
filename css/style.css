@@ -200,6 +200,9 @@ a {
   margin-bottom: 9.16px;
   margin-left: auto;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 .header__burger .line1 {
   width: 30.54px;
@@ -391,6 +394,9 @@ a {
 .faction__acor-body {
   height: 0;
   transition: color 0.5s, padding 0.5s;
+  -webkit-transition: color 0.5s, padding 0.5s;
+  -moz-transition: color 0.5s, padding 0.5s;
+  -o-transition: color 0.5s, padding 0.5s;
   overflow: hidden;
   position: relative;
   margin-top: -35px;
@@ -404,6 +410,9 @@ a {
   /* padding: 15px 20px; */
   width: 100%;
   transition: color 0.35s;
+  -webkit-transition: color 0.35s;
+  -moz-transition: color 0.35s;
+  -o-transition: color 0.35s;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -421,6 +430,9 @@ a {
 }
 .faction__acor input:checked + label:before {
   transition: transform 0.35s;
+  -webkit-transition: transform 0.35s;
+  -moz-transition: transform 0.35s;
+  -o-transition: transform 0.35s;
 }
 .faction__acor-btn {
   position: absolute;
@@ -949,6 +961,9 @@ input[type=radio]:checked + label .off {
 .swiper-slide {
   transform: scale(1);
   transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
   display: flex;
 }
 
