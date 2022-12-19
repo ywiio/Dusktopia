@@ -177,6 +177,9 @@ a {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -291,6 +294,9 @@ a {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -312,6 +318,9 @@ a {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -426,6 +435,9 @@ a {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -515,6 +527,9 @@ input[type=radio]:checked + label .off {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -662,6 +677,9 @@ input[type=radio]:checked + label .off {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
@@ -1085,6 +1103,9 @@ input[type=radio]:checked + label .off {
     justify-content: center;
     align-items: center;
     transition: background-color 0.6s ease;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
     overflow: hidden;
     font-weight: 700;
     cursor: pointer;
@@ -1107,6 +1128,9 @@ input[type=radio]:checked + label .off {
     justify-content: center;
     align-items: center;
     transition: background-color 0.6s ease;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
     overflow: hidden;
     font-weight: 700;
     cursor: pointer;
@@ -1169,6 +1193,9 @@ input[type=radio]:checked + label .off {
     justify-content: center;
     align-items: center;
     transition: background-color 0.6s ease;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
     overflow: hidden;
     font-weight: 700;
     cursor: pointer;
