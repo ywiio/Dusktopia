@@ -1,6 +1,6 @@
 .questions{
     &__container{
-        height: 1423px;
+        // height: 1423px;
         background: 
         url("../img/questions/back_questions.png")
         top left 28% no-repeat;
@@ -36,12 +36,9 @@
         margin-top: 90px;
     }
     &__about{
-        backdrop-filter: blur(16.9248px);
+        @include blur;
         clip-path: polygon(0px 0px, 61.9px 0px, 82.143px 13.134px, 1221px 13.134px, 1221px 766px, 1169.81px 766px, 1150.762px 776.746px, 0px 776.746px);
         overflow: hidden;
-        // background:    
-        // url('../img/frame-175.png')
-        // top no-repeat;
         background: linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
         border: 2.12px solid;
         border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
@@ -67,6 +64,7 @@
     }
     &__block{
         padding-left: 21px;
+        padding-right: 11px;
         width: 100%;
         // height: fit-content;
         border: 1px solid white;
@@ -145,6 +143,20 @@
     }
     .two-vec{
         grid-area: two-vec;
+        
+        .questions{
+            &__vec:nth-child(2){
+                display: flex;
+                gap: 12px;
+                img:first-child{
+                    rotate: 90deg;
+                }
+                img:last-child{
+                    rotate: -90deg;
+                }
+            }
+        }
+        
     }
 
     .three-vec, .two-vec{

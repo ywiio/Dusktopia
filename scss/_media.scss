@@ -5,11 +5,38 @@
         }
     }
 }
-
+@media screen and (max-width: 1270px){
+    .questions{
+        &__block{
+            h3{
+                font-size: 28px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1160px){
     .faction{
         &__title{
             font-size: 50px;
+        }
+    }
+    .questions{
+        &__about{
+            clip-path: none;
+            // width: 100%;
+            // grid-template-areas: 
+            // "many mint"
+            // "mintable blockchain"
+            // "mintable three-vec"
+            // "dusklist utitily"
+            // "staking mints"
+            // "much two-vec";
+            display: block;
+            width: 50vw;
+        }
+        &__block{
+            padding: 40px 20px;
+
         }
     }
 }
@@ -42,7 +69,7 @@
     .faction{
         &__inner{
             flex-direction: column;
-            padding-top: 28px;
+            // padding-top: 28px;
         }
         &__title{
             margin-bottom: 40px;
@@ -66,16 +93,47 @@
 {
     [class*="__title"] {
         font-size: 50px;
+        line-height: 100%;
+        letter-spacing: 0.21em;
     }
     [class$="__nav"]{
         display: none;
     }
     .main{
         &__text{
-            margin: 0 auto;
+            margin: -48px auto 0;
+            gap: 77px;
+            // margin-top: -134px;
         }
         &__btns{
             margin-left: 0;
+            gap: 35px;
+        }
+        &__btn-mint{
+            background:    
+            url("../img/btn-171.png")
+             top no-repeat;
+            clip-path: polygon(0px 6.898px, 127.924px 6.898px, 138.584px 0, 171.192px 0, 171.192px 70.86px, 36.997px 70.86px, 26.964px 65.216px, 0px 65.216px);
+            @include btn(171.192);
+            height: 70.86px;
+            &:hover{
+                background:    
+                url("../img/btn-full-171.png")
+                 top no-repeat;
+            }
+        }
+        &__btn-connect{
+            background:    
+            url("../img/btn-243.png")
+             top no-repeat;
+            clip-path: polygon(0px 6.898px, 200.037px 6.898px, 219.698px 0, 243.306px 0, 243.306px 70.86px, 36.997px 70.86px, 26.964px 65.216px, 0px 65.216px);
+            @include btn(243.31);
+            height: 70.86px;
+            &:hover{
+                background:    
+                url("../img/btn-full-243.png")
+                 top no-repeat;
+            }
         }
     }
     
@@ -107,12 +165,34 @@
             flex-direction: column;
         }
     }
-    .faction{        
+    .faction{  
+        &__container{
+            height: 930px;
+            background:    
+            url('../img/faction/back_faction-adaptive.png')
+            top no-repeat;
+            background-size: cover;
+        }
+        &__inner{
+            padding-top: 198px;
+            padding-right: 34px;
+        }      
         &__title{
             font-size: 40px;
         }
+        &__acor{
+            margin-right: 24px;
+            margin-top: 45px;
+            &-btn{
+                margin-top: 134px;
+                margin-left: 90px;
+            }
+        }
     }
     .roadmap{
+        &__inner{
+            padding-top: 58px;
+        }
         &__point{
             @include btn(250);
             height: 250px;
@@ -134,10 +214,12 @@
             }
         }
         &__text{
-            width: 100%;
+            margin: 0;
+            gap: 32px;
+            
         }
         &__title{
-                text-align: left;
+            font-size: 40px;
         }
     }
     .active{
@@ -148,11 +230,21 @@
             top no-repeat;
         color: black;
     }
-    .questions{        
+    .questions{   
+        &__inner{
+            margin-top: 39px;
+        }     
+        &__text{
+            gap: 32px;
+        }
         &__title{
             font-size: 35px;
+            margin-left: 5px;
+            p:nth-child(2) {
+                margin-top: 0;
+            }
             span{
-                padding:0 12px;
+                padding:0 5px;
                 img{
                     width: 28px;
                 }
@@ -186,4 +278,7 @@
             display: block;
         }
     }
+}
+@media screen and (max-width: 393px){
+    
 }
