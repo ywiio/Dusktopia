@@ -1,7 +1,7 @@
 .faction{
     &__container{
     background:    
-    url('../img/back_faction.png')
+    url('../img/faction/back_faction.png')
     top no-repeat;
     background-size: cover;
     height: 751px;
@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         gap: 27px;
-        font-family: "OctosM",serif;
+        font-family: "Octos",serif;
         font-weight: 500;
         font-size: 22px;
         line-height: 140%;

@@ -17,17 +17,31 @@ body{
     background-color: #080809;
     color: white;
     margin: 0 auto;
-    font-family: "Mazzard-R",serif;
+    font-family: "Mazzard",serif;
+    position: relative;
 }
-
+.ellipses{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        url("../img/elipses.png")
+        6% no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
 [class*="__container"]{
     width: 100vw;
     // height: fit-content;
 }
+[class*="__inner"]{
+    position: relative;
+    z-index: 2;
+}
 
 [class*="__title"]{
     font-size: 64px; 
-    font-family: "OctosR",serif;
+    font-family: "Octos",serif;
     font-weight: 400;
     line-height: 76px;
     letter-spacing: 0.365em;
@@ -44,7 +58,7 @@ body{
 
 div[class*="btn"]{
     font-family: "Neue Machina";
-    font-weight: 700;
+    font-weight: bold;
     /* letter-spacing: 0.9px; ???????????????????? */
     line-height: 140%;
 }
@@ -53,7 +67,8 @@ div[class*="btn"]{
     display: flex;
     align-items: center;
     gap: 40px;
-    font-family: "NeueMachina-Medium", sans-serif;
+    font-family: "NeueMachina", sans-serif;
+    font-weight: 500;
     letter-spacing: 0.9px;
     width: 22px;
     transform: rotate(90deg);
@@ -106,7 +121,10 @@ a{
         to {opacity: 1}
     }
 }
-
+@mixin blur{
+    backdrop-filter: blur(16.9248px);
+    -webkit-backdrop-filter: blur(16.9248px);
+}
 
 // @mixin before($property) {
 //     content: "";

@@ -1,5 +1,5 @@
 .faction__acor{
-    font-family: "OctosM",serif;
+    font-family: "Octos",serif;
     font-weight: 500;
     font-size: 22px;
     line-height: 140%;
@@ -13,7 +13,7 @@
     margin-right: 61px;
 
     background:    
-    url('../img/faction-line.png')
+    url('../img/faction/faction-line.png')
     top right 15px no-repeat;
     &-body {
         height: 0;
@@ -54,7 +54,7 @@
         position: absolute;
         margin-top: 26px;
         clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
-        background: url("../img/btn-more.png");
+        background: url("../img/faction/btn-more.png");
         @include btn(136);
         font-size: 16px;
         color: black;
@@ -67,7 +67,7 @@
         //     width: 100%;
         //     height: 100%;
         //     background: linear-gradient(90deg, #FFB800 0%, #FFBAC3 70.62%);
-        //     backdrop-filter: blur(17px);
+        //     @include blur;
         //     z-index: -5;
         // }
     }

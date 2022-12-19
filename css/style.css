@@ -19,16 +19,31 @@ body {
   background-color: #080809;
   color: white;
   margin: 0 auto;
-  font-family: "Mazzard-R", serif;
+  font-family: "Mazzard", serif;
+  position: relative;
+}
+
+.ellipses {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/elipses.png") 6% no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
 [class*=__container] {
   width: 100vw;
 }
 
+[class*=__inner] {
+  position: relative;
+  z-index: 2;
+}
+
 [class*=__title] {
   font-size: 64px;
-  font-family: "OctosR", serif;
+  font-family: "Octos", serif;
   font-weight: 400;
   line-height: 76px;
   letter-spacing: 0.365em;
@@ -45,7 +60,7 @@ body {
 
 div[class*=btn] {
   font-family: "Neue Machina";
-  font-weight: 700;
+  font-weight: bold;
   /* letter-spacing: 0.9px; ???????????????????? */
   line-height: 140%;
 }
@@ -54,7 +69,8 @@ div[class*=btn] {
   display: flex;
   align-items: center;
   gap: 40px;
-  font-family: "NeueMachina-Medium", sans-serif;
+  font-family: "NeueMachina", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.9px;
   width: 22px;
   transform: rotate(90deg);
@@ -80,46 +96,60 @@ a {
 }
 
 @font-face {
-  font-family: "Mazzard-R";
-  src: url("../font/MazzardH-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Mazzard";
+  src: url("../font/Mazzard/MazzardH-Regular.eot");
+  src: local("Mazzard H Regular"), local("MazzardH-Regular"), url("../font/MazzardH-Regular.woff2") format("woff2"), url("../font/Mazzard/MazzardH-Regular.woff") format("woff"), url("../font/Mazzard/MazzardH-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Mazzard-B";
-  src: url("../font/MazzardH-Bold.woff2") format("woff2");
+  font-family: "Mazzard";
+  src: url("../font/Mazzard/MazzardH-Regular.eot");
+  src: local("Mazzard H Bold"), local("MazzardH-Bold"), url("../font/MazzardH-Bold.woff2") format("woff2"), url("../font/Mazzard/MazzardH-Bold.woff") format("woff"), url("../font/Mazzard/MazzardH-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "OctosM";
-  src: url("../font/TTOctosquares-Medium.woff2") format("woff2");
+  font-family: "Mazzard";
+  src: url("../font/Mazzard/MazzardH-Regular.eot");
+  src: local("Mazzard H Bold"), local("MazzardH-Bold"), url("../font/MazzardH-Bold.woff2") format("woff2"), url("../font/Mazzard/MazzardH-Bold.woff") format("woff"), url("../font/Mazzard/MazzardH-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Octos";
+  src: url("../font/TTOctosquares/");
+  src: local("TT Octosquares Medium"), local("TTOctosquares-Medium"), url("../font/TTOctosquares/TTOctosquares-Medium.woff2") format("woff2"), url("../font/TTOctosquares/TTOctosquares-Medium.woff") format("woff"), url("../font/TTOctosquares/TTOctosquares-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "OctosR";
-  src: url("../font/TTOctosquares-Regular.woff2") format("woff2");
+  font-family: "Octos";
+  src: url("../font/TTOctosquares/");
+  src: local("TT Octosquares"), local("TTOctosquares-Regular"), url("../font/TTOctosquares/TTOctosquares-Regular.woff2") format("woff2"), url("../font/TTOctosquares/TTOctosquares-Regular.woff") format("woff"), url("../font/TTOctosquares/TTOctosquares-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "NeueMachina-Medium";
+  font-family: "Neue Machina";
+  src: url("../font/Neue Machina/");
+  src: local("Neue Machina Medium"), local("NeueMachina-Medium"), url("../font/Neue Machina/?#iefix") format("embedded-opentype"), url("../font/Neue Machina/NeueMachina-Medium.woff2") format("woff2"), url("../font/Neue Machina/NeueMachina-Medium.woff") format("woff"), url("../font/Neue Machina/NeueMachina-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
-  font-weight: normal;
-  src: local("NeueMachina-Medium"), url("../font/NeueMachina-Medium.woff2") format("woff2");
 }
 @font-face {
-  font-family: "NeueMachina-Bold";
+  font-family: "Neue Machina";
+  src: url("../font/Neue Machina/");
+  src: local("Neue Machina Bold"), local("NeueMachina-Bold"), url("../font/Neue Machina/NeueMachina-Bold.woff2") format("woff2"), url("../font/Neue Machina/NeueMachina-Bold.woff") format("woff"), url("../font/Neue Machina/NeueMachina-Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
-  font-weight: normal;
-  src: local("NeueMachina-Bold"), url("../font/NeueMachina-Bold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "NeueMachina-Regular";
-  font-style: normal;
+  font-family: "Neue Machina";
+  src: url("../font/Neue Machina/");
+  src: local("Neue Machina Regular"), local("NeueMachina-Regular"), url("../font/Neue Machina/NeueMachina-Regular.woff2") format("woff2"), url("../font/Neue Machina/NeueMachina-Regular.woff") format("woff"), url("../font/Neue Machina/NeueMachina-Regular.ttf") format("truetype");
   font-weight: normal;
-  src: local("NeueMachina-Regular"), url("../font/NeueMachina-Regular.woff2") format("woff2");
+  font-style: normal;
 }
 .header {
   position: absolute;
@@ -155,7 +185,7 @@ a {
   color: #000;
 }
 .header__btn:hover {
-  background: url("../img/btn-194-hov.png") top no-repeat;
+  background: url("../img/btn-full-194.png") top no-repeat;
 }
 .header__burger {
   display: none;
@@ -212,25 +242,20 @@ a {
   /* will-change: transform; ?????????????????????????????? */
 }
 .main__layers-base {
-  background: url("../img/layer-intro-base.png") top no-repeat;
+  background: url("../img/main/layer-intro-base.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: -2;
 }
 .main__layers-middle {
-  background: url("../img/layer-intro-middle.png") top no-repeat;
+  background: url("../img/main/layer-intro-middle.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
 }
 .main__layers-front {
-  background: url("../img/layer-intro-front.png") top no-repeat;
+  background: url("../img/main/layer-intro-front.png") top no-repeat;
   background-size: cover;
   transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
-}
-.main__layers-gradient {
-  background: url("../img/gradient-1(chamge).png") top no-repeat;
-  background-size: cover;
-  transform: translate3d(0, calc(var(--scrollTop) / 7), 0);
 }
 .main__intro {
   z-index: 9;
@@ -242,7 +267,7 @@ a {
   margin-top: 42px;
 }
 .main__nav {
-  margin-top: -135px;
+  margin-top: -9.2%;
 }
 .main__text {
   gap: 35px;
@@ -256,7 +281,7 @@ a {
   margin-left: -24px;
 }
 .main__btn-mint {
-  background: url("../img/btn-136.png") top no-repeat;
+  background: url("../img/main-btn-136.png") top no-repeat;
   -webkit-clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
           clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
   height: 56px;
@@ -274,7 +299,7 @@ a {
   color: #000;
 }
 .main__btn-mint:hover {
-  background: url("../img/btn-136-hov.png") top no-repeat;
+  background: url("../img/main-btn-full-136.png") top no-repeat;
 }
 .main__btn-connect {
   background: url("../img/btn-194.png") top no-repeat;
@@ -295,11 +320,11 @@ a {
   color: #000;
 }
 .main__btn-connect:hover {
-  background: url("../img/btn-194-hov.png") top no-repeat;
+  background: url("../img/btn-full-194.png") top no-repeat;
 }
 
 .faction__container {
-  background: url("../img/back_faction.png") top no-repeat;
+  background: url("../img/faction/back_faction.png") top no-repeat;
   background-size: cover;
   height: 751px;
 }
@@ -321,7 +346,7 @@ a {
   display: flex;
   align-items: center;
   gap: 27px;
-  font-family: "OctosM", serif;
+  font-family: "Octos", serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
@@ -342,7 +367,7 @@ a {
 }
 
 .faction__acor {
-  font-family: "OctosM", serif;
+  font-family: "Octos", serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
@@ -352,7 +377,7 @@ a {
   width: 396px;
   height: 522px;
   margin-right: 61px;
-  background: url("../img/faction-line.png") top right 15px no-repeat;
+  background: url("../img/faction/faction-line.png") top right 15px no-repeat;
 }
 .faction__acor-body {
   height: 0;
@@ -393,7 +418,7 @@ a {
   margin-top: 26px;
   -webkit-clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
           clip-path: polygon(0px 5.493px, 89.877px 5.493px, 98.366px 0px, 125px 0px, 125px 56px, 29.46px 56px, 21.471px 51.54px, 0px 51.54px);
-  background: url("../img/btn-more.png");
+  background: url("../img/faction/btn-more.png");
   height: 56px;
   width: 136px;
   display: flex;
@@ -449,9 +474,6 @@ input[type=radio]:checked + label .off {
   margin-top: -56%;
 }
 .roadmap__text {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin-right: 50px;
   align-items: flex-start;
   gap: 10px;
@@ -472,7 +494,8 @@ input[type=radio]:checked + label .off {
   display: flex;
   /* align-items: flex-end; */
   gap: 42px;
-  font-family: "Mazzard-R", serif;
+  font-family: "Mazzard", serif;
+  font-weight: 400;
   font-size: 13px;
 }
 .roadmap__lights {
@@ -495,21 +518,15 @@ input[type=radio]:checked + label .off {
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
-  height: 175px;
+  backdrop-filter: blur(16.9248px);
   -webkit-backdrop-filter: blur(16.9248px);
-          backdrop-filter: blur(16.9248px);
+  height: 175px;
   -webkit-clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
           clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
-  background: url("../img/frame-175.png") top no-repeat;
+  background: url("../img/roadmap/frame-175.png") top no-repeat;
 }
 .roadmap__point:hover {
   color: #000;
-}
-.roadmap__point:nth-child(5) {
-  height: 130px;
-  -webkit-clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
-          clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
-  background: url("../img/frame-130.png") top no-repeat;
 }
 .roadmap__point:hover {
   background-color: gray;
@@ -528,12 +545,14 @@ input[type=radio]:checked + label .off {
   z-index: 1;
   margin-left: -45px;
 }
-.roadmap__point-text h3 {
+.roadmap__point-text h2 {
   font-family: "Neue Machina";
+  font-weight: bold;
   font-size: 41px;
 }
-.roadmap__point-text h4 {
-  font-family: "Mazzard-B", serif;
+.roadmap__point-text h3 {
+  font-family: "Mazzard", serif;
+  font-weight: bold;
   line-height: 140%;
 }
 .roadmap__point-text p {
@@ -568,24 +587,9 @@ input[type=radio]:checked + label .off {
   width: 503px;
   -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
           clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
-  background: url("../img/frame-full-175.png") top no-repeat;
+  background: url("../img/roadmap/frame-full-175.png") top no-repeat;
   color: black;
 }
-.active .roadmap__point-text {
-  width: 445px;
-  font-size: 15px;
-  margin: 0 auto;
-}
-.active .roadmap__point-text h3 {
-  font-size: 45px;
-}
-.active .roadmap__point:nth-child(5) {
-  height: 148.71px;
-  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
-          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
-  background: url("../img/frame-full-130.png") top no-repeat;
-}
-
 .slideshow {
   z-index: -1;
   margin-left: -36.5%;
@@ -630,8 +634,7 @@ input[type=radio]:checked + label .off {
 }
 .collab__inner {
   display: flex;
-  /* ga
-  p: 100px; */
+  /* gap: 100px; */
 }
 .collab__nav {
   margin-top: -20px;
@@ -639,7 +642,7 @@ input[type=radio]:checked + label .off {
 .collab__info {
   display: flex;
   flex-direction: column;
-  gap: 51px;
+  gap: 63px;
   margin: 0 auto;
 }
 .collab__logos {
@@ -650,7 +653,6 @@ input[type=radio]:checked + label .off {
   gap: 51px;
   flex-wrap: wrap;
   margin-left: -49px;
-  margin-top: 12px;
 }
 .collab__logo {
   height: 56px;
@@ -663,14 +665,13 @@ input[type=radio]:checked + label .off {
   overflow: hidden;
   font-weight: 700;
   cursor: pointer;
-  height: 113px;
+  backdrop-filter: blur(16.9248px);
   -webkit-backdrop-filter: blur(16.9248px);
-          backdrop-filter: blur(16.9248px);
+  height: 113px;
   -webkit-clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
           clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
-  background: url("../img/btn-241.png") top no-repeat;
-  font-family: "OctosR", serif;
-  font-style: normal;
+  background: url("../img/collab-btn-241.png") top no-repeat;
+  font-family: "Octos", serif;
   font-weight: 400;
   font-size: 25px;
   line-height: 100%;
@@ -701,7 +702,7 @@ input[type=radio]:checked + label .off {
 
 .questions__container {
   height: 1423px;
-  background: url("../img/back_questions.png") top left 28% no-repeat;
+  background: url("../img/questions/back_questions.png") top left 28% no-repeat;
 }
 .questions__text {
   /* width: fit-content; */
@@ -743,17 +744,21 @@ input[type=radio]:checked + label .off {
   /* height: fit-content; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: 192px 29.9px 56.67px 143.9px 146.47px 84.05px 123.75px;
   grid-template-areas: "many mint blockchain" "many mintable blockchain" "three-vec mintable utility" "dusklist mintable utility" "dusklist staking utility" "much staking mints" "much two-vec mints";
   margin: 0 auto;
 }
 .questions__block {
-  padding: 58px 28px 45px;
+  padding-left: 21px;
+  width: 100%;
   border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .questions__block h3 {
-  width: 100%;
-  font-family: "TTOctosquares-Regular";
+  font-family: "Octos";
   font-style: normal;
   font-weight: 400;
   font-size: 31px;
@@ -762,8 +767,10 @@ input[type=radio]:checked + label .off {
   text-transform: uppercase;
 }
 .questions__block p {
-  width: 100%;
-  font-family: "Mazzard-R";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Mazzard";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -774,21 +781,6 @@ input[type=radio]:checked + label .off {
   font-weight: 700;
   font-size: 24px;
   margin: 0;
-}
-.questions__vec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  height: 100%;
-  width: 100%;
-}
-.questions__vec img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .questions .many {
   grid-area: many;
@@ -834,11 +826,23 @@ input[type=radio]:checked + label .off {
 }
 .questions .two-vec {
   grid-area: two-vec;
+}
+.questions .three-vec, .questions .two-vec {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid white;
   padding: 0;
-  height: 56.67px;
+  height: 100%;
+  width: 100%;
+}
+.questions .three-vec img, .questions .two-vec img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .team__container {
@@ -906,7 +910,6 @@ input[type=radio]:checked + label .off {
 
 .swiper-wrapper {
   margin-left: 132px;
-  margin-top: 232px;
 }
 
 .team-swiper {
@@ -921,13 +924,6 @@ input[type=radio]:checked + label .off {
   display: flex;
 }
 
-.swiper-slide-active {
-  transform: scale(1.66);
-}
-.swiper-slide-active .info {
-  display: block;
-}
-
 .avatar {
   cursor: pointer;
   text-align: center;
@@ -938,15 +934,37 @@ input[type=radio]:checked + label .off {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 7px;
+  backdrop-filter: blur(16.9248px);
   -webkit-backdrop-filter: blur(16.9248px);
-          backdrop-filter: blur(16.9248px);
   -webkit-clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
           clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
-  background: url("../img/card-sm.png") top no-repeat;
+  background: url("../img/team/card-sm.png") top no-repeat;
+}
+
+.swiper-slide-active {
+  transform: scale(1.66);
+  width: 442px;
+  height: 701.42px;
+  margin-left: 3px;
+  position: relative;
+  margin-top: 232px;
+  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 442px 14.31px, 442px 689.708px, 386.255px 689.708px, 365.513px 701.416px, 0px 701.416px);
+          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 442px 14.31px, 442px 689.708px, 386.255px 689.708px, 365.513px 701.416px, 0px 701.416px);
+  background: url("../img/team/card-lg.png") top no-repeat;
 }
 
 .info {
-  display: none;
+  width: 667px;
+  height: 192px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  backdrop-filter: blur(16.9248px);
+  -webkit-backdrop-filter: blur(16.9248px);
+  -webkit-clip-path: polygon(0px 0px, 667px 0px, 667px 167.529px, 640.336px 192px, 0px 192px);
+          clip-path: polygon(0px 0px, 667px 0px, 667px 167.529px, 640.336px 192px, 0px 192px);
+  background: url("../img/team/team-about.png") top no-repeat;
 }
 
 .footer__inner {
@@ -956,7 +974,8 @@ input[type=radio]:checked + label .off {
   padding: 75px 50px;
 }
 .footer__container {
-  /* margin: 0 auto; */
+  position: relative;
+  z-index: 2;
   background-color: black;
 }
 .footer__social {
@@ -971,6 +990,11 @@ input[type=radio]:checked + label .off {
   text-align: end;
 }
 
+@media screen and (min-width: 1500px) {
+  .main__text {
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 1160px) {
   .faction__title {
     font-size: 50px;
@@ -1061,7 +1085,7 @@ input[type=radio]:checked + label .off {
     margin-top: -40px;
     -webkit-clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 220.066px, 197.802px 220.066px, 178.379px 227.528px, 0px 227.528px);
             clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 220.066px, 197.802px 220.066px, 178.379px 227.528px, 0px 227.528px);
-    background: url("../img/frame-250.png") top no-repeat;
+    background: url("../img/roadmap/frame-250.png") top no-repeat;
   }
   .roadmap__point:hover {
     color: #000;
@@ -1085,7 +1109,7 @@ input[type=radio]:checked + label .off {
     width: 267px;
     -webkit-clip-path: polygon(0px 0px, 67.416px 0px, 89.456px 9.74px, 267px 9.74px, 267px 235.031px, 211.253px 235.031px, 190.509px 243px, 0px 243px);
             clip-path: polygon(0px 0px, 67.416px 0px, 89.456px 9.74px, 267px 9.74px, 267px 235.031px, 211.253px 235.031px, 190.509px 243px, 0px 243px);
-    background: url("../img/frame-full-250.png") top no-repeat;
+    background: url("../img/roadmap/frame-full-250.png") top no-repeat;
     color: black;
   }
   .questions__title {

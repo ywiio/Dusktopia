@@ -1,5 +1,4 @@
 const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
   loop: true,
   scrollbar: {
     el:'.swiper-slide',
@@ -7,7 +6,6 @@ const swiper = new Swiper('.swiper', {
   },
 
   grabCursor:true,
-//???????
   slideToClickedSlide:true,
   
   keyboard: {
@@ -30,6 +28,9 @@ const swiper = new Swiper('.swiper', {
   },
 
   speed: 800,
+
+  // centeredSlides:true,
+  setWrapperSize: true,
 
 });
 

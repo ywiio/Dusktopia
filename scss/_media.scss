@@ -1,3 +1,11 @@
+@media screen and (min-width: 1500px){
+    .main{
+        &__text{
+            margin: 0 auto;
+        }
+    }
+}
+
 @media screen and (max-width: 1160px){
     .faction{
         &__title{
@@ -111,7 +119,7 @@
             margin-top: -40px;
             clip-path: polygon(0px 0px, 63.123px 0px, 83.76px 9.12px, 250px 9.12px, 250px 220.066px, 197.802px 220.066px, 178.379px 227.528px, 0px 227.528px);
             background:    
-            url("../img/frame-250.png")
+            url("../img/roadmap/frame-250.png")
             top no-repeat;
         }
         &__info{
@@ -136,7 +144,7 @@
         width: 267px;
         clip-path: polygon(0px 0px, 67.416px 0px, 89.456px 9.74px, 267px 9.74px, 267px 235.031px, 211.253px 235.031px, 190.509px 243px, 0px 243px);
         background:    
-            url("../img/frame-full-250.png")
+            url("../img/roadmap/frame-full-250.png")
             top no-repeat;
         color: black;
     }

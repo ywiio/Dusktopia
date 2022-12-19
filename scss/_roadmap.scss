@@ -15,7 +15,7 @@
         margin-top: -56%;
     }
     &__text{
-        width: fit-content;
+        // width: fit-content;
         margin-right: 50px;
         // margin-left: 11%;
         // margin-bottom: 111px;
@@ -38,7 +38,8 @@
         display: flex;
         /* align-items: flex-end; */
         gap: 42px;
-        font-family:"Mazzard-R", serif;
+        font-family:"Mazzard", serif;
+        font-weight: 400;
         font-size: 13px;
     }
     &__lights{
@@ -54,28 +55,22 @@
     }
     &__point{
         @include btn(464);
+        @include blur;
         height: 175px;
-        backdrop-filter: blur(16.9248px);
         clip-path: polygon(0px 0px, 61.9px 0px, 82.16px 13.18px, 468px 13.18px, 468px 165.2px, 410.8px 164.3px, 391.748px 175px, 0px 175px);
         background:    
-        url('../img/frame-175.png')
+        url('../img/roadmap/frame-175.png')
         top no-repeat;
-
-        // background: linear-gradient(249.9deg, rgba(255, 255, 255, 0) -24.77%, rgba(255, 255, 255, 0.15) 105.99%);
-        // border: 2.12px solid white;
-        // border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
-        &:nth-child(5){
-            height: 130px;
-            clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
-            background:    
-            url('../img/frame-130.png')
-            top no-repeat;
-        }
-
+        // &:nth-child(5){
+        //     height: 130px;
+        //     clip-path: polygon(0px 0px, 61.918px 0px, 82.16px 13.186px, 462px 13.186px, 462px 119.212px, 410.799px 119.212px, 391.748px 130px, 0px 130px);
+        //     background:    
+        //     url('../img/roadmap/frame-130.png')
+        //     top no-repeat;
+        // }
         &:hover{
             background-color: gray;
         }
-
         &::before{
             content: "";
             position: absolute;
@@ -91,12 +86,14 @@
             align-items: flex-start;
             z-index: 1;
             margin-left: -45px;
-            h3{
+            h2{
                 font-family: "Neue Machina";
+                font-weight: bold;
                 font-size: 41px;
             }
-            h4{
-                font-family:"Mazzard-B", serif;
+            h3{
+                font-family:"Mazzard", serif;
+                font-weight: bold;
                 line-height: 140%;
             }
             p{
@@ -136,27 +133,27 @@
     width: 503px;
     clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 13.186px, 503px 13.186px, 503px 164.212px, 447.255px 164.212px, 426.513px 175px, 0px 175px);
     background:    
-        url("../img/frame-full-175.png")
+        url("../img/roadmap/frame-full-175.png")
         top no-repeat;
     color: black;
-    .roadmap{
-        &__point{
-            &-text{
-                width: 445px;
-                font-size: 15px;
-                margin: 0 auto;
-                h3{
-                    font-size: 45px;
-                }
-            }
-            &:nth-child(5){
-                height: 148.71px;
-                clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
-                background:    
-                    url("../img/frame-full-130.png")
-                    top no-repeat;
-            }
-        }
+    .roadmap &{
+        // &__point{
+        //     &-text{
+        //         width: 445px;
+        //         font-size: 15px;
+        //         margin: 0 auto;
+        //         h2{
+        //             font-size: 45px;
+        //         }
+        //     }
+        //     &:nth-child(5){
+        //         height: 148.71px;
+        //         clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 503px 14.31px, 503px 137px, 448px 137px, 427.258px 148.708px, 0px 148.708px);
+        //         background:    
+        //             url("../img/roadmap/frame-full-130.png")
+        //             top no-repeat;
+        //     }
+        // }
     }
 }
 

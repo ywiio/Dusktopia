@@ -32,7 +32,7 @@
     }
     &__layers-base{
         background:    
-            url('../img/layer-intro-base.png')
+            url('../img/main/layer-intro-base.png')
              top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/1.6),0);
@@ -40,24 +40,17 @@
     }
     &__layers-middle{
         background:    
-            url('../img/layer-intro-middle.png')
+            url('../img/main/layer-intro-middle.png')
             top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/2.5),0);
     }
     &__layers-front{
         background:    
-            url('../img/layer-intro-front.png')
+            url('../img/main/layer-intro-front.png')
             top no-repeat;
         background-size: cover;
         transform: translate3d(0, calc(var(--scrollTop)/5.7),0);
-    }
-    &__layers-gradient{
-        background:    
-            url('../img/gradient-1\(chamge\).png')
-            top no-repeat;
-        background-size: cover;
-        transform: translate3d(0, calc(var(--scrollTop)/7),0);
     }
     &__intro{
         z-index: 9;
@@ -69,7 +62,7 @@
         margin-top: 42px;
     }
     &__nav{
-        margin-top: -135px;
+        margin-top: -9.2%;
     }
     &__text{
         gap: 35px;
@@ -84,13 +77,13 @@
     }
     &__btn-mint{
         background:    
-            url("../img/btn-136.png")
+            url("../img/main-btn-136.png")
              top no-repeat;  
         clip-path: polygon(0px 5.451px, 101.626px 5.451px, 110.095px 0px, 136px 0px, 136px 56px, 29.392px 56px, 21.421px 51.54px, 0px 51.54px);
         @include btn(136);
         &:hover{
             background:    
-            url("../img/btn-136-hov.png")
+            url("../img/main-btn-full-136.png")
              top no-repeat;
         }
     }
@@ -103,7 +96,7 @@
         @include btn(194);
         &:hover{
             background:    
-            url('../img/btn-194-hov.png')
+            url('../img/btn-full-194.png')
              top no-repeat;
         }
     }

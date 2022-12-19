@@ -1,5 +1,4 @@
 .team{
-    // cursor: url('../img/cursor.png'),auto;
     &__container{
         margin-top: -99px;
         margin-bottom: 161px;
@@ -90,7 +89,7 @@
 
 .swiper-wrapper{
     margin-left: 132px;
-    margin-top: 232px;
+    // margin-top: 0;
 }
 
 .team-swiper {
@@ -119,14 +118,6 @@
     //  align-items: center;
     
 }
-
-.swiper-slide-active{
-   transform: scale(1.66);
-   .info{
-    display: block;
-   }
-}
-
 .avatar{
     cursor: pointer;
     text-align: center;
@@ -138,13 +129,49 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 7px;
 
-    backdrop-filter: blur(16.9248px);
+    @include blur;
     clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
     background:    
-        url('../img/card-sm.png')
+        url('../img/team/card-sm.png')
         top no-repeat;
+    
 }
+
+.swiper-slide-active{
+    transform: scale(1.66);
+    width: 442px;
+    height: 701.42px;
+    margin-left: 3px;
+    position: relative;
+    margin-top: 232px;
+    clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 442px 14.31px, 442px 689.708px, 386.255px 689.708px, 365.513px 701.416px, 0px 701.416px);
+    background:    
+        url('../img/team/card-lg.png')
+        top no-repeat;
+//    .info{
+//         display: block;
+//         position: absolute;
+//         font-weight: 400;
+//         font-size: 15px;
+//         line-height: 140%;
+//         height: 126px;
+//    }
+}
+
+
+
 .info{
-    display: none;
+    // display: none;
+    width: 667px;
+    height: 192px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    @include blur;
+    clip-path: polygon(0px 0px, 667px 0px, 667px 167.529px, 640.336px 192px, 0px 192px);
+    background:    
+        url('../img/team/team-about.png')
+        top no-repeat;
 }

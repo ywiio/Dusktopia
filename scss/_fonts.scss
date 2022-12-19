@@ -1,45 +1,85 @@
 @font-face {
-    font-family: "Mazzard-R";
-    src: url('../font/MazzardH-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'Mazzard';
+    src: url('../font/Mazzard/MazzardH-Regular.eot');
+    src: local('Mazzard H Regular'), local('MazzardH-Regular'),
+        url('../font/MazzardH-Regular.woff2') format('woff2'),
+        url('../font/Mazzard/MazzardH-Regular.woff') format('woff'),
+        url('../font/Mazzard/MazzardH-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Mazzard-B";
-    src: url('../font/MazzardH-Bold.woff2') format('woff2');
+    font-family: 'Mazzard';
+    src: url('../font/Mazzard/MazzardH-Regular.eot');
+    src: local('Mazzard H Bold'), local('MazzardH-Bold'),
+        url('../font/MazzardH-Bold.woff2') format('woff2'),
+        url('../font/Mazzard/MazzardH-Bold.woff') format('woff'),
+        url('../font/Mazzard/MazzardH-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
-    font-family: "OctosM";
-    src: url('../font/TTOctosquares-Medium.woff2') format('woff2');
+    font-family: 'Mazzard';
+    src: url('../font/Mazzard/MazzardH-Regular.eot');
+    src: local('Mazzard H Bold'), local('MazzardH-Bold'),
+        url('../font/MazzardH-Bold.woff2') format('woff2'),
+        url('../font/Mazzard/MazzardH-Bold.woff') format('woff'),
+        url('../font/Mazzard/MazzardH-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Octos';
+    src: url('../font/TTOctosquares/');
+    src: local('TT Octosquares Medium'), local('TTOctosquares-Medium'),
+        url('../font/TTOctosquares/TTOctosquares-Medium.woff2') format('woff2'),
+        url('../font/TTOctosquares/TTOctosquares-Medium.woff') format('woff'),
+        url('../font/TTOctosquares/TTOctosquares-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: "OctosR";
-    src: url('../font/TTOctosquares-Regular.woff2') format('woff2');
+    font-family: "Octos";
+    src: url('../font/TTOctosquares/');
+    src: local('TT Octosquares'), local('TTOctosquares-Regular'),
+        url('../font/TTOctosquares/TTOctosquares-Regular.woff2') format('woff2'),
+        url('../font/TTOctosquares/TTOctosquares-Regular.woff') format('woff'),
+        url('../font/TTOctosquares/TTOctosquares-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: "NeueMachina-Medium";
+    font-family: 'Neue Machina';
+    src: url('../font/Neue Machina/');
+    src: local('Neue Machina Medium'), local('NeueMachina-Medium'),
+        url('../font/Neue Machina/?#iefix') format('embedded-opentype'),
+        url('../font/Neue Machina/NeueMachina-Medium.woff2') format('woff2'),
+        url('../font/Neue Machina/NeueMachina-Medium.woff') format('woff'),
+        url('../font/Neue Machina/NeueMachina-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
-    font-weight: normal;
-    src: local("NeueMachina-Medium"),
-         url('../font/NeueMachina-Medium.woff2') format('woff2'),
 }
 @font-face {
-    font-family: "NeueMachina-Bold";
+    font-family: 'Neue Machina';
+    src: url('../font/Neue Machina/');
+    src: local('Neue Machina Bold'), local('NeueMachina-Bold'),
+        url('../font/Neue Machina/NeueMachina-Bold.woff2') format('woff2'),
+        url('../font/Neue Machina/NeueMachina-Bold.woff') format('woff'),
+        url('../font/Neue Machina/NeueMachina-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
-    font-weight: normal;
-    src: local("NeueMachina-Bold"),
-         url('../font/NeueMachina-Bold.woff2') format('woff2'),
 }
 @font-face {
-    font-family: "NeueMachina-Regular";
-    font-style: normal;
+    font-family: 'Neue Machina';
+    src: url('../font/Neue Machina/');
+    src: local('Neue Machina Regular'), local('NeueMachina-Regular'),
+        url('../font/Neue Machina/NeueMachina-Regular.woff2') format('woff2'),
+        url('../font/Neue Machina/NeueMachina-Regular.woff') format('woff'),
+        url('../font/Neue Machina/NeueMachina-Regular.ttf') format('truetype');
     font-weight: normal;
-    src: local("NeueMachina-Regular"),
-         url('../font/NeueMachina-Regular.woff2') format('woff2'),
+    font-style: normal;
 }

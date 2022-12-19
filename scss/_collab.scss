@@ -7,8 +7,7 @@
     &__inner{
         // margin-top: 63px;
         display: flex;
-        /* ga
-        p: 100px; */
+        /* gap: 100px; */
     }
     &__nav{
         margin-top: -20px;
@@ -16,7 +15,7 @@
     &__info{
         display: flex;
         flex-direction: column;
-        gap: 51px;
+        gap: 63px;
         margin: 0 auto;
     }
     &__logos{
@@ -28,20 +27,17 @@
         gap: 51px;
         flex-wrap: wrap;
         margin-left: -49px;
-        margin-top: 12px;
     }
     &__logo{
         @include btn(241);
+        @include blur;
         height: 113px;
-        
-        backdrop-filter: blur(16.9248px);
         clip-path: polygon(0px 0px, 36.757px 0px, 48.773px 7.88px, 241px 7.88px, 241px 106.553px, 210.605px 106.553px, 199.296px 113px, 0px 113px);
         background:    
-        url('../img/btn-241.png')
+        url('../img/collab-btn-241.png')
         top no-repeat;
 
-        font-family: "OctosR", serif;
-        font-style: normal;
+        font-family: "Octos", serif;
         font-weight: 400;
         font-size: 25px;
         line-height: 100%;
