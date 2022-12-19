@@ -76,8 +76,10 @@
             position: absolute;
             width: 50%;
             height: 50%;
-            background:
-            linear-gradient(60deg,#F1A347, #FF72E0);
+            background: linear-gradient(60deg,#F1A347, #FF72E0);
+            background: -webkit-linear-gradient(60deg,#F1A347, #FF72E0);
+            background: -moz-linear-gradient(60deg,#F1A347, #FF72E0);
+            background: -o-linear-gradient(60deg,#F1A347, #FF72E0);
             filter: blur(51.7478px);
         }
 

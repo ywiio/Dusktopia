@@ -564,6 +564,7 @@ input[type=radio]:checked + label .off {
   width: 50%;
   height: 50%;
   background: linear-gradient(60deg, #F1A347, #FF72E0);
+  background: -o-linear-gradient(60deg, #F1A347, #FF72E0);
   filter: blur(51.7478px);
 }
 .roadmap__point-text {
@@ -767,8 +768,12 @@ input[type=radio]:checked + label .off {
           clip-path: polygon(0px 0px, 61.9px 0px, 82.143px 13.134px, 1221px 13.134px, 1221px 766px, 1169.81px 766px, 1150.762px 776.746px, 0px 776.746px);
   overflow: hidden;
   background: linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
+  background: -o-linear-gradient(238.33deg, rgba(255, 255, 255, 0) -7.92%, rgba(255, 255, 255, 0.15) 33.87%);
   border: 2.12px solid;
   border-image-source: linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+  border-image-source: -webkit-linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+  border-image-source: -moz-linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
+  border-image-source: -o-linear-gradient(109.27deg, rgba(255, 255, 255, 0.33) -4.94%, rgba(255, 255, 255, 0) 56.55%);
   max-width: 83.79vw;
   /* height: fit-content; */
   display: grid;
