@@ -11,7 +11,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -21,6 +20,7 @@ body {
   margin: 0 auto;
   font-family: "Mazzard", serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 .ellipses {
@@ -927,12 +927,83 @@ input[type=radio]:checked + label .off {
   padding: 0 34px 0 26px;
 }
 .team__cards {
-  display: none;
+  margin: 0 auto;
+  gap: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.team__card {
+  position: relative;
+  background: url("../img/team/card-sm.png") top no-repeat;
+  width: 265.2px;
+  height: 501px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
 }
 .team__card img {
   width: 247.08px;
   height: 328.97px;
   margin-top: 19.39px;
+}
+.team__card:hover {
+  background: url("../img/team/card-lg.png") top no-repeat;
+  width: 312px;
+  color: black;
+  -webkit-animation-name: scale;
+          animation-name: scale;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezer(1, 0.01, 0, 1.01);
+          animation-timing-function: cubic-bezer(1, 0.01, 0, 1.01);
+}
+@-webkit-keyframes scale {
+  from {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+}
+.team__card:hover img {
+  width: 290.68px;
+  height: 387.02px;
+  margin-top: 32.31px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team__card:hover-job {
+  font-size: 13px;
+  margin-left: 27px;
+}
+.team__card:hover-name {
+  font-size: 24px;
+  align-self: flex-start;
+  margin-left: 27px;
 }
 .team__job {
   font-size: 8px;
@@ -941,91 +1012,12 @@ input[type=radio]:checked + label .off {
   margin-left: 16px;
 }
 .team__name {
+  font-family: "Octos", serif;
   font-size: 21px;
   line-height: 117.8%;
   text-transform: uppercase;
   align-self: flex-start;
   margin-left: 16px;
-}
-.team__card:first-child {
-  /* &-img{
-      width: 411.8px;
-      height: 548.28px;
-      margin-top: 32.31px;
-  }
-
-  &-job{
-      font-size: 13px;
-      margin-left: 27px;
-  }
-
-  &-name{
-      font-size: 35px;
-      align-self: flex-start;
-      margin-left: 27px;
-  } */
-}
-
-.swiper-wrapper {
-  margin-left: 132px;
-}
-
-.team-swiper {
-  margin-right: 0 !important;
-  width: 88%;
-  height: 701.42px;
-}
-
-.swiper-slide {
-  transform: scale(1);
-  transition: 0.3s all;
-  -webkit-transition: 0.3s all;
-  -moz-transition: 0.3s all;
-  -o-transition: 0.3s all;
-  display: flex;
-}
-
-.avatar {
-  cursor: pointer;
-  text-align: center;
-  font-size: 18px;
-  width: 265.2px;
-  height: 420.85px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  backdrop-filter: blur(16.9248px);
-  -webkit-backdrop-filter: blur(16.9248px);
-  -webkit-clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
-          clip-path: polygon(0px 0px, 40.447px 0px, 53.671px 8.586px, 265.2px 8.586px, 265.2px 413.825px, 231.753px 413.825px, 219.308px 420.85px, 0px 420.85px);
-  background: url("../img/team/card-sm.png") top no-repeat;
-}
-
-.swiper-slide-active {
-  transform: scale(1.66);
-  width: 442px;
-  height: 701.42px;
-  margin-left: 3px;
-  position: relative;
-  margin-top: 232px;
-  -webkit-clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 442px 14.31px, 442px 689.708px, 386.255px 689.708px, 365.513px 701.416px, 0px 701.416px);
-          clip-path: polygon(0px 0px, 67.413px 0px, 89.451px 14.31px, 442px 14.31px, 442px 689.708px, 386.255px 689.708px, 365.513px 701.416px, 0px 701.416px);
-  background: url("../img/team/card-lg.png") top no-repeat;
-}
-
-.info {
-  width: 667px;
-  height: 192px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 140%;
-  backdrop-filter: blur(16.9248px);
-  -webkit-backdrop-filter: blur(16.9248px);
-  -webkit-clip-path: polygon(0px 0px, 667px 0px, 667px 167.529px, 640.336px 192px, 0px 192px);
-          clip-path: polygon(0px 0px, 667px 0px, 667px 167.529px, 640.336px 192px, 0px 192px);
-  background: url("../img/team/team-about.png") top no-repeat;
 }
 
 .footer__inner {
