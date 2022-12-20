@@ -790,7 +790,7 @@ input[type=radio]:checked + label .off {
   max-width: 83.79vw;
   /* height: fit-content; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(300px, 407px));
   grid-template-rows: 192px 29.9px 56.67px 143.9px 146.47px 84.05px 123.75px;
   grid-template-areas: "many mint blockchain" "many mintable blockchain" "three-vec mintable utility" "dusklist mintable utility" "dusklist staking utility" "much staking mints" "much two-vec mints";
   margin: 0 auto;
@@ -1047,6 +1047,11 @@ input[type=radio]:checked + label .off {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1400px) {
+  .questions__info {
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 1270px) {
   .questions__block h3 {
     font-size: 28px;
@@ -1301,6 +1306,9 @@ input[type=radio]:checked + label .off {
   }
   .team__cards {
     gap: 40px;
+  }
+  .team__title {
+    font-size: 35px;
   }
   .footer__inner {
     flex-direction: column;

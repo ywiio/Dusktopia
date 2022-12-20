@@ -5,6 +5,20 @@
         }
     }
 }
+@media screen and (min-width: 1440px){
+    .questions{
+        &__about{
+            // clip-path: none;
+        }
+    }
+}
+@media screen and (min-width: 1400px){
+    .questions{
+        &__info{
+            margin-left: 20px;
+        }
+    }
+}
 @media screen and (max-width: 1270px){
     .questions{
         &__block{
@@ -283,6 +297,9 @@
     .team{
         &__cards{
             gap: 40px;
+        }
+        &__title{
+            font-size: 35px;
         }
     }
     .footer{
