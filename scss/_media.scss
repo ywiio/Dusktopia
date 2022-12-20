@@ -4,19 +4,8 @@
             margin: 0 auto;
         }
     }
-}
-@media screen and (min-width: 1440px){
-    .questions{
-        &__about{
-            // clip-path: none;
-        }
-    }
-}
-@media screen and (min-width: 1400px){
-    .questions{
-        &__info{
-            margin-left: 20px;
-        }
+    .slideshow{
+        margin-left:-20%;
     }
 }
 @media screen and (max-width: 1270px){
@@ -25,6 +14,11 @@
             h3{
                 font-size: 28px;
             }
+        }
+    }
+    .collab{
+        &__info{
+            margin: 0 60px;
         }
     }
 }
@@ -38,18 +32,6 @@
         &__about{
             clip-path: none;
             width: 100%;
-            // grid-template-areas: 
-            // "many" 
-            // "three-vec"
-            // "blockchain" 
-            // "much"
-            // "mintable" 
-            // "mintable"
-            // "two-vec"
-            // "dusklist"
-            // "utitily"
-            // "staking" 
-            // "mints";
             display: block;
             width: 331px;
         }
@@ -88,7 +70,7 @@
     .faction{
         &__inner{
             flex-direction: column;
-            // padding-top: 28px;
+            padding-top: 0px;
         }
         &__title{
             margin-bottom: 40px;
@@ -168,6 +150,11 @@
         }
         &__inner{
             margin-left: 24px;
+        }
+    }
+    .faction{
+        &__inner{
+            padding-top: 118px;
         }
     }
 }

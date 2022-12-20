@@ -27,7 +27,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/elipses.png") 6% no-repeat;
+  background: url(../img/elipses.png) 6% no-repeat;
   background-size: cover;
   z-index: 1;
 }
@@ -226,14 +226,8 @@ a {
 .main {
   position: relative;
 }
-.main__elipses {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
 .main__container {
   height: 100vh;
-  /* padding: 220px auto 221px; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -245,7 +239,7 @@ a {
   width: 100%;
   position: absolute;
   background-position: center;
-  /* will-change: transform; ?????????????????????????????? */
+  will-change: transform;
 }
 .main__layers-base {
   background: url("../img/main/layer-intro-base.png") top no-repeat;
@@ -404,10 +398,9 @@ a {
 .faction__acor-body img {
   margin-left: 60px;
 }
-.faction__acor label {
+.faction__acor-label {
   cursor: pointer;
   display: block;
-  /* padding: 15px 20px; */
   width: 100%;
   transition: color 0.35s;
   -webkit-transition: color 0.35s;
@@ -417,6 +410,9 @@ a {
   justify-content: flex-end;
   align-items: center;
 }
+.faction__acor-label::after {
+  display: none;
+}
 .faction__acor input {
   display: none;
 }
@@ -425,10 +421,7 @@ a {
   font-weight: 500;
   font-size: 22px;
 }
-.faction__acor label::after {
-  display: none;
-}
-.faction__acor input:checked + label:before {
+.faction__acor input:checked + .faction__acor-label::before {
   transition: transform 0.35s;
   -webkit-transition: transform 0.35s;
   -moz-transition: transform 0.35s;
@@ -467,19 +460,19 @@ a {
   position: absolute;
 }
 
-label:nth-child(odd) .on, label:nth-child(odd) .off {
+.faction__acor-label:nth-child(odd) .on, .faction__acor-label:nth-child(odd) .off {
   transform: scale(-1, 1);
 }
 
-input[type=radio]:checked + label {
+input[type=radio]:checked + .faction__acor-label {
   text-transform: uppercase;
 }
 
-input[type=radio]:checked + label .off {
+input[type=radio]:checked + .faction__acor-label .off {
   display: none;
 }
 
-.faction__acor input:checked + label + .faction__acor-body {
+.faction__acor input:checked + .faction__acor-label + .faction__acor-body {
   height: auto;
 }
 
@@ -745,6 +738,7 @@ input[type=radio]:checked + label .off {
 }
 
 .questions__container {
+  padding-bottom: 560px;
   background: url("../img/questions/back_questions.png") top left 28% no-repeat;
 }
 .questions__text {
@@ -904,7 +898,7 @@ input[type=radio]:checked + label .off {
 }
 
 .team__container {
-  margin-top: 259px;
+  margin-top: -302px;
   margin-bottom: 161px;
 }
 .team__info {
@@ -1046,15 +1040,16 @@ input[type=radio]:checked + label .off {
   .main__text {
     margin: 0 auto;
   }
-}
-@media screen and (min-width: 1400px) {
-  .questions__info {
-    margin-left: 20px;
+  .slideshow {
+    margin-left: -20%;
   }
 }
 @media screen and (max-width: 1270px) {
   .questions__block h3 {
     font-size: 28px;
+  }
+  .collab__info {
+    margin: 0 60px;
   }
 }
 @media screen and (max-width: 1160px) {
@@ -1092,6 +1087,7 @@ input[type=radio]:checked + label .off {
 @media screen and (max-width: 960px) {
   .faction__inner {
     flex-direction: column;
+    padding-top: 0px;
   }
   .faction__title {
     margin-bottom: 40px;
@@ -1183,6 +1179,9 @@ input[type=radio]:checked + label .off {
   }
   .roadmap__inner {
     margin-left: 24px;
+  }
+  .faction__inner {
+    padding-top: 118px;
   }
 }
 @media screen and (max-width: 660px) {

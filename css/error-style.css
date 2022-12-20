@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #080809;
+  color: white;
+  margin: 0 auto;
+  font-family: "Mazzard", serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/404-back.png") top no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Mazzard", serif;
+  font-size: 50px;
+}/*# sourceMappingURL=error-style.css.map */

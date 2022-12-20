@@ -1,22 +1,7 @@
 .main{
     position: relative;
-    &__elipses{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        
-    }
-    // .elipse{
-    //     width: 1089px;
-    //     height: 861px;
-    //     top: 412px;
-    //     background: rgba(255, 114, 190, 0.5);
-    //     opacity: 0.8;
-    //     filter: blur(190.875px);
-    // }
     &__container{
         height: 100vh;
-        /* padding: 220px auto 221px; */
         display: flex;
         align-items: center;
         text-align: center;
@@ -28,7 +13,7 @@
         width: 100%;
         position: absolute;
         background-position: center;
-        /* will-change: transform; ?????????????????????????????? */
+        will-change: transform;
     }
     &__layers-base{
         background:    
