@@ -937,11 +937,11 @@ input[type=radio]:checked + label .off {
   position: relative;
   background: url("../img/team/card-sm.png") top no-repeat;
   width: 265.2px;
-  height: 501px;
+  height: 420.85px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 5px;
 }
 .team__card img {
   width: 247.08px;
@@ -951,6 +951,7 @@ input[type=radio]:checked + label .off {
 .team__card:hover {
   background: url("../img/team/card-lg.png") top no-repeat;
   width: 312px;
+  height: 501px;
   color: black;
   -webkit-animation-name: scale;
           animation-name: scale;
@@ -996,20 +997,18 @@ input[type=radio]:checked + label .off {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.team__card:hover-job {
-  font-size: 13px;
-  margin-left: 27px;
-}
-.team__card:hover-name {
+.team__card:hover div:nth-child(1) {
   font-size: 24px;
-  align-self: flex-start;
-  margin-left: 27px;
+}
+.team__card:hover div:nth-child(2) {
+  font-size: 13px;
 }
 .team__job {
   font-size: 8px;
   line-height: 140%;
   align-self: flex-start;
   margin-left: 16px;
+  margin-top: 9px;
 }
 .team__name {
   font-family: "Octos", serif;
@@ -1300,6 +1299,9 @@ input[type=radio]:checked + label .off {
   .questions__title span img {
     width: 28px;
   }
+  .team__cards {
+    gap: 40px;
+  }
   .footer__inner {
     flex-direction: column;
     justify-content: center;
@@ -1312,14 +1314,6 @@ input[type=radio]:checked + label .off {
   .footer__rights {
     text-align: start;
     margin: 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  .swiper {
-    display: none;
-  }
-  .team__cards {
-    display: block;
   }
 }
 @media screen and (max-width: 393px) {

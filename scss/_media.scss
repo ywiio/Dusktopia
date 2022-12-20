@@ -280,6 +280,11 @@
             }
         }
     }
+    .team{
+        &__cards{
+            gap: 40px;
+        }
+    }
     .footer{
         
         &__inner{
@@ -298,16 +303,6 @@
     }
 }
 
-@media screen and (max-width: 480px){
-    .swiper{
-        display: none;
-    }
-    .team{
-        &__cards{
-            display: block;
-        }
-    }
-}
 @media screen and (max-width: 393px){
     .roadmap{
         &__inner{
