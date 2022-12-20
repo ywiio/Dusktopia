@@ -1,21 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-body{
-    background-color: #080809;
-    margin: 0 auto;
-    font-family: "Mazzard",serif;
-    font-weight: 400;
-    color: #000;
-    position: relative;
-    overflow-x: hidden;
-}
 .error{
     width: 100vw;
     height: 100vh;
