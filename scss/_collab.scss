@@ -1,13 +1,10 @@
 .collab{
     &__container{
-        /* я думаю, надо заменять, но не знаю что */
         padding-bottom: 182px;
         padding-top: 53px;
     }
     &__inner{
-        // margin-top: 63px;
         display: flex;
-        /* gap: 100px; */
     }
     &__nav{
         margin-top: -20px;
@@ -22,7 +19,6 @@
         display: flex;
         justify-content: center;
         margin: 0 auto;
-        // ?????????????????????????
         max-width: 1117px; 
         gap: 51px;
         flex-wrap: wrap;

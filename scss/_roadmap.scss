@@ -1,7 +1,6 @@
 .roadmap{
     &__container{
         display: flex;
-        // margin-bottom: 168px;
     }
     &__inner{
         padding-top: 137px;
@@ -15,10 +14,7 @@
         margin-top: -56%;
     }
     &__text{
-        // width: fit-content;
         margin-right: 50px;
-        // margin-left: 11%;
-        // margin-bottom: 111px;
         align-items: flex-start;
         gap: 10px;
     }
@@ -36,7 +32,6 @@
     }
     &__about{
         display: flex;
-        /* align-items: flex-end; */
         gap: 42px;
         font-family:"Mazzard", serif;
         font-weight: 400;
@@ -50,8 +45,6 @@
         flex-direction: column;
         gap: 50px;
         margin-top: -17px;
-        // width: 503px;
-        // z-index: 2;
     }
     &__point{
         @include btn(464);
@@ -146,7 +139,6 @@
         top no-repeat;
     color: black;
 }
-// .roadmap__point:nth-child(5)
 .slideshow{
     z-index: -1;
     margin-left: -36.5%;
